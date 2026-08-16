@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/*
+  Promptstack Technologies design tokens
+  Source: docs/06-brand-design-system.md
+*/
+
+:root {
+  /* Official brand colors */
+  --brand-purple: #a800e6;
+  --brand-navy: #1b263b;
+  --brand-grey: #919191;
+  --brand-lavender: #cbaed3;
+  --white: #ffffff;
+
+  /* Derived functional tokens */
+  --surface-primary: #ffffff;
+  --surface-soft: rgba(203, 174, 211, 0.16);
+  --surface-muted: rgba(27, 38, 59, 0.035);
+  --surface-dark: #1b263b;
+
+  --text-primary: #1b263b;
+  --text-secondary: rgba(27, 38, 59, 0.72);
+  --text-inverse: #ffffff;
+  /* Do not use --brand-grey for normal small body text on white (~3.15:1). */
+  --text-muted: rgba(27, 38, 59, 0.56);
+
+  --border-soft: rgba(27, 38, 59, 0.12);
+  --border-strong: rgba(27, 38, 59, 0.25);
+
+  --accent: #a800e6;
+  --accent-soft: #cbaed3;
+  /* Functional interaction token — not a new official brand identity color */
+  --accent-hover: #9200c7;
+
+  --radius-button: 8px;
+  --radius-field: 8px;
+  --radius-card: 12px;
+  --radius-visual: 16px;
+
+  --container-max: 1280px;
+  --header-height: 80px;
+  --header-height-mobile: 72px;
+
+  /*
+    TODO_ASSET: --font-eurostile is set by next/font/local once licensed
+    Eurostile webfonts are placed in src/assets/fonts/. Until then, CSS
+    falls back to Eurostile (if locally installed) then Arial.
+  */
+  --font-eurostile: "Eurostile", Arial, sans-serif;
+}
+
+@theme inline {
+  /*
+    Content-fit navigation breakpoints (not device names).
+    --breakpoint-nav: minimum width where full horizontal desktop nav is shown.
+    Tuned against logo + 6 labels + CTA with progressive density (see Header).
+  */
+  --breakpoint-nav: 64rem; /* 1024px — desktop nav activates */
+  --breakpoint-nav-md: 73.75rem; /* 1180px — moderately roomier desktop */
+  --breakpoint-wide: 90rem; /* 1440px — spacious desktop */
+
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-grey: var(--brand-grey);
+  --color-brand-lavender: var(--brand-lavender);
+  --color-white: var(--white);
+
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-dark: var(--surface-dark);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-muted: var(--text-muted);
+
+  --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-strong);
+
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-hover: var(--accent-hover);
+
+  --font-sans: var(--font-eurostile);
+  --font-display: var(--font-eurostile);
+
+  --radius-button: var(--radius-button);
+  --radius-field: var(--radius-field);
+  --radius-card: var(--radius-card);
+  --radius-visual: var(--radius-visual);
+
+  --spacing-container: var(--container-max);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: var(--surface-primary);
+    color: var(--text-primary);
+    font-family: var(--font-eurostile);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Visible, brand-consistent keyboard focus */
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-purple);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: rgba(168, 0, 230, 0.18);
+    color: var(--brand-navy);
+  }
+}

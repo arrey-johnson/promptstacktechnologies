@@ -1,0 +1,53 @@
+---
+description: Promptstack visual and responsive design rules
+alwaysApply: true
+---
+
+# Promptstack design rules
+
+Official brand:
+- font: Eurostile, using owner-supplied licensed webfont files
+- purple: #A800E6
+- navy: #1B263B
+- grey: #919191
+- lavender: #CBAED3
+- white: #FFFFFF
+
+Visual direction:
+- light
+- premium
+- modern
+- editorial
+- technical
+- African
+- human
+- restrained
+
+Use navy as the dominant text/dark surface.
+Use purple as a controlled accent, not a dominant page background.
+Use lavender for soft surfaces and Academy accents.
+Do not use #919191 for small body text on white; it lacks sufficient normal-text contrast.
+
+Desktop header:
+- horizontal navigation
+- no hamburger at normal desktop width
+- official logo left
+- Solutions, Work, How We Work, Academy, Insights, Company
+- visible Start a Project CTA right
+- Solutions uses a mega-menu
+- sticky header
+- no giant pill navbar
+
+Avoid:
+- neon AI aesthetics
+- robots/brains/circuit heads
+- purple overload
+- template-like card walls
+- glassmorphism everywhere
+- huge corner radii on everything
+- gratuitous parallax
+- auto-playing heavy hero video
+- hidden desktop navigation
+
+Use CSS-first motion; use a motion library only for interactions that genuinely need it.
+Respect prefers-reduced-motion.

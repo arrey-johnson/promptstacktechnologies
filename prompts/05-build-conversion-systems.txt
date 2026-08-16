@@ -1,0 +1,20 @@
+Implement the business inquiry and Academy application as two separate transactional flows.
+
+Follow docs/10-forms-crm-workflows.md and docs/09-cms-and-data-model.md.
+
+Required:
+- accessible forms
+- client convenience validation
+- authoritative server validation
+- Cloudflare Turnstile client widget + mandatory server Siteverify
+- rate limiting
+- Supabase/PostgreSQL persistence
+- state fields
+- UTM/landing-page attribution where available
+- transactional notification
+- confirmation page
+- robust error handling
+- no raw Turnstile-token storage
+- no loss of a persisted lead if notification fails
+
+Do not expose privileged database credentials to the client.

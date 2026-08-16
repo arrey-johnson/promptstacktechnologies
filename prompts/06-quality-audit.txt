@@ -1,0 +1,25 @@
+Audit the entire Promptstack website against the source-of-truth.
+
+Return findings grouped by:
+1. strategy/IA drift
+2. brand drift
+3. desktop navigation
+4. mobile UX
+5. accessibility
+6. performance
+7. SEO
+8. forms/security
+9. data/privacy
+10. factual/content integrity
+11. missing production assets
+
+Do not simply say "looks good".
+
+Identify each violation with:
+- route/file;
+- problem;
+- expected behavior;
+- priority;
+- recommended fix.
+
+Then fix only the approved or objectively required issues.

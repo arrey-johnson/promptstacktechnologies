@@ -1,0 +1,29 @@
+Build the Promptstack Technologies homepage using docs/04-homepage-spec-and-copy.md exactly as the content and section source.
+
+Implement:
+1. Hero
+2. Capability strip
+3. Business problem recognition
+4. Large Software / AI & Automation / Digital Marketing modules
+5. Business outcomes
+6. Selected Work
+7. How We Work
+8. Why Promptstack
+9. Academy
+10. Insights
+11. Final CTA
+
+Design:
+- light, premium, Eurostile-led
+- navy primary text
+- controlled purple
+- lavender soft accents
+- strong whitespace
+- real-product imagery slots
+- no AI clichés
+- avoid repetitive card-grid layout
+
+Do not rewrite the approved copy unless explicitly requested.
+For CMS-driven sections, create typed interfaces and realistic TODO_CONTENT placeholders, not fabricated business proof.
+
+Complete responsive states and accessibility before calling the page done.

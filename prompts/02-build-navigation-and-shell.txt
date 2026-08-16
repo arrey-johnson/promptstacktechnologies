@@ -1,0 +1,22 @@
+Build the global Promptstack application shell.
+
+Read the design and IA specs first.
+
+Desktop must use:
+Logo | Solutions | Work | How We Work | Academy | Insights | Company | Start a Project
+
+Requirements:
+- real horizontal desktop nav
+- Solutions accessible mega-menu
+- Company dropdown
+- sticky light header
+- mobile drawer below appropriate breakpoint
+- responsive footer
+- keyboard interactions
+- visible focus
+- escape/outside-click behavior where appropriate
+- reduced motion
+- no giant pill navbar
+- no desktop hamburger
+
+Use placeholder asset paths only if official logo files have not yet been added, and mark them TODO_CONTENT.

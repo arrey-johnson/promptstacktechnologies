@@ -1,0 +1,29 @@
+---
+description: Explicit prohibited implementation and design choices
+alwaysApply: true
+---
+
+# Do not do
+
+Do not:
+- create a mobile-style desktop menu
+- redraw/recolor/distort the official logo or icon
+- invent a new primary brand color
+- ship unlicensed Eurostile font files
+- build the entire site in one giant client component
+- use generic lorem ipsum where approved copy exists
+- fabricate clients/results/testimonials/stats
+- add an AI chatbot to v1
+- add public authentication to v1
+- add an LMS to v1
+- add a client portal to v1
+- add site-wide search to v1
+- add WebGL/3D scenes without explicit approval
+- rely on hover for essential mobile content
+- use huge autoplay background videos
+- create dozens of empty service pages
+- use grey #919191 as small body text on white
+- store business leads only in email
+- send secrets to the client
+- validate Turnstile only in the browser
+- silently change the approved content hierarchy

@@ -1,0 +1,25 @@
+---
+description: Promptstack website source-of-truth and product constraints
+alwaysApply: true
+---
+
+# Product source of truth
+
+You are building the production public website for Promptstack Technologies.
+
+Read `CURSOR_MASTER_CONTEXT.md` and `PROJECT_DECISIONS.md` before significant work.
+
+The website is a commercial acquisition + credibility + content + Academy platform.
+
+Primary conversion: `Start a Project`.
+Secondary conversion: Academy application.
+
+Use business-first communication:
+
+`problem → outcome → solution → capability → proof → process → action`
+
+Never invent company proof, statistics, testimonials, client names, results, addresses, fees, dates, or certifications.
+
+Do not alter official brand assets.
+
+When a required fact is missing, implement a clearly marked placeholder and surface the missing input.

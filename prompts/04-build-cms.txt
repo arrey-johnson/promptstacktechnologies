@@ -1,0 +1,20 @@
+Implement Sanity according to docs/09-cms-and-data-model.md.
+
+Create schemas for:
+- Project/Case Study
+- Insight
+- Academy Program
+- Team Member
+- Testimonial
+- Site Settings
+
+Requirements:
+- typed queries where practical
+- preview/draft support
+- alt text
+- SEO fields
+- related content
+- featured flags
+- do not use Sanity for transactional lead/application records
+
+Seed content must be clearly labeled NON-PRODUCTION / TODO_CONTENT if real content has not been supplied.

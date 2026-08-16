@@ -1,0 +1,38 @@
+---
+description: Required quality gates before work is considered complete
+alwaysApply: true
+---
+
+# Definition of Done
+
+A page is not done because it visually resembles a mockup.
+
+It is done only when:
+- desktop + tablet + mobile are implemented
+- approved real copy is used where available
+- missing facts are visibly flagged
+- keyboard navigation works
+- focus states are visible
+- contrast is acceptable
+- responsive images are optimized
+- metadata is complete
+- analytics events are wired where specified
+- form success/error states work
+- no console errors
+- no known hydration errors
+- key browser widths tested
+- page passes product-owner review
+
+Performance target:
+- LCP <= 2.5s
+- INP <= 200ms
+- CLS <= 0.1
+- production Lighthouse performance target >= 90 on representative pages
+
+Accessibility target:
+- WCAG 2.2 AA
+
+Critical E2E journeys:
+1. Home → Software → Work → Start Project → Submit → confirmation
+2. Home → Academy → Program → Apply → Submit → confirmation
+3. Insight → relevant Solution → Start Project

@@ -1,0 +1,49 @@
+---
+description: Promptstack frontend architecture and coding standards
+alwaysApply: true
+---
+
+# Engineering standards
+
+Baseline:
+- Next.js 16 App Router
+- current secure 16.x Active LTS patch; do not use a known vulnerable patch
+- TypeScript strict
+- Tailwind with Promptstack design tokens
+- Sanity for editorial content
+- Supabase/PostgreSQL for transactional data
+- Vercel deployment
+
+Prefer:
+- React Server Components by default
+- static/ISR rendering for public content where appropriate
+- server-only data access for secrets and transactional operations
+- typed schemas and reusable domain types
+- semantic HTML
+- accessible headless primitives only when needed
+- `next/image` for responsive optimized images
+- route-level metadata
+- small client islands
+
+Avoid:
+- broad `use client` boundaries
+- duplicated page-level UI
+- unnecessary client state
+- huge JS animation libraries for simple effects
+- generic visual UI kits that override Promptstack's identity
+- hard-coded secrets
+- direct browser writes to privileged database tables
+- untyped CMS query results
+
+Forms:
+- schema validate server-side
+- sanitize/normalize
+- Turnstile server-side verification
+- rate limit
+- persist status + timestamps
+- email notification is not the system of record
+
+Tests:
+- unit/component tests for critical reusable logic
+- Playwright for conversion journeys
+- accessibility checks

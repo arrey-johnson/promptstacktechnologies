@@ -1,0 +1,23 @@
+Initialize the Promptstack website foundation according to the repository source-of-truth.
+
+Required:
+- Next.js 16 App Router + TypeScript
+- current secure 16.x Active LTS patch
+- Tailwind CSS
+- strict TypeScript
+- lint/typecheck/test scripts
+- environment schema
+- Promptstack design tokens
+- server-component-first structure
+- reusable layout/UI primitives
+- no generic visual component kit
+- accessible base focus/reduced-motion styles
+
+Do not build pages beyond a minimal shell yet.
+
+Create a short implementation report listing:
+- files created;
+- dependencies;
+- environment variables required;
+- quality checks run;
+- unresolved owner inputs.

@@ -1,0 +1,44 @@
+---
+description: Content, editorial, SEO, and factual-integrity rules
+alwaysApply: true
+---
+
+# Content rules
+
+Use approved homepage copy from `docs/04-homepage-spec-and-copy.md`.
+
+Do not replace business language with developer jargon.
+
+Do not write:
+- "innovative cutting-edge solutions" boilerplate
+- fake social proof
+- fake project outcomes
+- fake statistics
+- fake testimonials
+- generic filler that sounds like a template
+
+When a client case study lacks measurable numbers, use factual qualitative outcomes only.
+
+SEO:
+- one clear intent per page
+- human-readable lowercase URLs
+- unique metadata
+- one logical H1
+- semantic heading hierarchy
+- canonical URLs
+- XML sitemap
+- Organization structured data from verified company facts only
+- internal linking between Insights, Solutions, Work, and Academy
+- no keyword stuffing
+- no thin SEO pages
+
+CMS:
+- projects/case studies
+- Insights
+- Academy programs
+- team
+- testimonials
+- selected statistics
+- site settings
+
+Do not make every sentence CMS-managed.
