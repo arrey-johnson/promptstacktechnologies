@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FormStartBeacon } from "@/components/analytics";
 import { ProjectInquiryForm } from "@/components/forms";
 import { Container, Eyebrow, Heading, Section, Text } from "@/components/ui";
 import { createPageMetadata } from "@/lib/seo/page-metadata";
@@ -36,6 +37,7 @@ export default function StartAProjectPage() {
 
   return (
     <main id="main-content" data-analytics="start_project_view">
+      <FormStartBeacon kind="project" />
       <Section tone="primary" className="pb-8 pt-14 md:pb-10 md:pt-16">
         <Container>
           <div className="max-w-3xl">

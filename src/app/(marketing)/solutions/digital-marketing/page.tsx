@@ -10,6 +10,7 @@ import {
   SolutionPageHero,
   UseCaseList,
 } from "@/components/solutions";
+import { AnalyticsViewBeacon } from "@/components/analytics";
 import {
   digitalMarketingCapabilities,
   digitalMarketingCta,
@@ -34,6 +35,10 @@ export const metadata = createPageMetadata({
 export default async function DigitalMarketingPage() {
   return (
     <main id="main-content">
+      <AnalyticsViewBeacon
+        event="solution_view"
+        payload={{ solution_type: "digital-marketing" }}
+      />
       <SolutionPageHero
         content={digitalMarketingHero}
         analyticsPrefix="digital_marketing"

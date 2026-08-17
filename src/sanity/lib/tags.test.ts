@@ -33,8 +33,12 @@ describe("CMS cache tags", () => {
     expect(siteSettingsTag()).toEqual(["site-settings"]);
   });
 
-  it("builds Insight tags for homepage refresh (Epic 10 detail reserved)", () => {
-    expect(insightTag("example")).toEqual(["insight", "insight:example"]);
+  it("builds Insight tags with shared + slug + sitemap scope", () => {
+    expect(insightTag("example")).toEqual([
+      "insight",
+      "sitemap",
+      "insight:example",
+    ]);
   });
 });
 
@@ -46,6 +50,15 @@ describe("resolveRevalidateTags", () => {
         slug: { current: "ops-platform" },
       }),
     ).toEqual(["case-study", "sitemap", "case-study:ops-platform"]);
+  });
+
+  it("invalidates Insight shared + slug + sitemap tags", () => {
+    expect(
+      resolveRevalidateTags({
+        _type: "insight",
+        slug: { current: "ops-article" },
+      }),
+    ).toEqual(["insight", "sitemap", "insight:ops-article"]);
   });
 
   it("invalidates Academy shared + slug tags", () => {

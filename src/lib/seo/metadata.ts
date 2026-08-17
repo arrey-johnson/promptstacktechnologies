@@ -5,6 +5,9 @@ import { siteConfig } from "@/config/site";
 
 export function createRootMetadata(): Metadata {
   const siteUrl = getSiteUrl();
+  const verificationToken =
+    process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
+    process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
   return {
     metadataBase: new URL(siteUrl),
@@ -20,6 +23,7 @@ export function createRootMetadata(): Metadata {
       siteName: siteConfig.name,
       title: siteConfig.name,
       description: siteConfig.description,
+      url: siteUrl,
     },
     twitter: {
       card: "summary_large_image",
@@ -28,5 +32,12 @@ export function createRootMetadata(): Metadata {
     },
     // Environment-aware — see src/config/indexing.ts (not permanently noindex).
     robots: getRobotsMetadata(),
+    ...(verificationToken
+      ? {
+          verification: {
+            google: verificationToken,
+          },
+        }
+      : {}),
   };
 }

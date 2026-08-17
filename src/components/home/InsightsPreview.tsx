@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button, Container, Heading, Section, Text } from "@/components/ui";
 import { homepageInsights, type InsightPreview } from "@/content/homepage";
 import { getHomepageInsights } from "@/lib/insights/get-homepage-insights";
@@ -26,11 +27,23 @@ function InsightCard({
     >
       {featured ? (
         <div className="lg:col-span-7">
-          <VisualPlaceholder
-            kind="insight"
-            className="border border-border-soft"
-            label={`${article.title} visual`}
-          />
+          {article.imageSrc && !article.isPlaceholder ? (
+            <div className="relative aspect-[16/10] overflow-hidden border border-border-soft bg-surface-muted">
+              <Image
+                src={article.imageSrc}
+                alt={article.imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                className="object-cover"
+              />
+            </div>
+          ) : (
+            <VisualPlaceholder
+              kind="insight"
+              className="border border-border-soft"
+              label={`${article.title} visual`}
+            />
+          )}
         </div>
       ) : null}
 

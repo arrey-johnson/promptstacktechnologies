@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ConversionSuccessBeacon } from "@/components/analytics";
 import { Button, Container, Eyebrow, Heading, Section, Text } from "@/components/ui";
 import { createPageMetadata } from "@/lib/seo/page-metadata";
 
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function AcademyApplicationReceivedPage() {
   return (
     <main id="main-content">
+      <ConversionSuccessBeacon kind="academy" />
       <Section tone="soft" spacious>
         <Container>
           <div className="mx-auto max-w-3xl text-center">

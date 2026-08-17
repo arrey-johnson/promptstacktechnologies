@@ -8,6 +8,7 @@ import {
   SolutionPageHero,
   UseCaseList,
 } from "@/components/solutions";
+import { AnalyticsViewBeacon } from "@/components/analytics";
 import {
   softwareCapabilities,
   softwareCta,
@@ -30,6 +31,10 @@ export const metadata = createPageMetadata({
 export default async function SoftwareSolutionsPage() {
   return (
     <main id="main-content">
+      <AnalyticsViewBeacon
+        event="solution_view"
+        payload={{ solution_type: "software" }}
+      />
       <SolutionPageHero content={softwareHero} analyticsPrefix="software" />
       <ProblemSignals
         heading={softwareProblems.heading}

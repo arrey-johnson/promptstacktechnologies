@@ -57,8 +57,8 @@ SANITY PUBLISH
 | --- | --- |
 | `case-study` | `/work`, homepage Selected Work, Solutions related work, How We Work related work, sitemap Work entries |
 | `case-study:<slug>` | `/work/[slug]` |
-| `insight` | Homepage Insights preview only |
-| `insight:<slug>` | Reserved for Epic 10 detail routes |
+| `insight` | `/insights`, homepage Insights preview, related Insights |
+| `insight:<slug>` | `/insights/[slug]` |
 | `academy-program` | Academy indexes/cards, sitemap program entries |
 | `academy-program:<slug>` | `/academy/programs/[slug]` |
 | `site-settings` | Footer / verified contact / social |
@@ -117,11 +117,11 @@ Inclusion requires **both**:
 1. published legitimate content  
 2. a real implemented public route  
 
-Until Epic 10:
+Epic 10 Insight routes:
 
-- **no** `/insights`  
-- **no** `/insights/[slug]`  
-- published Insight documents may still refresh homepage preview via the `insight` tag  
+- `/insights` (static index)
+- `/insights/[slug]` for **published** Insight documents only  
+- development fixtures never enter the sitemap  
 
 Always excluded: Studio, `/api/*`, draft/preview endpoints, confirmation routes, placeholders, drafts.
 

@@ -1,58 +1,83 @@
 import type { Metadata } from "next";
-import { Container, Eyebrow, Heading, Section, Text } from "@/components/ui";
+import { LegalPageShell } from "@/components/company";
+import { interimLegalNotice } from "@/content/company";
+import { getLegalPageRobots } from "@/lib/legal/legal-indexing";
 import { createPageMetadata } from "@/lib/seo/page-metadata";
 
 /**
- * Interim privacy page for form linking.
- * TODO_CONTENT / legal review: replace with approved Privacy Policy before launch.
- * Until then: noindex, follow. Become normally indexable only after legal approval.
+ * Interim Privacy Policy.
+ * Remains noindex until lawyer-approved final content replaces this notice.
  */
 export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
   description:
     "How Promptstack Technologies handles information submitted through the website.",
   path: "/privacy",
-  robots: {
-    index: false,
-    follow: true,
-  },
+  robots: getLegalPageRobots("privacy"),
 });
 
 export default function PrivacyPage() {
+  const { heading, status } = interimLegalNotice.privacy;
+
   return (
-    <main id="main-content">
-      <Section tone="primary" spacious>
-        <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>Legal</Eyebrow>
-            <Heading level={1} as="h1" className="mt-5 text-text-primary">
-              Privacy Policy
-            </Heading>
-            <Text size="lead" muted className="mt-5">
-              Promptstack Technologies is preparing a complete Privacy Policy for
-              legal review.
-            </Text>
-            <Text muted className="mt-6">
-              When you submit a project inquiry through this website, we use the
-              information you provide to review and respond to that inquiry.
-              Personal information submitted through the Start a Project form is
-              stored as a business lead record and may be used to contact you
-              about the request.
-            </Text>
-            <Text muted className="mt-4">
-              This page is an interim notice so visitors can understand the
-              immediate purpose of form collection. It is not a final legal
-              policy and should be replaced with approved legal content before
-              public launch.
-            </Text>
-            <Text muted className="mt-4">
-              For privacy questions related to a submitted inquiry, use the
-              contact details published by Promptstack once verified contact
-              information is available on this website.
-            </Text>
-          </div>
-        </Container>
-      </Section>
-    </main>
+    <LegalPageShell title={heading} lead={status}>
+      <section aria-labelledby="privacy-forms-heading">
+        <h2
+          id="privacy-forms-heading"
+          className="text-xl font-medium text-text-primary md:text-2xl"
+        >
+          Information submitted through website forms
+        </h2>
+        <p className="mt-4">
+          When you submit a project inquiry through Start a Project, Promptstack
+          uses the information you provide to review and respond to that inquiry.
+          Personal information submitted through that form is stored as a
+          business lead record and may be used to contact you about the request.
+        </p>
+        <p className="mt-4">
+          When Academy applications are enabled and you submit an Academy
+          application, Promptstack uses the information you provide for
+          admissions review and related communication. Application records are
+          stored separately from commercial project leads.
+        </p>
+      </section>
+
+      <section aria-labelledby="privacy-analytics-heading">
+        <h2
+          id="privacy-analytics-heading"
+          className="text-xl font-medium text-text-primary md:text-2xl"
+        >
+          Analytics
+        </h2>
+        <p className="mt-4">
+          When Google Tag Manager is configured on the deployment, optional
+          analytics may run only after you accept analytics cookies. Rejecting
+          analytics keeps measurement scripts unloaded. Analytics events use
+          controlled context values and must not include form free-text or
+          contact details. See the Cookies page for the current storage
+          inventory and preference controls.
+        </p>
+      </section>
+
+      <section aria-labelledby="privacy-interim-heading">
+        <h2
+          id="privacy-interim-heading"
+          className="text-xl font-medium text-text-primary md:text-2xl"
+        >
+          Interim notice
+        </h2>
+        <p className="mt-4">
+          This page is an interim notice so visitors can understand the
+          immediate purpose of form collection. It is not a final legal policy
+          and should be replaced with approved legal content before relying on
+          it as a complete Privacy Policy.
+        </p>
+        <p className="mt-4">
+          For privacy questions related to a submitted inquiry or application,
+          use the verified contact details published on the Contact page when
+          available.
+        </p>
+      </section>
+    </LegalPageShell>
   );
 }

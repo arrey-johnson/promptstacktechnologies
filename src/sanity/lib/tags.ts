@@ -21,7 +21,7 @@ export function caseStudyTag(slug?: string | null): string[] {
 }
 
 export function insightTag(slug?: string | null): string[] {
-  const tags: string[] = [CMS_TAGS.insight];
+  const tags: string[] = [CMS_TAGS.insight, CMS_TAGS.sitemap];
   if (slug) tags.push(`${CMS_TAGS.insight}:${slug}`);
   return tags;
 }
@@ -71,7 +71,7 @@ export function resolveRevalidateTags(body: SanityWebhookBody): string[] {
     case "caseStudy":
       return caseStudyTag(slug);
     case "insight":
-      // Homepage Insights preview only until Epic 10 routes exist.
+      // Index, detail, homepage preview, related surfaces, sitemap.
       return insightTag(slug);
     case "academyProgram":
       return academyProgramTag(slug);

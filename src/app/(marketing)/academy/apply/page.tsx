@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FormStartBeacon } from "@/components/analytics";
 import { AcademyApplicationForm } from "@/components/forms";
 import { Button, Container, Eyebrow, Heading, Section, Text } from "@/components/ui";
 import {
@@ -118,6 +119,7 @@ export default async function AcademyApplyPage({ searchParams }: PageProps) {
 
   return (
     <main id="main-content" data-analytics="academy_apply_view">
+      {applicationsOpen ? <FormStartBeacon kind="academy" /> : null}
       <Section tone="primary" className="pb-8 pt-14 md:pb-10 md:pt-16">
         <Container>
           <div className="max-w-3xl">

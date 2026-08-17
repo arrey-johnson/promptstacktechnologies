@@ -115,7 +115,7 @@ export function MobileNavigation({ open, onOpenChange }: MobileNavigationProps) 
     open && mounted
       ? createPortal(
           <div
-            className="fixed inset-0 z-[100] nav:hidden"
+            className="fixed inset-0 z-[100]"
             data-mobile-nav-drawer="true"
           >
             <button

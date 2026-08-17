@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { primaryCta } from "@/config/navigation";
 import { Button } from "@/components/ui";
 import { cn } from "@/lib/cn";
@@ -11,6 +11,11 @@ import { SiteLogo } from "./SiteLogo";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const hydrated = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   useEffect(() => {
     const onScroll = () => {
@@ -24,6 +29,7 @@ export function Header() {
 
   return (
     <header
+      data-header-hydrated={hydrated ? "true" : "false"}
       className={cn(
         "sticky top-0 z-40 bg-surface-primary/95 backdrop-blur-[2px] transition-[border-color,box-shadow] duration-200",
         scrolled

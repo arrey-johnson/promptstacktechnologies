@@ -3,6 +3,9 @@
  * Secrets must never use the NEXT_PUBLIC_ prefix.
  */
 
+export const CANONICAL_PRODUCTION_ORIGIN =
+  "https://www.promptstacktechnologies.com";
+
 type EnvResult =
   | { success: true; data: { NEXT_PUBLIC_SITE_URL: string } }
   | { success: false; error: string };
@@ -14,6 +17,31 @@ function isValidHttpUrl(value: string): boolean {
   } catch {
     return false;
   }
+}
+
+/**
+ * Normalize Promptstack production hostnames to the canonical https www origin.
+ * Prevents sitemap/robots/canonicals from emitting http:// or apex duplicates
+ * when NEXT_PUBLIC_SITE_URL is misconfigured.
+ */
+export function normalizeSiteUrl(raw: string): string {
+  const trimmed = raw.trim().replace(/\/$/, "");
+  let url: URL;
+  try {
+    url = new URL(trimmed);
+  } catch {
+    return trimmed;
+  }
+
+  const host = url.hostname.toLowerCase();
+  if (
+    host === "promptstacktechnologies.com" ||
+    host === "www.promptstacktechnologies.com"
+  ) {
+    return CANONICAL_PRODUCTION_ORIGIN;
+  }
+
+  return `${url.protocol}//${url.host}${url.pathname}`.replace(/\/$/, "");
 }
 
 /**
@@ -40,7 +68,7 @@ export function getPublicEnv(): EnvResult {
 
   return {
     success: true,
-    data: { NEXT_PUBLIC_SITE_URL: siteUrl.replace(/\/$/, "") },
+    data: { NEXT_PUBLIC_SITE_URL: normalizeSiteUrl(siteUrl) },
   };
 }
 

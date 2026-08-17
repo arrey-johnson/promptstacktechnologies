@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { AnalyticsRoot } from "@/components/analytics";
 import { eurostileVariableClassName } from "@/lib/fonts";
 import { createRootMetadata } from "@/lib/seo/metadata";
 import { cn } from "@/lib/cn";
@@ -30,6 +31,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <AnalyticsRoot />
         <DraftModeSanityLive />
       </body>
     </html>

@@ -5,7 +5,8 @@ import type { MetadataRoute } from "next";
  * 1) published legitimate content, and
  * 2) a real implemented public route.
  *
- * Insights detail/index URLs are intentionally excluded until Epic 10.
+ * Insight index + published detail slugs are included (Epic 10).
+ * Development fixtures and drafts never enter the sitemap.
  */
 
 export const SITEMAP_STATIC_PATHS = [
@@ -19,8 +20,10 @@ export const SITEMAP_STATIC_PATHS = [
   "/academy",
   "/academy/programs",
   "/academy/how-we-teach",
+  "/insights",
+  "/company/about",
+  "/contact",
   "/start-a-project",
-  "/privacy",
 ] as const;
 
 /** Routes that must never appear in the sitemap. */
@@ -29,7 +32,9 @@ export const SITEMAP_EXCLUDED_PATH_PREFIXES = [
   "/api/",
   "/project-request-received",
   "/academy/application-received",
-  "/insights",
+  "/privacy",
+  "/terms",
+  "/cookies",
 ] as const;
 
 export type SitemapContentInput = {
@@ -38,7 +43,7 @@ export type SitemapContentInput = {
   workSlugs: string[];
   /** Active Academy program slugs with implemented routes. */
   academyProgramSlugs: string[];
-  /** Reserved — must stay empty until Epic 10 implements routes. */
+  /** Real published Insight slugs only (never development fixtures). */
   insightSlugs?: string[];
   now?: Date;
 };
@@ -78,8 +83,12 @@ export function buildSitemapEntries(
     entries.push({ url: `${base}${path}`, lastModified: now });
   }
 
-  // Epic 10 gate: ignore insight slugs even if callers pass them.
-  void input.insightSlugs;
+  for (const slug of input.insightSlugs ?? []) {
+    if (!slug || slug.startsWith("development-preview-")) continue;
+    const path = `/insights/${slug}`;
+    if (isSitemapPathExcluded(path)) continue;
+    entries.push({ url: `${base}${path}`, lastModified: now });
+  }
 
   return entries;
 }

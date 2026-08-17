@@ -22,8 +22,9 @@
   --text-primary: #1b263b;
   --text-secondary: rgba(27, 38, 59, 0.72);
   --text-inverse: #ffffff;
-  /* Do not use --brand-grey for normal small body text on white (~3.15:1). */
-  --text-muted: rgba(27, 38, 59, 0.56);
+  /* Prefer navy-based muted text that meets ~WCAG AA on white for small copy.
+     Do not use brand grey #919191 for normal small body text. */
+  --text-muted: rgba(27, 38, 59, 0.68);
 
   --border-soft: rgba(27, 38, 59, 0.12);
   --border-strong: rgba(27, 38, 59, 0.25);

@@ -6,32 +6,40 @@ import {
 } from "./sitemap-entries";
 
 describe("sitemap safeguards", () => {
-  it("excludes Studio, confirmations, api, and Insights paths", () => {
+  it("excludes Studio, confirmations, api, and interim legal paths", () => {
     expect(isSitemapPathExcluded("/studio")).toBe(true);
-    expect(isSitemapPathExcluded("/studio/structure")).toBe(true);
     expect(isSitemapPathExcluded("/api/revalidate")).toBe(true);
     expect(isSitemapPathExcluded("/project-request-received")).toBe(true);
     expect(isSitemapPathExcluded("/academy/application-received")).toBe(true);
-    expect(isSitemapPathExcluded("/insights")).toBe(true);
-    expect(isSitemapPathExcluded("/insights/example")).toBe(true);
-    expect(isSitemapPathExcluded("/work")).toBe(false);
+    expect(isSitemapPathExcluded("/privacy")).toBe(true);
+    expect(isSitemapPathExcluded("/terms")).toBe(true);
+    expect(isSitemapPathExcluded("/cookies")).toBe(true);
+    expect(isSitemapPathExcluded("/insights")).toBe(false);
+    expect(isSitemapPathExcluded("/company/about")).toBe(false);
+    expect(isSitemapPathExcluded("/contact")).toBe(false);
   });
 
-  it("does not include Insight index or detail URLs before Epic 10", () => {
+  it("includes corporate About/Contact and Insight index after Epic 10/11", () => {
     const entries = buildSitemapEntries({
       baseUrl: "https://example.com",
       workSlugs: ["real-project"],
       academyProgramSlugs: ["software-engineering"],
-      insightSlugs: ["should-not-appear"],
+      insightSlugs: ["real-insight", "development-preview-software-systems"],
     });
 
     const urls = entries.map((entry) => entry.url);
-    expect(urls).toContain("https://example.com/work/real-project");
-    expect(urls).toContain(
-      "https://example.com/academy/programs/software-engineering",
+    expect(urls).toContain("https://example.com/company/about");
+    expect(urls).toContain("https://example.com/contact");
+    expect(urls).toContain("https://example.com/insights");
+    expect(urls).toContain("https://example.com/insights/real-insight");
+    expect(urls).not.toContain(
+      "https://example.com/insights/development-preview-software-systems",
     );
-    expect(urls.some((url) => url.includes("/insights"))).toBe(false);
-    expect(SITEMAP_STATIC_PATHS.includes("/insights" as never)).toBe(false);
+    expect(urls).not.toContain("https://example.com/privacy");
+    expect(urls).not.toContain("https://example.com/terms");
+    expect(urls).not.toContain("https://example.com/cookies");
+    expect(SITEMAP_STATIC_PATHS.includes("/company/about")).toBe(true);
+    expect(SITEMAP_STATIC_PATHS.includes("/contact")).toBe(true);
   });
 
   it("excludes placeholder-marked work slugs and excluded static paths", () => {

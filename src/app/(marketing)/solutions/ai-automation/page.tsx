@@ -9,6 +9,7 @@ import {
   SolutionPageHero,
   UseCaseList,
 } from "@/components/solutions";
+import { AnalyticsViewBeacon } from "@/components/analytics";
 import {
   aiAutomationCapabilities,
   aiAutomationCta,
@@ -32,6 +33,10 @@ export const metadata = createPageMetadata({
 export default async function AiAutomationPage() {
   return (
     <main id="main-content">
+      <AnalyticsViewBeacon
+        event="solution_view"
+        payload={{ solution_type: "ai-automation" }}
+      />
       <SolutionPageHero
         content={aiAutomationHero}
         analyticsPrefix="ai_automation"

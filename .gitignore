@@ -46,3 +46,7 @@ next-env.d.ts
 
 # Local scratch / review artifacts
 /tmp/
+
+test-results/
+playwright-report/
+

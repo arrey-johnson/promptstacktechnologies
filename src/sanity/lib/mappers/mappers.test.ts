@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { mapSanityCaseStudy } from "@/sanity/lib/mappers/caseStudy";
-import { mapSanityInsightPreview } from "@/sanity/lib/mappers/insight";
+import {
+  mapSanityInsightArticle,
+  mapSanityInsightPreview,
+} from "@/sanity/lib/mappers/insight";
 import { mapSanityAcademyProgram } from "@/sanity/lib/mappers/academyProgram";
 import { mapSanitySiteSettings } from "@/sanity/lib/mappers/siteSettings";
 import {
@@ -77,6 +80,25 @@ describe("insight mapper", () => {
     });
     expect(mapped?.isPlaceholder).toBe(false);
     expect(mapped?.href).toBe("/insights/automation-operations");
+  });
+
+  it("maps full articles with missing author and image safely", () => {
+    const mapped = mapSanityInsightArticle({
+      _id: "insight-2",
+      title: "When automation helps operations",
+      slug: "automation-operations",
+      excerpt:
+        "A practical look at choosing automation work that reduces operational friction.",
+      category: "business-operations",
+      body: [{ _type: "block", children: [] }],
+      publishedAt: "2026-02-01T12:00:00.000Z",
+      relatedSlugs: ["other"],
+      author: null,
+    });
+    expect(mapped?.author).toBeNull();
+    expect(mapped?.imageSrc).toBeNull();
+    expect(mapped?.relatedSlugs).toEqual(["other"]);
+    expect(mapped?.seo.noIndex).toBe(false);
   });
 
   it("returns null for incomplete insights", () => {

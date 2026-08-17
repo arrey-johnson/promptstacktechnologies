@@ -4,6 +4,7 @@ import {
   AcademyPageHero,
   ProgramDetailSections,
 } from "@/components/academy";
+import { AnalyticsViewBeacon } from "@/components/analytics";
 import { FAQSection } from "@/components/solutions";
 import {
   getAcademyProgramBySlug,
@@ -45,6 +46,10 @@ export default async function AcademyProgramPage({ params }: PageProps) {
       id="main-content"
       data-analytics={`academy_program_${program.slug}_view`}
     >
+      <AnalyticsViewBeacon
+        event="academy_program_view"
+        payload={{ program: program.slug }}
+      />
       <AcademyPageHero
         eyebrow={program.title}
         heading={program.heroHeading}

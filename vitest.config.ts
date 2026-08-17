@@ -5,6 +5,11 @@ export default defineConfig({
   test: {
     environment: "node",
     include: ["src/**/*.{test,spec}.{ts,tsx}"],
+    setupFiles: ["./src/test/setup.ts"],
+    // Prevent accidental inheritance of developer shell env for CMS switches.
+    env: {
+      VITEST: "true",
+    },
   },
   resolve: {
     alias: {

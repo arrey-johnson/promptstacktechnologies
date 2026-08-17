@@ -34,4 +34,16 @@ describe("getPublicEnv", () => {
     const result = getPublicEnv();
     expect(result.success).toBe(false);
   });
+
+  it("normalizes Promptstack production URL to https www", () => {
+    process.env.NEXT_PUBLIC_SITE_URL =
+      "http://www.promptstacktechnologies.com/";
+    const result = getPublicEnv();
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.NEXT_PUBLIC_SITE_URL).toBe(
+        "https://www.promptstacktechnologies.com",
+      );
+    }
+  });
 });
