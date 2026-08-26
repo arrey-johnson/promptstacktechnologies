@@ -102,19 +102,16 @@ export const aboutMarket = {
 
 /**
  * Verified founder identity only.
- * No unverified biography, degrees, employers, awards or photography.
+ * No unverified biography, degrees, employers, awards.
+ * Photography: owner-approved portrait only.
  */
 export const aboutFounder = {
   heading: "Founder & leadership",
   name: "Arrey Johnson",
   role: "Founder & CEO",
   organization: "Promptstack Technologies",
-  body: "Arrey Johnson leads Promptstack Technologies with a business-first approach to technology: connect real operating problems to practical software, automation, AI and digital growth solutions.",
-  /**
-   * TODO_ASSET: Add approved founder photography when available.
-   * Do not use AI-generated portraits or scraped social images.
-   */
-  imageSrc: null as string | null,
+  body: "Arrey Johnson is the Founder & CEO of Promptstack Technologies, a technology company focused on helping businesses solve real problems with software, AI, automation, and digital systems. His approach is simple: understand the problem, build what works, and create solutions that deliver measurable value.",
+  imageSrc: "/images/company/about-founder.webp",
   imageAlt: "Portrait of Arrey Johnson, Founder & CEO of Promptstack Technologies",
 } as const;
 

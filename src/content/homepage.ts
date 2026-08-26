@@ -129,7 +129,7 @@ export const homepageSolutions = {
         href: "/solutions/software",
       },
       align: "text-first" as const,
-      visual: "systems" as const,
+      visual: "software" as const,
     },
     {
       id: "ai-automation",
@@ -167,7 +167,7 @@ export const homepageSolutions = {
         href: "/solutions/digital-marketing",
       },
       align: "text-first" as const,
-      visual: "growth" as const,
+      visual: "marketing" as const,
     },
   ],
 } as const;

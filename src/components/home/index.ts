@@ -5,6 +5,7 @@ export { CapabilityStrip } from "./CapabilityStrip";
 export { DevelopmentPreviewLabel } from "./DevelopmentPreviewLabel";
 export { FinalCTA } from "./FinalCTA";
 export { Hero } from "./Hero";
+export { HomeSectionVisual } from "./HomeSectionVisual";
 export { InsightsPreview } from "./InsightsPreview";
 export { ProcessSection } from "./ProcessSection";
 export { SelectedWork } from "./SelectedWork";

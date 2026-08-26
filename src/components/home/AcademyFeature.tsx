@@ -1,6 +1,6 @@
 import { Button, Container, Eyebrow, Heading, Section, Text } from "@/components/ui";
 import { homepageAcademy } from "@/content/homepage";
-import { VisualPlaceholder } from "./VisualPlaceholder";
+import { HomeSectionVisual } from "./HomeSectionVisual";
 
 export function AcademyFeature() {
   const { label, heading, body, cta } = homepageAcademy;
@@ -32,20 +32,15 @@ export function AcademyFeature() {
               {body}
             </Text>
             <div className="mt-8">
-              <Button
-                href={cta.href}
-                size="lg"
-                data-analytics="cta_academy"
-              >
+              <Button href={cta.href} size="lg" data-analytics="cta_academy">
                 {cta.label}
               </Button>
             </div>
           </div>
           <div className="lg:col-span-6 xl:col-span-7">
-            <VisualPlaceholder
-              kind="academy"
+            <HomeSectionVisual
+              id="academy"
               className="border border-white/60 shadow-[0_20px_50px_rgba(27,38,59,0.08)]"
-              label="Academy learning composition"
             />
           </div>
         </div>

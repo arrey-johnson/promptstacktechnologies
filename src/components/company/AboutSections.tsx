@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container, Heading, Section, Text } from "@/components/ui";
 import {
@@ -191,15 +192,14 @@ export function AboutFounder() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-14">
           <div className="lg:col-span-4">
-            <div
-              className="flex aspect-[4/5] items-end bg-surface-muted p-6"
-              data-todo-asset="founder-photography"
-              role="img"
-              aria-label={aboutFounder.imageAlt}
-            >
-              <p className="text-sm text-text-muted">
-                TODO_ASSET: Approved founder photography
-              </p>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-visual)] border border-border-soft bg-surface-muted">
+              <Image
+                src={aboutFounder.imageSrc}
+                alt={aboutFounder.imageAlt}
+                fill
+                sizes="(max-width: 1023px) 90vw, 30vw"
+                className="object-cover object-[50%_15%]"
+              />
             </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">

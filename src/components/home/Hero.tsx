@@ -1,7 +1,12 @@
+import Image from "next/image";
 import { Button, Container, Eyebrow, Heading, Text } from "@/components/ui";
 import { homepageHero } from "@/content/homepage";
-import { VisualPlaceholder } from "./VisualPlaceholder";
 
+/**
+ * Homepage hero — approved copy/layout preserved.
+ * Visual: VR / immersive tech portrait in the right-hand panel.
+ * Image is atmospheric brand photography (decorative); meaning is in the copy.
+ */
 export function Hero() {
   const { eyebrow, h1, supporting, primaryCta, secondaryCta } = homepageHero;
 
@@ -52,11 +57,19 @@ export function Hero() {
           </div>
 
           <div className="lg:col-span-5">
-            <VisualPlaceholder
-              kind="hero"
-              className="border border-border-soft shadow-[0_24px_60px_rgba(27,38,59,0.08)]"
-              label="hero product composition"
-            />
+            <div
+              aria-hidden="true"
+              className="relative mx-auto aspect-[5/4] w-full max-h-[16.5rem] overflow-hidden rounded-[var(--radius-visual)] border border-border-soft shadow-[0_24px_60px_rgba(27,38,59,0.08)] sm:aspect-[5/6] sm:max-h-[24rem] lg:mx-0 lg:aspect-[5/6] lg:max-h-none lg:min-h-[28rem]"
+            >
+              <Image
+                src="/images/home/homepage-hero-vr-v2.webp"
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 70vw, 40vw"
+                className="object-cover object-[50%_20%]"
+              />
+            </div>
           </div>
         </div>
       </Container>

@@ -31,7 +31,7 @@ describe("company content integrity", () => {
   it("uses verified founder identity only", () => {
     expect(aboutFounder.name).toBe("Arrey Johnson");
     expect(aboutFounder.role).toBe("Founder & CEO");
-    expect(aboutFounder.imageSrc).toBeNull();
+    expect(aboutFounder.imageSrc).toBe("/images/company/about-founder.webp");
   });
 
   it("does not invent trust metrics in company copy", () => {
