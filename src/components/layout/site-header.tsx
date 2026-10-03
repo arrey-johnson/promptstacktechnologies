@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PromptstackLogo } from "@/components/brand/promptstack-logo";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { SocialIconLinks } from "@/components/layout/social-icons";
@@ -63,8 +63,21 @@ export function SiteHeader({
   const menuLabel = locale === "fr" ? "Ouvrir le menu" : "Open menu";
   const closeLabel = locale === "fr" ? "Fermer le menu" : "Close menu";
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-40">
+    <header className="sticky top-0 z-50">
       <div className="bg-brand-navy text-white">
         <div className="site-container flex min-h-10 flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 text-xs sm:text-[0.8rem]">
           <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-1.5 text-white/90">
@@ -91,7 +104,7 @@ export function SiteHeader({
         </div>
       </div>
 
-      <div className="border-b border-brand-navy/10 bg-white/90 backdrop-blur">
+      <div className="relative border-b border-brand-navy/10 bg-white/90 backdrop-blur">
         <div className="site-container flex min-h-[4.5rem] items-center justify-between gap-4 py-3">
           <PromptstackLogo className="inline-flex items-center gap-3" />
 
@@ -144,27 +157,39 @@ export function SiteHeader({
         </div>
 
         {open ? (
-          <nav
-            id="mobile-nav"
-            className="border-t border-brand-navy/10 bg-white lg:hidden"
-            aria-label="Mobile"
-          >
-            <div className="site-container flex flex-col gap-3 py-4">
-              {nav.map((item) => (
+          <>
+            <button
+              type="button"
+              className="fixed inset-0 z-40 bg-brand-navy/45 lg:hidden"
+              aria-label={closeLabel}
+              onClick={() => setOpen(false)}
+            />
+            <nav
+              id="mobile-nav"
+              className="absolute inset-x-0 top-full z-50 border-b border-brand-navy/10 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.18)] lg:hidden"
+              aria-label="Mobile"
+            >
+              <div className="site-container flex max-h-[min(70dvh,28rem)] flex-col gap-1 overflow-y-auto py-3">
+                {nav.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-(--radius-btn) px-3 py-3 text-sm font-semibold text-brand-navy hover:bg-surface-soft"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-semibold text-brand-navy"
+                  href={cta.href}
+                  className="btn-primary mt-2 w-fit"
                   onClick={() => setOpen(false)}
                 >
-                  {item.label}
+                  {cta.label}
                 </Link>
-              ))}
-              <Link href={cta.href} className="btn-primary w-fit" onClick={() => setOpen(false)}>
-                {cta.label}
-              </Link>
-            </div>
-          </nav>
+              </div>
+            </nav>
+          </>
         ) : null}
       </div>
     </header>

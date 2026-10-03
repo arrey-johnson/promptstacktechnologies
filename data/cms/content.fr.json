@@ -156,7 +156,7 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Promptstack Technologies · Douala",
+      "eyebrow": "Promptstack Technologies",
       "heading": "Construisez de meilleurs systèmes. Automatisez ce qui vous ralentit.",
       "accentWords": [
         "meilleurs",
@@ -178,7 +178,7 @@
       "heading": "Des systèmes que votre équipe peut faire tourner — et faire grandir.",
       "body": [
         "Promptstack Technologies se place à la croisée des opérations, de la croissance et des compétences. Nous aidons les organisations à arrêter de bricoler des outils et à livrer logiciels, automatisations et campagnes que les opérateurs peuvent vraiment posséder.",
-        "Depuis Bonapriso, Douala, nous associons la livraison à Promptstack Academy pour que la capacité ne parte pas avec le projet — elle s'accumule dans votre équipe."
+        "Nous associons la livraison à Promptstack Academy pour que la capacité ne parte pas avec le projet — elle s'accumule dans votre équipe."
       ]
     },
     "servicesIntro": {
@@ -240,10 +240,10 @@
     },
     "aboutTeaser": {
       "eyebrow": "Qui nous sommes",
-      "heading": "Des builders à Bonapriso — centrés sur des résultats utilisables.",
+      "heading": "Construit autour de services qui font avancer le travail réel.",
       "body": [
-        "Promptstack est une entreprise techno basée à Douala. Notre métier : livrer logiciels, automatisations et systèmes de croissance — et former les gens à faire tourner ce que nous laissons.",
-        "Nous concevons pour une connectivité mixte, des équipes lean, et des dirigeants qui veulent des preuves plus vite qu'un long deck stratégique."
+        "Promptstack est une entreprise techno centrée sur le logiciel, l'IA & l'automatisation, le marketing digital et l'Academy — pour livrer des systèmes que les équipes peuvent faire tourner, et des compétences qui restent.",
+        "Nous concevons pour des équipes lean, des contraintes concrètes, et des dirigeants qui veulent des preuves plus vite qu'un long deck stratégique."
       ]
     },
     "whyUs": {
@@ -281,7 +281,7 @@
     "hero": {
       "eyebrow": "Promptstack Technologies",
       "heading": "À propos de Promptstack",
-      "body": "Une entreprise à Douala qui construit logiciels, automatisations, systèmes de marketing digital et programmes Academy — pour des opérations plus claires et des compétences qui restent."
+      "body": "Nous construisons logiciels, automatisations, systèmes de marketing digital et programmes Academy — pour des opérations plus claires et des compétences qui restent."
     },
     "story": {
       "eyebrow": "Comment nous en sommes arrivés là",
@@ -296,8 +296,8 @@
       "heading": "Les exigences que nous nous fixons",
       "items": [
         {
-          "title": "Racines à Bonapriso, esprit opérateur",
-          "body": "Nous concevons pour le travail réel ici — équipes lean, connectivité mixte, et dirigeants qui veulent des preuves plus vite qu'un long deck."
+          "title": "Les services d'abord, esprit opérateur",
+          "body": "Notre identité, c'est le travail que nous livrons — logiciel, automatisation, systèmes de croissance et Academy — conçu pour des équipes lean et des dirigeants qui veulent des preuves vite."
         },
         {
           "title": "Livrer ce que les gens peuvent faire tourner",
@@ -377,7 +377,7 @@
   "careersPage": {
     "hero": {
       "heading": "Travailler chez Promptstack",
-      "body": "Rejoignez une équipe à Douala qui livre logiciel, automatisation, systèmes de croissance et Academy — avec craft, clarté, et de la place pour monter en niveau."
+      "body": "Rejoignez une équipe qui livre logiciel, automatisation, systèmes de croissance et Academy — avec craft, clarté, et de la place pour monter en niveau."
     },
     "whyJoin": {
       "heading": "Pourquoi on nous rejoint",
@@ -425,6 +425,13 @@
       "name": "Logiciel",
       "summary": "Outils et plateformes calés sur vos vrais flux de travail.",
       "body": "Nous construisons des systèmes web et mobile que votre équipe peut faire tourner au quotidien — apps internes, portails clients et outils métier alignés sur le travail réel.",
+      "detailBody": "Quand les tableurs, les fils de chat et les outils génériques ne suffisent plus, nous concevons et livrons un logiciel dans lequel vos opérateurs peuvent vraiment travailler. Flux clairs, permissions sensées, releases revoyables avant le go-live — pas une passation boîte noire.",
+      "details": [
+        "Ateliers de découverte pour cartographier le vrai flux avant de proposer des écrans",
+        "Apps web/mobile, portails et tableaux de bord ops calés sur votre process",
+        "Builds itératifs avec démos pour corriger le cap tant que changer coûte peu",
+        "Passation, formation et suivi optionnel pour que la propriété reste chez vous"
+      ],
       "href": "/services#software",
       "imageSrc": "/brand/services/software.jpg",
       "imageAlt": "Développeur travaillant tard devant plusieurs écrans de code"
@@ -434,6 +441,13 @@
       "name": "IA & Automatisation",
       "summary": "Automatisez les étapes répétitives qui mangent votre semaine.",
       "body": "Nous repérons les handoffs, copier-coller et piles de validation à corriger — puis nous les automatisons avec des flux maintenables, pas du théâtre de démo.",
+      "detailBody": "Nous ciblons la corvée qui brûle des heures sans jugement — ressaisie, relances, mises à jour de statut, routage de documents — et la remplaçons par des automatisations que votre équipe comprend et peut maintenir. L'IA là où elle aide ; des flux fiables là où ils suffisent.",
+      "details": [
+        "Audit de process pour repérer les automatisations à fort ROI",
+        "Automatisation des formulaires, validations, notifications et handoffs",
+        "Assistants IA pratiques quand ils réduisent l'erreur ou accélèrent les décisions",
+        "Suivi et playbooks pour que les automatisations ne deviennent pas une dette obscure"
+      ],
       "href": "/services#ai-automation",
       "imageSrc": "/brand/services/ai-automation.jpg",
       "imageAlt": "Poignée de main entre une main humaine et une main robotique"
@@ -443,6 +457,13 @@
       "name": "Marketing digital",
       "summary": "Acquisition et contenu reliés à des chiffres défendables.",
       "body": "SEO, médias payants, contenu et analytics connectés pour transformer l'attention en pipeline — avec un reporting fiable pour les opérateurs.",
+      "detailBody": "Nous construisons des systèmes de croissance, pas des campagnes déconnectées. Canaux, pages et reporting restent reliés pour voir ce qui a coûté, ce qui a converti, et quoi faire ensuite — sans tableau de bord illisible.",
+      "details": [
+        "Stratégie de canaux (SEO, paid, contenu) avec des priorités claires",
+        "Pages et tunnels alignés sur l'offre et l'audience",
+        "Tracking et analytics qui relient dépenses, leads et conversion",
+        "Reporting utilisable semaine après semaine — pas seulement des vanity metrics"
+      ],
       "href": "/services#digital-marketing",
       "imageSrc": "/brand/services/digital-marketing.jpg",
       "imageAlt": "Professionnelle souriante en appel vidéo sur smartphone à son bureau"
@@ -452,6 +473,13 @@
       "name": "Academy",
       "summary": "Apprendre en construisant. Partir avec des preuves, pas seulement des slides.",
       "body": "Promptstack Academy forme à livrer du travail fini — des projets qui démontrent la compétence, pas des certificats sans preuve.",
+      "detailBody": "Promptstack Academy s'adresse aux personnes et équipes qui veulent une capacité démontrable. Les apprenants construisent vers des projets finis — avec coaching, critique, et un parcours proche de notre livraison client — pour que les compétences survivent à la salle de classe.",
+      "details": [
+        "Parcours par projets en logiciel, IA et compétences digitales associées",
+        "Cycles de build mentorés avec revues, pas seulement des cours enregistrés",
+        "Livrables portfolio qui prouvent ce que quelqu'un peut shipper",
+        "Options d'upselling d'équipe quand vous voulez la capacité en interne"
+      ],
       "href": "/services#academy",
       "imageSrc": "/brand/services/academy.jpg",
       "imageAlt": "Intervenante présentant devant des participants en atelier de formation"

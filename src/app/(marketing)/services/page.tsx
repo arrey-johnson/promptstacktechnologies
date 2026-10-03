@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getCmsData } from "@/lib/cms/store";
+import { getRequestLocale } from "@/lib/i18n/locale";
 
 export const metadata: Metadata = { title: "Services" };
 
 export default async function ServicesPage() {
-  const { servicesPage, serviceItems } = await getCmsData();
+  const [cms, locale] = await Promise.all([getCmsData(), getRequestLocale()]);
+  const { servicesPage, serviceItems } = cms;
+  const includedLabel = locale === "fr" ? "Ce que ça couvre" : "What this covers";
+  const ctaLabel = locale === "fr" ? "Réserver un appel découverte" : "Book a discovery call";
 
   return (
     <>
@@ -15,7 +19,7 @@ export default async function ServicesPage() {
         <p className="mt-4 max-w-2xl body-muted">{servicesPage.hero.body}</p>
       </section>
 
-      <section className="site-container pb-16 grid gap-6">
+      <section className="site-container pb-16 grid gap-8">
         {serviceItems.map((service) => (
           <article
             key={service.id}
@@ -45,9 +49,26 @@ export default async function ServicesPage() {
                   <p className="mt-2 text-sm font-semibold text-brand-purple">{service.summary}</p>
                 </>
               ) : null}
-              <p className={`body-muted ${service.imageSrc ? "mt-4" : ""}`}>{service.body}</p>
-              <Link href="/contact?subject=Project%20enquiry" className="btn-primary mt-5 inline-flex">
-                Book a discovery call
+              <p className={`body-muted ${service.imageSrc ? "mt-4" : ""}`}>
+                {service.detailBody || service.body}
+              </p>
+              {service.details && service.details.length > 0 ? (
+                <div className="mt-6">
+                  <p className="text-sm font-bold tracking-wide text-brand-navy uppercase">
+                    {includedLabel}
+                  </p>
+                  <ul className="mt-3 space-y-2">
+                    {service.details.map((item) => (
+                      <li key={item} className="flex gap-2 body-muted">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-purple" aria-hidden />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              <Link href="#book-discovery" className="btn-primary mt-6 inline-flex">
+                {ctaLabel}
               </Link>
             </div>
           </article>

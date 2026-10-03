@@ -9,6 +9,9 @@ export type ServiceItem = {
   name: string;
   summary: string;
   body: string;
+  /** Longer detail shown on /services — keep home cards on summary + body */
+  detailBody?: string;
+  details?: string[];
   href: string;
   imageSrc?: string;
   imageAlt?: string;

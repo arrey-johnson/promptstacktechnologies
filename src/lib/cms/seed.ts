@@ -79,7 +79,7 @@ export const cmsSeed: CmsData = {
   },
   home: {
     hero: {
-      eyebrow: "Promptstack Technologies · Douala",
+      eyebrow: "Promptstack Technologies",
       heading: "Build better systems. Automate the work slowing you down.",
       accentWords: ["better", "Automate"],
       supporting:
@@ -93,7 +93,7 @@ export const cmsSeed: CmsData = {
       heading: "Systems your team can run — and grow with.",
       body: [
         "Promptstack Technologies sits where operations, growth, and skills meet. We help organisations stop duct-taping tools together and start shipping software, automation, and campaigns that operators can own.",
-        "From Bonapriso, Douala, we pair delivery with Promptstack Academy so capability doesn’t leave when a project ends — it compounds inside your team.",
+        "We pair delivery with Promptstack Academy so capability doesn’t leave when a project ends — it compounds inside your team.",
       ],
     },
     servicesIntro: {
@@ -149,10 +149,10 @@ export const cmsSeed: CmsData = {
     },
     aboutTeaser: {
       eyebrow: "Who we are",
-      heading: "Builders in Bonapriso — focused on usable outcomes.",
+      heading: "Built around services that move real work.",
       body: [
-        "Promptstack is a Douala-based technology company. Our day job is shipping software, automation, and growth systems — and training people to run what we leave behind.",
-        "We design for mixed connectivity, lean teams, and leaders who need proof faster than a long strategy deck.",
+        "Promptstack is a technology company focused on software, AI & automation, digital marketing, and Academy — shipping systems teams can run, and skills that stick.",
+        "We design for lean teams, practical constraints, and leaders who need proof faster than a long strategy deck.",
       ],
     },
     whyUs: {
@@ -187,7 +187,7 @@ export const cmsSeed: CmsData = {
     hero: {
       eyebrow: "Promptstack Technologies",
       heading: "About Promptstack",
-      body: "A Douala company building software, automation, digital marketing systems, and Academy programs — so teams can run clearer operations and grow with skills that stick.",
+      body: "We build software, automation, digital marketing systems, and Academy programs — so teams can run clearer operations and grow with skills that stick.",
     },
     story: {
       eyebrow: "How we got here",
@@ -202,8 +202,8 @@ export const cmsSeed: CmsData = {
       heading: "The standards we hold ourselves to",
       items: [
         {
-          title: "Bonapriso roots, operator mindset",
-          body: "We design for how work really happens here — lean teams, mixed connectivity, and leaders who need proof faster than a long strategy deck.",
+          title: "Services first, operator mindset",
+          body: "Our identity is the work we ship — software, automation, growth systems, and Academy — designed for lean teams and leaders who need proof faster than a long strategy deck.",
         },
         {
           title: "Ship what people can run",
@@ -280,7 +280,7 @@ export const cmsSeed: CmsData = {
   careersPage: {
     hero: {
       heading: "Work at Promptstack",
-      body: "Join a Douala team that ships software, automation, growth systems, and Academy — with craft, clarity, and room to level up.",
+      body: "Join a team that ships software, automation, growth systems, and Academy — with craft, clarity, and room to level up.",
     },
     whyJoin: {
       heading: "Why people join us",
@@ -328,6 +328,14 @@ export const cmsSeed: CmsData = {
       name: "Software",
       summary: "Custom tools and platforms shaped around your real workflows.",
       body: "We build web and mobile systems your team can run day to day — internal apps, client portals, and line-of-business tools matched to how work actually moves.",
+      detailBody:
+        "When spreadsheets, chat threads, and off-the-shelf tools stop fitting, we design and ship software your operators can actually live in. That means clear workflows, sensible permissions, and releases you can review before go-live — not a black-box handoff.",
+      details: [
+        "Discovery workshops to map the real workflow before we propose screens",
+        "Web and mobile apps, portals, and ops dashboards shaped to your process",
+        "Iterative builds with demos so you can steer while change is still cheap",
+        "Handover, training, and optional aftercare so ownership stays with your team",
+      ],
       href: "/services#software",
       imageSrc: "/brand/services/software.jpg",
       imageAlt: "Developer working late at a desk with code on multiple screens",
@@ -337,6 +345,14 @@ export const cmsSeed: CmsData = {
       name: "AI & Automation",
       summary: "Automate the repetitive steps that steal your week.",
       body: "We find the handoffs, copy-paste loops, and approval piles worth fixing — then automate them with maintainable workflows, not demo theatre.",
+      detailBody:
+        "We look for the grind that burns hours without adding judgment — re-keying, chasing approvals, status updates, document routing — and replace it with automations your team can understand and maintain. AI is used where it helps; boring reliable workflows win where they do.",
+      details: [
+        "Process audit to spot high-ROI automation candidates",
+        "Workflow automation across forms, approvals, notifications, and handoffs",
+        "Practical AI assist where it reduces error or speeds decisions",
+        "Monitoring and playbooks so automations don’t become mysterious debts",
+      ],
       href: "/services#ai-automation",
       imageSrc: "/brand/services/ai-automation.jpg",
       imageAlt: "Human and robot hands shaking — partnership between people and automation",
@@ -346,6 +362,14 @@ export const cmsSeed: CmsData = {
       name: "Digital Marketing",
       summary: "Acquisition and content tied to numbers you can defend.",
       body: "SEO, paid media, content, and analytics connected so attention turns into pipeline — with reporting operators can trust.",
+      detailBody:
+        "We build growth systems, not disconnected campaigns. Channels, landing experiences, and reporting stay wired together so you can see what spent money, what converted, and what to do next — without a dashboard that only a consultant can decode.",
+      details: [
+        "Channel strategy across SEO, paid media, and content with clear priorities",
+        "Landing pages and funnels aligned to the offer and audience",
+        "Tracking and analytics that connect spend to leads and conversion",
+        "Reporting your team can use week to week — not vanity metrics alone",
+      ],
       href: "/services#digital-marketing",
       imageSrc: "/brand/services/digital-marketing.jpg",
       imageAlt: "Professional smiling during a video call on a smartphone at her desk",
@@ -355,6 +379,14 @@ export const cmsSeed: CmsData = {
       name: "Academy",
       summary: "Learn by building. Leave with proof, not just slides.",
       body: "Promptstack Academy trains people to ship finished work — projects that demonstrate skill, not certificates without evidence.",
+      detailBody:
+        "Promptstack Academy is for people and teams who want capability they can show. Learners build toward finished projects — with coaching, critique, and a path that mirrors how we deliver client work — so skills survive past the classroom.",
+      details: [
+        "Project-based paths across software, AI, and related digital skills",
+        "Mentored build cycles with reviews, not only recorded lectures",
+        "Portfolio-ready outputs that prove what someone can ship",
+        "Team upskilling options when you want delivery capacity in-house",
+      ],
       href: "/services#academy",
       imageSrc: "/brand/services/academy.jpg",
       imageAlt: "Speaker presenting to attendees at a professional training workshop",
