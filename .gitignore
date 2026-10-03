@@ -1,0 +1,8 @@
+node_modules
+.next
+.tools
+*.log
+.env
+.env*.local
+!.env.example
+data/booking/bookings.json

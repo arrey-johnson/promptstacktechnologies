@@ -1,0 +1,403 @@
+import type { CmsData } from "./types";
+
+export const cmsSeedFr: CmsData = {
+  settings: {
+    siteName: "Promptstack Technologies",
+    tagline: "Construisez de meilleurs systèmes. Automatisez ce qui vous ralentit.",
+    contactEmail: "hello@promptstacktechnologies.com",
+    phone: "+237 674 047 453",
+    location: "Bonapriso, Douala",
+    nav: [
+      { label: "Accueil", href: "/" },
+      { label: "À propos", href: "/about" },
+      { label: "Services", href: "/services" },
+      { label: "Produits", href: "/products" },
+      { label: "Carrières", href: "/careers" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contact", href: "/contact" },
+    ],
+    cta: { label: "Réserver un appel", href: "#book-discovery" },
+    footerColumns: [
+      {
+        title: "Promptstack",
+        links: [
+          { label: "À propos", href: "/about" },
+          { label: "Carrières", href: "/careers" },
+          { label: "Contact", href: "/contact" },
+          { label: "Blog", href: "/blog" },
+        ],
+      },
+      {
+        title: "Ce que nous offrons",
+        links: [
+          { label: "Logiciel", href: "/services#software" },
+          { label: "IA & Automatisation", href: "/services#ai-automation" },
+          { label: "Marketing digital", href: "/services#digital-marketing" },
+          { label: "Academy", href: "/services#academy" },
+        ],
+      },
+      {
+        title: "Academy",
+        links: [
+          { label: "Programmes", href: "/services#academy" },
+          { label: "Nous écrire", href: "/contact?subject=Demande%20Academy" },
+        ],
+      },
+      {
+        title: "Plus",
+        links: [
+          { label: "Produits", href: "/products" },
+          { label: "Appel découverte", href: "#book-discovery" },
+          { label: "Contact", href: "/contact" },
+        ],
+      },
+      {
+        title: "Légal",
+        links: [
+          { label: "Politique de confidentialité", href: "/privacy-policy" },
+          { label: "Conditions d'utilisation", href: "/terms-of-service" },
+          { label: "Politique cookies", href: "/cookie-policy" },
+        ],
+      },
+    ],
+    socials: [
+      { label: "LinkedIn", href: "https://www.linkedin.com/" },
+      { label: "X", href: "https://x.com/" },
+      { label: "TikTok", href: "https://www.tiktok.com/" },
+    ],
+    newsletter: {
+      heading: "Notes Promptstack",
+      body: "Des updates courts sur les produits, les cohortes Academy et des leçons de livraison — sans spam.",
+      consent:
+        "Oui, envoyez-moi occasionnellement des updates Promptstack sur les produits, l'Academy et les événements.",
+    },
+    seo: {
+      title: "Promptstack Technologies",
+      description:
+        "Promptstack Technologies aide les entreprises à résoudre leurs défis opérationnels et de croissance grâce au logiciel, à l'IA & l'automatisation, au marketing digital et à l'Academy.",
+    },
+  },
+  home: {
+    hero: {
+      eyebrow: "Promptstack Technologies · Douala",
+      heading: "Construisez de meilleurs systèmes. Automatisez ce qui vous ralentit.",
+      accentWords: ["meilleurs", "Automatisez"],
+      supporting:
+        "Logiciel, IA & automatisation, marketing digital et Promptstack Academy — pour des processus plus clairs, des décisions plus rapides et une croissance mesurable.",
+      primaryCta: { label: "Réserver un appel découverte", href: "#book-discovery" },
+      secondaryCta: { label: "Voir nos services", href: "/services" },
+      videoSrc: "/brand/hero-background.mp4",
+    },
+    purpose: {
+      eyebrow: "Le brief Promptstack",
+      heading: "Des systèmes que votre équipe peut faire tourner — et faire grandir.",
+      body: [
+        "Promptstack Technologies se place à la croisée des opérations, de la croissance et des compétences. Nous aidons les organisations à arrêter de bricoler des outils et à livrer logiciels, automatisations et campagnes que les opérateurs peuvent vraiment posséder.",
+        "Depuis Bonapriso, Douala, nous associons la livraison à Promptstack Academy pour que la capacité ne parte pas avec le projet — elle s'accumule dans votre équipe.",
+      ],
+    },
+    servicesIntro: {
+      eyebrow: "La stack Promptstack",
+      heading: "Un partenaire. Quatre leviers reliés.",
+      body: "Choisissez le point d'entrée qui fait le plus mal aujourd'hui — logiciel sur mesure, IA & automatisation, marketing digital ou Academy — puis élargissez sans changer de prestataire en cours de route.",
+    },
+    featuredWork: {
+      eyebrow: "Ce que nous livrons typiquement",
+      heading: "Exemples de chantiers",
+      items: [
+        {
+          title: "Cockpit ops pour validations et relances",
+          industry: "Ops back-office",
+          services: ["Logiciel", "IA & Automatisation"],
+          body: "Un espace partagé qui remplace la chasse aux tableurs par des files claires, des rappels et une traçabilité.",
+        },
+        {
+          title: "Moteur de demande avec reporting honnête",
+          industry: "Équipes revenus",
+          services: ["Marketing digital", "Logiciel"],
+          body: "Campagnes, pages et tableaux de bord reliés pour que dépenses, leads et conversion racontent une seule histoire.",
+        },
+      ],
+    },
+    process: {
+      eyebrow: "Travailler avec Promptstack",
+      heading: "Quatre phases. Démos hebdo. Responsables nommés.",
+      body: "Nous gardons l'engagement assez compact pour le piloter : diagnostiquer la contrainte, verrouiller un premier gain utile, livrer par tranches revoyables, puis laisser le système avec des propriétaires clairs chez vous.",
+      steps: [
+        {
+          title: "Diagnostiquer le goulot",
+          body: "Nous travaillons avec les gens qui font le travail, nommons la friction en langage clair, et définissons ce que « mieux » doit signifier avant de proposer des outils.",
+        },
+        {
+          title: "Verrouiller le premier gain utile",
+          body: "Périmètre, séquence et critères de succès sont écrits tôt — pour protéger le résultat qui compte dans les prochaines semaines, pas une roadmap fantaisiste.",
+        },
+        {
+          title: "Livrer, revoir, solidifier",
+          body: "Vous voyez des tranches qui marchent à un rythme régulier. Le feedback arrive quand changer coûte peu ; les tests voyagent avec le build, pas en panique finale.",
+        },
+        {
+          title: "Transférer la propriété",
+          body: "Le go-live inclut formation, docs et carte des responsables. Des parcours Academy sont dispo quand vous voulez garder les compétences en interne.",
+        },
+      ],
+    },
+    productsTeaser: {
+      eyebrow: "En labo",
+      heading: "Des ventures que nous façonnons",
+      body: "Cartes placeholder pour les idées que Promptstack explore. Renommez, changez le statut ou remplacez-les dans Admin → Produits.",
+    },
+    aboutTeaser: {
+      eyebrow: "Qui nous sommes",
+      heading: "Des builders à Bonapriso — centrés sur des résultats utilisables.",
+      body: [
+        "Promptstack est une entreprise techno basée à Douala. Notre métier : livrer logiciels, automatisations et systèmes de croissance — et former les gens à faire tourner ce que nous laissons.",
+        "Nous concevons pour une connectivité mixte, des équipes lean, et des dirigeants qui veulent des preuves plus vite qu'un long deck stratégique.",
+      ],
+    },
+    whyUs: {
+      eyebrow: "Ce que vous gagnez avec Promptstack",
+      heading: "Livraison plus capacité — pas seulement des slides.",
+      items: [
+        {
+          title: "Une stack reliée, pas des silos",
+          body: "Logiciel, automatisation, marketing et Academy peuvent se renforcer au lieu de se battre pour le budget chez quatre prestataires différents.",
+        },
+        {
+          title: "Design orienté opérateurs",
+          body: "Interfaces et flux sont jugés par ceux qui cliquent chaque jour — pas seulement par le comité de pilotage.",
+        },
+        {
+          title: "Progrès par démos",
+          body: "Vous voyez assez souvent du logiciel et des artefacts de campagne pour corriger le cap. Les surprises restent petites et corrigeables.",
+        },
+        {
+          title: "Des compétences qui restent",
+          body: "Quand vous le voulez, l'Academy transforme la livraison en capacité interne — pour que le gain ne soit pas loué pour toujours.",
+        },
+      ],
+    },
+    finalCta: {
+      heading: "Envie d'une prochaine étape plus claire ?",
+      body: "Réservez un appel découverte. Nous trancherons s'il vous faut un système, une automatisation, une poussée growth, l'Academy, ou un mix — et quoi faire en premier.",
+      cta: { label: "Réserver un appel découverte", href: "#book-discovery" },
+    },
+  },
+  about: {
+    hero: {
+      eyebrow: "Promptstack Technologies",
+      heading: "À propos de Promptstack",
+      body: "Une entreprise à Douala qui construit logiciels, automatisations, systèmes de marketing digital et programmes Academy — pour des opérations plus claires et des compétences qui restent.",
+    },
+    story: {
+      eyebrow: "Comment nous en sommes arrivés là",
+      heading: "Concentrés sur la stack qui fait vraiment avancer le travail.",
+      body: [
+        "Promptstack part d'une frustration simple : trop d'organisations jonglent avec des outils qui ne se parlent pas, des campagnes illisibles, et des formations qui n'arrivent jamais en production.",
+        "Nous nous sommes recentrés sur quatre leviers reliés — logiciel, IA & automatisation, marketing digital et Academy — pour que livraison et capacité grandissent ensemble.",
+      ],
+    },
+    values: {
+      eyebrow: "Notre façon de travailler",
+      heading: "Les exigences que nous nous fixons",
+      items: [
+        {
+          title: "Racines à Bonapriso, esprit opérateur",
+          body: "Nous concevons pour le travail réel ici — équipes lean, connectivité mixte, et dirigeants qui veulent des preuves plus vite qu'un long deck.",
+        },
+        {
+          title: "Livrer ce que les gens peuvent faire tourner",
+          body: "De beaux écrans sans propriétaires ne comptent pas. Nous optimisons pour des systèmes que votre équipe peut opérer après notre départ.",
+        },
+        {
+          title: "Dire les arbitrages tôt",
+          body: "Périmètre, risques et délais sont nommés clairement. Les surprises doivent rester rares et petites.",
+        },
+        {
+          title: "Laisser de la capacité derrière",
+          body: "Quand c'est pertinent, l'Academy transforme le projet en muscle interne — pas une location permanente.",
+        },
+      ],
+    },
+    teamIntro: {
+      heading: "Les personnes derrière Promptstack",
+      body: "Ajoutez vrais noms, rôles et bios dans l'Admin quand vous êtes prêts à publier l'équipe.",
+    },
+    capabilities: {
+      heading: "La boîte à outils Promptstack",
+      body: "Quatre voies de livraison, plus les habitudes qui gardent les projets honnêtes du premier atelier à la passation.",
+      items: [
+        {
+          title: "Cartographie des contraintes",
+          body: "Nous partons du goulot — process, données, outils ou compétences — avant de proposer un build.",
+        },
+        {
+          title: "Logiciel sur mesure",
+          body: "Systèmes web et mobile calés sur vos vrais flux, pas sur des templates génériques.",
+        },
+        {
+          title: "IA & automatisation",
+          body: "Des flux qui coupent le répétitif et réduisent l'erreur, sans cirque de démos.",
+        },
+        {
+          title: "Systèmes de croissance",
+          body: "Acquisition, contenu et analytics reliés pour que l'attention rejoigne le pipeline.",
+        },
+        {
+          title: "Parcours Academy",
+          body: "Apprendre en livrant du travail fini — des preuves plutôt que des slides.",
+        },
+        {
+          title: "Passation & suivi",
+          body: "Formation, carte des responsables et support optionnel pour que le go-live ne soit pas la fin.",
+        },
+      ],
+    },
+    contactBand: {
+      heading: "Envie de voir si ça matche ?",
+      body: "Réservez un appel découverte ou écrivez-nous — nous tracerons la prochaine étape utile.",
+    },
+  },
+  servicesPage: {
+    hero: {
+      heading: "Services",
+      body: "Quatre leviers reliés : logiciel sur mesure, IA & automatisation, marketing digital et Academy. Commencez là où la contrainte est la plus nette.",
+    },
+    cta: {
+      heading: "Pas sûr du levier à tirer en premier ?",
+      body: "Réservez un appel découverte et nous trancherons la séquence ensemble.",
+      cta: { label: "Réserver un appel découverte", href: "#book-discovery" },
+    },
+  },
+  productsPage: {
+    hero: {
+      eyebrow: "Produits Promptstack",
+      heading: "Produits bientôt disponibles",
+      body: "Nous façonnons des ventures et outils qui méritent d'être publiés. Cette page s'ouvrira quand les premiers seront prêts à partager.",
+    },
+    emptyState: "Revenez bientôt — ou réservez un appel découverte pour un aperçu anticipé.",
+  },
+  careersPage: {
+    hero: {
+      heading: "Travailler chez Promptstack",
+      body: "Rejoignez une équipe à Douala qui livre logiciel, automatisation, systèmes de croissance et Academy — avec craft, clarté, et de la place pour monter en niveau.",
+    },
+    whyJoin: {
+      heading: "Pourquoi on nous rejoint",
+      body: "Des contraintes clients réelles, une stack reliée, et des pairs qui visent des résultats utilisables.",
+      items: [
+        "Livrer des systèmes que les opérateurs peuvent vraiment faire tourner",
+        "Travailler entre logiciel, automatisation, marketing et Academy",
+        "Grandir par démos, revues et travail fini — pas par du remplissage",
+      ],
+    },
+    openRolesHeading: "Postes ouverts",
+    emptyState: "Aucun poste ouvert pour le moment. Laissez votre e-mail ci-dessous et nous vous préviendrons.",
+    alert: {
+      heading: "Envie d'être prévenu des nouveaux postes ?",
+      body: "Laissez votre e-mail et nous vous écrirons quand quelque chose d'intéressant s'ouvre.",
+    },
+  },
+  contact: {
+    hero: {
+      heading: "Contacter Promptstack",
+      body: "Dites-nous la contrainte — système, automatisation, croissance, Academy ou autre — et nous répondrons avec une prochaine étape claire.",
+    },
+    intents: [
+      "Réserver un appel découverte",
+      "Demande de projet",
+      "Demande Academy",
+      "Partenariat",
+      "Carrières",
+      "Intérêt produit",
+      "Autre",
+    ],
+    formLabels: {
+      name: "Nom complet",
+      email: "E-mail",
+      phone: "Téléphone (optionnel)",
+      subject: "De quoi s'agit-il ?",
+      message: "Message",
+      consent: "J'ai lu et j'accepte la Politique de confidentialité.",
+      submit: "Envoyer",
+    },
+  },
+  serviceItems: [
+    {
+      id: "software",
+      name: "Logiciel",
+      summary: "Outils et plateformes calés sur vos vrais flux de travail.",
+      body: "Nous construisons des systèmes web et mobile que votre équipe peut faire tourner au quotidien — apps internes, portails clients et outils métier alignés sur le travail réel.",
+      href: "/services#software",
+      imageSrc: "/brand/services/software.jpg",
+      imageAlt: "Développeur travaillant tard devant plusieurs écrans de code",
+    },
+    {
+      id: "ai-automation",
+      name: "IA & Automatisation",
+      summary: "Automatisez les étapes répétitives qui mangent votre semaine.",
+      body: "Nous repérons les handoffs, copier-coller et piles de validation à corriger — puis nous les automatisons avec des flux maintenables, pas du théâtre de démo.",
+      href: "/services#ai-automation",
+      imageSrc: "/brand/services/ai-automation.jpg",
+      imageAlt: "Poignée de main entre une main humaine et une main robotique",
+    },
+    {
+      id: "digital-marketing",
+      name: "Marketing digital",
+      summary: "Acquisition et contenu reliés à des chiffres défendables.",
+      body: "SEO, médias payants, contenu et analytics connectés pour transformer l'attention en pipeline — avec un reporting fiable pour les opérateurs.",
+      href: "/services#digital-marketing",
+      imageSrc: "/brand/services/digital-marketing.jpg",
+      imageAlt: "Professionnelle souriante en appel vidéo sur smartphone à son bureau",
+    },
+    {
+      id: "academy",
+      name: "Academy",
+      summary: "Apprendre en construisant. Partir avec des preuves, pas seulement des slides.",
+      body: "Promptstack Academy forme à livrer du travail fini — des projets qui démontrent la compétence, pas des certificats sans preuve.",
+      href: "/services#academy",
+      imageSrc: "/brand/services/academy.jpg",
+      imageAlt: "Intervenante présentant devant des participants en atelier de formation",
+    },
+  ],
+  products: [
+    {
+      id: "prod-1",
+      slug: "sample-product-one",
+      name: "Produit exemple un",
+      status: "Exploration précoce",
+      summary: "Remplacez ceci par votre premier vrai produit.",
+      body: "Carte produit exemple. Modifiez-la dans Admin → Produits quand vous êtes prêt.",
+      ctaLabel: "Je suis intéressé",
+    },
+    {
+      id: "prod-2",
+      slug: "sample-product-two",
+      name: "Produit exemple deux",
+      status: "Design en cours",
+      summary: "Remplacez ceci par votre deuxième vrai produit.",
+      body: "Carte produit exemple. Modifiez-la dans Admin → Produits quand vous êtes prêt.",
+      ctaLabel: "Demander un accès anticipé",
+    },
+  ],
+  jobs: [],
+  team: [],
+  posts: [],
+  legal: [
+    {
+      slug: "privacy-policy",
+      title: "Politique de confidentialité",
+      body: "Brouillon de politique de confidentialité — remplacez par votre texte légal final dans l'Admin.",
+    },
+    {
+      slug: "terms-of-service",
+      title: "Conditions d'utilisation",
+      body: "Brouillon des conditions d'utilisation — remplacez par votre texte légal final dans l'Admin.",
+    },
+    {
+      slug: "cookie-policy",
+      title: "Politique cookies",
+      body: "Brouillon de politique cookies — remplacez par votre texte légal final dans l'Admin.",
+    },
+  ],
+};

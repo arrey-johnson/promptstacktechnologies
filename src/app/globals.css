@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #a800e6;
+  --color-brand-navy: #1b263b;
+  --color-brand-grey: #919191;
+  --color-brand-lavender: #cbaed3;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f7f2f8;
+  --color-text: #1b263b;
+  --color-text-muted: rgb(27 38 59 / 0.72);
+  --font-display: "Eurostile", "Avenir Next", "Segoe UI", sans-serif;
+  --radius-pill: 999px;
+  --radius-btn: 8px;
+  --radius-media: 16px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-text antialiased;
+    font-family: var(--font-display);
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-(--radius-pill) bg-brand-lavender/25 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-brand-purple uppercase;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) bg-brand-purple px-5 text-sm font-semibold text-white hover:bg-[#9200c7];
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) border border-brand-purple px-5 text-sm font-semibold text-brand-purple hover:bg-brand-lavender/20;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20;
+  }
+
+  .heading-xl {
+    @apply text-3xl font-bold tracking-tight text-brand-navy sm:text-5xl;
+  }
+
+  .heading-lg {
+    @apply text-2xl font-bold tracking-tight text-brand-navy sm:text-4xl;
+  }
+
+  .body-muted {
+    @apply text-base leading-relaxed text-text-muted;
+  }
+
+  .logo-wordmark {
+    @apply flex flex-col gap-0.5 leading-tight;
+  }
+
+  .logo-wordmark-name {
+    @apply text-[1.05rem] font-bold tracking-tight text-brand-navy;
+  }
+
+  .logo-wordmark-name span {
+    @apply text-brand-purple;
+  }
+
+  .logo-wordmark-sub {
+    @apply text-[0.62rem] font-semibold tracking-[0.16em] text-brand-grey uppercase;
+  }
+}
