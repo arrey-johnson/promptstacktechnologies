@@ -19,10 +19,12 @@ function initialsFor(name: string) {
 }
 
 export function TeamSection({
+  eyebrow = "Experienced team",
   heading,
   body,
   members,
 }: {
+  eyebrow?: string;
   heading: string;
   body: string;
   members: TeamMember[];
@@ -30,9 +32,9 @@ export function TeamSection({
   if (members.length === 0) return null;
 
   return (
-    <section className="bg-surface-soft">
+    <section>
       <div className="site-container section-space">
-        <p className="pill">Promptstack Team</p>
+        <p className="pill">{eyebrow}</p>
         <h2 className="mt-4 heading-lg">{heading}</h2>
         <p className="mt-3 max-w-2xl body-muted">{body}</p>
 

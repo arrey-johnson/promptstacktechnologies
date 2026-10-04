@@ -188,52 +188,92 @@ export const cmsSeedFr: CmsData = {
   },
   about: {
     hero: {
-      eyebrow: "Promptstack Technologies",
-      heading: "À propos de Promptstack",
-      body: "Nous construisons logiciels, automatisations et systèmes de marketing digital pour les entreprises — et animons l'Academy pour former étudiants et aspirants tech au développement web, au marketing digital et à l'IA.",
+      eyebrow: "Notre histoire",
+      heading: "Construire l'écosystème Promptstack — là où la technologie rend enfin le travail plus simple.",
+      body: "Promptstack Technologies est une entreprise de logiciel, d'automatisation, de marketing digital et d'Academy. Nous aidons les organisations à clarifier leurs processus aujourd'hui — et formons les talents qui feront vivre ces systèmes demain.",
     },
     story: {
-      eyebrow: "Comment nous en sommes arrivés là",
-      heading: "Concentrés sur la stack qui fait vraiment avancer le travail.",
+      eyebrow: "Pourquoi nous existons",
+      heading: "Trop d'entreprises sont coincées entre l'ambition et des outils cassés.",
       body: [
-        "Promptstack part d'une frustration simple : trop d'organisations jonglent avec des outils qui ne se parlent pas, des campagnes illisibles, et des talents sans compétences tech pratiques.",
-        "Nous livrons logiciel, IA & automatisation et marketing digital pour les entreprises — et l'Academy forme la prochaine vague de talents au développement web, au marketing digital et à l'IA.",
+        "Les dirigeants veulent des systèmes modernes. Les équipes veulent des outils calés sur le vrai travail. Les étudiants veulent des compétences qui ouvrent des portes. Trop souvent, ces objectifs vivent dans trois pièces différentes — avec trois prestataires, trois calendriers, et aucun propriétaire partagé.",
+        "Promptstack a été créé pour combler cet écart. Nous concevons et livrons sites, logiciels, IA & automatisation et systèmes de croissance que les gens peuvent vraiment faire tourner — et via l'Academy nous formons étudiants et aspirants professionnels tech au développement web, au marketing digital et à l'IA.",
+      ],
+    },
+    vision: {
+      eyebrow: "Notre vision",
+      heading: "Un avenir où les processus métier semblent légers — et où la compétence reste proche de ceux qui font le travail.",
+      body: [
+        "Nous croyons que la prochaine ère du business n'est pas plus de logiciel pour le plaisir. Ce sont des systèmes connectés, une automatisation pratique, une croissance mesurable, et des personnes qui savent construire et opérer ce qu'elles utilisent.",
+        "L'écosystème Promptstack est notre façon d'y arriver : livraison pour les entreprises, formation pour les talents, et un standard de travail qui préfère la preuve aux slides.",
+      ],
+    },
+    howWeWin: {
+      eyebrow: "Comment nous comptons réussir",
+      heading: "Gagner en livrant des systèmes utiles — et en formant ceux qui peuvent les faire tourner.",
+      body: "Notre plan est simple et exigeant : rester proches des vraies contraintes, livrer par tranches vérifiables, et développer des talents capables de maintenir la stack après le go-live.",
+      items: [
+        {
+          title: "Une stack connectée",
+          body: "Logiciel, automatisation, marketing et Academy se renforcent — pour que les clients n'achètent pas quatre promesses déconnectées.",
+        },
+        {
+          title: "Livraison pilotée par la démo",
+          body: "Des tranches hebdomadaires gardent les décisions honnêtes. Le progrès est visible assez tôt pour piloter.",
+        },
+        {
+          title: "Design orienté opérateur",
+          body: "Nous jugeons le succès par les personnes qui utilisent le système chaque jour — pas seulement par un deck de lancement.",
+        },
+        {
+          title: "Des talents qui savent livrer",
+          body: "L'Academy construit des compétences pratiques en développement web, marketing digital et IA — pour que l'écosystème fasse grandir des personnes, pas seulement des projets.",
+        },
       ],
     },
     values: {
       eyebrow: "Notre façon de travailler",
-      heading: "Les exigences que nous nous fixons",
+      heading: "Les exigences derrière chaque mission",
       items: [
         {
-          title: "Les services d'abord, esprit opérateur",
-          body: "Notre identité, c'est le travail que nous livrons — logiciel, automatisation et systèmes de croissance pour des équipes lean — plus la formation Academy pour ceux qui entrent dans la tech.",
+          title: "La clarté plutôt que le théâtre",
+          body: "Périmètre, risques et arbitrages sont nommés tôt, en langage clair. Les surprises doivent rester rares et petites.",
         },
         {
           title: "Livrer ce que les gens peuvent faire tourner",
-          body: "De beaux écrans sans propriétaires ne comptent pas. Nous optimisons pour des systèmes que votre équipe peut opérer après notre départ.",
+          body: "De beaux écrans sans propriétaires ne comptent pas. Nous concevons pour la passation, l'ownership et la réalité du jour 2.",
         },
         {
-          title: "Dire les arbitrages tôt",
-          body: "Périmètre, risques et délais sont nommés clairement. Les surprises doivent rester rares et petites.",
+          title: "La preuve plutôt que l'opinion",
+          body: "Démos, métriques et travail terminé décident de ce qui reste. Nous optimisons pour des résultats que vous pouvez montrer.",
         },
         {
-          title: "Former des personnes qui savent livrer",
-          body: "L'Academy s'adresse aux étudiants et aspirants professionnels tech — développement web, marketing digital et IA — avec des projets qu'ils peuvent montrer.",
+          title: "Laisser de la capacité derrière soi",
+          body: "Que ce soit par la passation projet ou la formation Academy, nous voulons que la force reste de votre côté.",
         },
       ],
     },
+    ceoWord: {
+      eyebrow: "Mot du CEO",
+      heading: "Le futur dont nous rêvions doit se sentir concrètement au travail.",
+      quote:
+        "Promptstack existe pour faire entrer cette ère futuriste que nous avons tous imaginée dans la vie réelle des entreprises — pas comme du hype, mais comme des systèmes qui rendent les processus plus clairs, plus rapides et plus faciles à faire tourner. Quand logiciel, automatisation, croissance et personnes compétentes avancent ensemble, les organisations cessent de se battre contre leurs outils et commencent à composer du progrès.",
+      name: "Arrey Johnson",
+      role: "Directeur général",
+      credentials:
+        "Ingénieur logiciel et business developer avec plus de 8 ans d'expérience. Il a travaillé avec plusieurs entreprises tech et exécuté pour des multinationales — apportant à la fois le craft technique et le jugement commercial à l'écosystème Promptstack.",
+      imageSrc: "/brand/team/arrey-johnson.jpg?v=hd1",
+      imageAlt: "Arrey Johnson, Directeur général de Promptstack Technologies",
+    },
     teamIntro: {
-      heading: "L’équipe Promptstack",
-      body: "Les personnes qui pilotent la livraison, la stratégie, le produit et le contenu qui raconte notre histoire.",
+      eyebrow: "Équipe expérimentée",
+      heading: "Une équipe expérimentée, construite pour livrer",
+      body: "Promptstack est dirigé par des praticiens en ingénierie, stratégie, direction de projet et contenu — des personnes qui ont livré, vendu, coordonné et communiqué du vrai travail. Nous allions profondeur technique et sens business, pour que les clients obtiennent des systèmes qui atterrissent et une équipe capable d'expliquer le chemin.",
     },
     capabilities: {
-      heading: "La boîte à outils Promptstack",
-      body: "Quatre voies de livraison, plus les habitudes qui gardent les projets honnêtes du premier atelier à la passation.",
+      heading: "Ce que nous mettons dans le monde",
+      body: "L'écosystème Promptstack entre livraison et formation — du premier diagnostic à la passation et à la montée en compétence.",
       items: [
-        {
-          title: "Cartographie des contraintes",
-          body: "Nous partons du goulot — process, données, outils ou compétences — avant de proposer un build.",
-        },
         {
           title: "Sites web & logiciel sur mesure",
           body: "Sites d'entreprise, portails et apps calés sur vos vrais flux — pas des templates génériques.",
@@ -243,12 +283,16 @@ export const cmsSeedFr: CmsData = {
           body: "Des flux qui coupent le répétitif et réduisent l'erreur, sans cirque de démos.",
         },
         {
-          title: "Systèmes de croissance",
+          title: "Systèmes de marketing digital",
           body: "Acquisition, contenu et analytics reliés pour que l'attention rejoigne le pipeline.",
         },
         {
           title: "Formation Academy",
           body: "Développement web, marketing digital et IA pour étudiants et aspirants professionnels tech — apprendre en construisant de vrais projets.",
+        },
+        {
+          title: "Cartographie des contraintes",
+          body: "Nous partons du goulot — process, données, outils ou compétences — avant de proposer un build.",
         },
         {
           title: "Passation & suivi",
@@ -257,8 +301,8 @@ export const cmsSeedFr: CmsData = {
       ],
     },
     contactBand: {
-      heading: "Envie de voir si ça matche ?",
-      body: "Réservez un appel découverte ou écrivez-nous — nous tracerons la prochaine étape utile.",
+      heading: "Envie de construire avec nous ?",
+      body: "Réservez un appel découverte ou écrivez-nous — nous verrons si Promptstack est la bonne prochaine étape pour vos systèmes, votre croissance ou votre parcours Academy.",
     },
   },
   servicesPage: {

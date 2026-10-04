@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export function AdminLogoutButton() {
+export function AdminLogoutButton({ className }: { className?: string }) {
   const router = useRouter();
 
   async function logout() {
@@ -15,7 +15,10 @@ export function AdminLogoutButton() {
     <button
       type="button"
       onClick={logout}
-      className="rounded-lg border border-brand-navy/15 px-3 py-2 text-sm font-semibold"
+      className={
+        className ||
+        "w-full rounded-lg border border-white/20 px-3 py-2 text-left text-sm font-semibold text-white hover:bg-white/10"
+      }
     >
       Sign out
     </button>

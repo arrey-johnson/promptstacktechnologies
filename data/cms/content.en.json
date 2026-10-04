@@ -291,52 +291,90 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "Promptstack Technologies",
-      "heading": "About Promptstack",
-      "body": "We build software, automation, and digital marketing systems for businesses — and run Academy programs that train students and aspiring tech pros in web development, digital marketing, and AI."
+      "eyebrow": "Our story",
+      "heading": "Building the Promptstack ecosystem — where technology finally makes work feel simple.",
+      "body": "Promptstack Technologies is a software, automation, digital marketing, and Academy company. We help organisations run clearer processes today — and train the talent that will keep those systems alive tomorrow."
     },
     "story": {
-      "eyebrow": "How we got here",
-      "heading": "Focused on the stack that actually moves work.",
+      "eyebrow": "Why we exist",
+      "heading": "Too many businesses are stuck between ambition and broken tools.",
       "body": [
-        "Promptstack started from a simple frustration: too many organisations juggle tools that don’t talk to each other, campaigns that don’t report cleanly, and talent that can’t get practical tech skills.",
-        "We deliver software, AI & automation, and digital marketing for businesses — and Academy trains the next wave of talent in web development, digital marketing, and AI."
+        "Leaders want modern systems. Teams want tools that match real work. Students want skills that open doors. Too often, those goals sit in three different rooms — with three different vendors, three timelines, and no shared owner.",
+        "Promptstack was built to close that gap. We design and ship websites, software, AI & automation, and growth systems that people can actually run — and through Academy we train students and aspiring tech professionals in web development, digital marketing, and AI."
+      ]
+    },
+    "vision": {
+      "eyebrow": "Our vision",
+      "heading": "A future where business processes feel light — and capability stays close to the people doing the work.",
+      "body": [
+        "We believe the next era of business is not more software for its own sake. It is connected systems, practical automation, measurable growth, and people who know how to build and operate what they use.",
+        "Promptstack’s ecosystem is how we bring that closer: delivery for companies, training for talent, and a standard of work that prefers proof over slides."
+      ]
+    },
+    "howWeWin": {
+      "eyebrow": "How we intend to succeed",
+      "heading": "Win by shipping useful systems — and raising the people who can run them.",
+      "body": "Our plan is simple and demanding: stay close to real constraints, deliver in reviewable slices, and grow talent that can keep the stack moving after go-live.",
+      "items": [
+        {
+          "title": "One connected stack",
+          "body": "Software, automation, marketing, and Academy reinforce each other — so clients don’t buy four disconnected promises."
+        },
+        {
+          "title": "Demo-driven delivery",
+          "body": "Weekly working slices keep decisions honest. Progress is visible early enough to steer."
+        },
+        {
+          "title": "Operator-first design",
+          "body": "We judge success by the people who use the system every day — not only by a launch deck."
+        },
+        {
+          "title": "Talent that can ship",
+          "body": "Academy builds practical skill in web development, digital marketing, and AI — so the ecosystem grows people, not just projects."
+        }
       ]
     },
     "values": {
       "eyebrow": "How we work",
-      "heading": "The standards we hold ourselves to",
+      "heading": "The standards behind every engagement",
       "items": [
         {
-          "title": "Services first, operator mindset",
-          "body": "Our identity is the work we ship — software, automation, and growth systems for lean teams — plus Academy training for people entering tech."
+          "title": "Clarity over theatre",
+          "body": "Scope, risk, and trade-offs are named early in plain language. Surprises should stay rare and small."
         },
         {
           "title": "Ship what people can run",
-          "body": "Pretty screens without owners don’t count. We optimise for systems your team can operate after we leave."
+          "body": "Pretty screens without owners don’t count. We design for handover, ownership, and day-two reality."
         },
         {
-          "title": "Say the hard trade-offs early",
-          "body": "Scope, risk, and timelines get named in plain language. Surprises should be rare and small."
+          "title": "Evidence over opinion",
+          "body": "Demos, metrics, and finished work decide what stays. We optimise for outcomes you can point to."
         },
         {
-          "title": "Train people who can ship",
-          "body": "Academy focuses on students and aspiring tech professionals — web development, digital marketing, and AI — with projects they can show."
+          "title": "Leave capability behind",
+          "body": "Whether through project handover or Academy training, we want strength to remain on your side."
         }
       ]
     },
+    "ceoWord": {
+      "eyebrow": "Word from the CEO",
+      "heading": "The future we dreamed of should feel practical at work.",
+      "quote": "Promptstack exists to bring that futuristic era we all imagined into real business life — not as hype, but as systems that make processes clearer, faster, and easier to run. When software, automation, growth, and skilled people move together, organisations stop fighting their tools and start compounding progress.",
+      "name": "Arrey Johnson",
+      "role": "Chief Executive Officer",
+      "credentials": "Software engineer and business developer with 8+ years of experience. He has worked with several tech companies and executed for multinational corporations — bringing both build craft and commercial judgment to Promptstack’s ecosystem.",
+      "imageSrc": "/brand/team/arrey-johnson.jpg?v=hd1",
+      "imageAlt": "Arrey Johnson, Chief Executive Officer of Promptstack Technologies"
+    },
     "teamIntro": {
-      "heading": "The Promptstack team",
-      "body": "The people steering delivery, strategy, product, and the content that tells our story."
+      "eyebrow": "Experienced team",
+      "heading": "An experienced team built for delivery",
+      "body": "Promptstack is led by practitioners across engineering, strategy, project direction, and content — people who have shipped, sold, coordinated, and communicated real work. We pair technical depth with business sense, so clients get systems that land and a team that can explain the path."
     },
     "capabilities": {
-      "heading": "The Promptstack toolkit",
-      "body": "Four delivery lanes plus the habits that keep projects honest from first workshop to handover.",
+      "heading": "What we put into the world",
+      "body": "The Promptstack ecosystem across delivery and training — from first diagnosis to handover and capability growth.",
       "items": [
-        {
-          "title": "Constraint mapping",
-          "body": "We start with the bottleneck — process, data, tools, or skills — before recommending a build."
-        },
         {
           "title": "Websites & custom software",
           "body": "Company websites, portals, and apps shaped around real workflows — not generic templates."
@@ -346,12 +384,16 @@
           "body": "Workflows that cut repeat work and reduce error without becoming a circus of demos."
         },
         {
-          "title": "Growth systems",
+          "title": "Digital marketing systems",
           "body": "Acquisition, content, and analytics wired so attention connects to pipeline."
         },
         {
           "title": "Academy training",
           "body": "Web development, digital marketing, and AI for students and aspiring tech professionals — learn by building real projects."
+        },
+        {
+          "title": "Constraint mapping",
+          "body": "We start with the bottleneck — process, data, tools, or skills — before recommending a build."
         },
         {
           "title": "Handover & aftercare",
@@ -360,8 +402,8 @@
       ]
     },
     "contactBand": {
-      "heading": "Want to see if we’re a fit?",
-      "body": "Book a discovery call or send a note — we’ll map the fastest useful next step."
+      "heading": "Want to build with us?",
+      "body": "Book a discovery call or send a note — we’ll map whether Promptstack is the right next step for your systems, growth, or Academy path."
     }
   },
   "servicesPage": {
@@ -385,6 +427,36 @@
       "body": "We’re shaping ventures and tools worth shipping. This page will open when the first ones are ready to share."
     },
     "emptyState": "Check back soon — or book a discovery call if you want an early look at what’s next."
+  },
+  "portfolioPage": {
+    "hero": {
+      "eyebrow": "Web design portfolio",
+      "heading": "Selected work across brands and industries",
+      "body": "Showcasing our best web design projects — from finance and ecommerce to beauty, education, and technology.",
+      "primaryCta": {
+        "label": "Explore projects",
+        "href": "#portfolio-grid"
+      },
+      "secondaryCta": {
+        "label": "Start a project",
+        "href": "#book-discovery"
+      },
+      "imageSrc": "/brand/portfolio-hero.jpg?v=3"
+    },
+    "grid": {
+      "eyebrow": "Some examples of our work",
+      "heading": "Our web design portfolio",
+      "body": "We have delivered projects across varied business niches. Hover over a project to explore."
+    },
+    "cta": {
+      "heading": "Let’s create work worth adding to this portfolio.",
+      "body": "Tell us about your goals and we will recommend the right path.",
+      "cta": {
+        "label": "Book a discovery call",
+        "href": "#book-discovery"
+      }
+    },
+    "emptyState": "Portfolio projects will appear here once you add them in Admin → Portfolio."
   },
   "careersPage": {
     "hero": {
@@ -826,144 +898,6 @@
       "ctaLabel": "Request early access"
     }
   ],
-  "jobs": [
-    {
-      "id": "job-corporate-sales-manager",
-      "slug": "corporate-sales-manager",
-      "title": "Corporate Sales Manager",
-      "employmentType": "Full-time",
-      "location": "Douala / Hybrid",
-      "workType": "Hybrid",
-      "summary": "Own enterprise and mid-market sales for Promptstack’s software, websites, automation, and digital growth services — from prospecting to signed delivery.",
-      "body": "As Corporate Sales Manager, you will build and run a professional sales pipeline for Promptstack Technologies. You will qualify opportunities, run discovery conversations, prepare proposals, and close engagements that our delivery team can execute with clarity.\n\nYou will work closely with founders and delivery leads, represent Promptstack with credibility, and keep CRM hygiene and forecast accuracy high.",
-      "responsibilities": [
-        "Prospect, qualify, and manage a corporate sales pipeline across target industries",
-        "Lead discovery calls and present Promptstack services with clear commercial framing",
-        "Prepare proposals, quotations, and follow-ups that convert interest into signed work",
-        "Coordinate handoff to delivery with accurate scope notes and next steps",
-        "Report weekly on pipeline, close rates, and revenue forecast"
-      ],
-      "requirements": [
-        "Proven B2B or corporate sales experience (technology, services, or digital preferred)",
-        "Strong communication skills in English; French is a strong plus",
-        "Comfortable owning targets, CRM updates, and professional client follow-up",
-        "Organized, self-driven, and confident presenting to decision-makers",
-        "Based in or able to work around Douala with hybrid availability"
-      ],
-      "published": true
-    },
-    {
-      "id": "job-digital-marketing-internship",
-      "slug": "digital-marketing-internship",
-      "title": "Digital Marketing Internship",
-      "employmentType": "Internship",
-      "location": "Douala / Hybrid",
-      "workType": "Hybrid",
-      "summary": "A structured internship for aspiring marketers who want hands-on experience in content, campaigns, analytics, and growth systems — not coffee runs.",
-      "body": "The Digital Marketing Internship at Promptstack is built for people who want to learn by shipping. You will support real campaigns and content workflows under mentorship, while building a portfolio of work you can show.\n\nThis is a professional internship track: clear expectations, weekly feedback, and exposure to how growth systems are planned and measured.",
-      "responsibilities": [
-        "Support content drafting, scheduling, and basic creative coordination",
-        "Assist with campaign setup, tracking checks, and weekly performance notes",
-        "Help research audiences, competitors, and channel opportunities",
-        "Maintain organized campaign assets and reporting sheets",
-        "Participate in reviews and apply feedback to improve output quality"
-      ],
-      "requirements": [
-        "Currently studying or recently graduated in marketing, communications, or a related field — or a strong self-taught portfolio",
-        "Curious about SEO, social, paid media, and analytics",
-        "Reliable writing skills and attention to detail",
-        "Comfortable with tools like Google Docs/Sheets; familiarity with Meta/Google Ads or Canva is a plus",
-        "Available for a structured internship schedule (hybrid in Douala preferred)"
-      ],
-      "published": true
-    }
-  ],
-  "team": [
-    {
-      "id": "arrey-johnson",
-      "name": "Arrey Johnson",
-      "role": "Chief Executive Officer",
-      "bio": "Leads Promptstack’s vision, delivery standards, and growth.",
-      "imageAlt": "Arrey Johnson, Chief Executive Officer",
-      "linkedinHref": "https://www.linkedin.com/in/arrey-johnson/",
-      "imageSrc": "/brand/team/arrey-johnson.jpg?v=hd1"
-    },
-    {
-      "id": "ngome-n-lifanje",
-      "name": "Ngome N. Lifanje",
-      "role": "Chief Strategy Officer",
-      "bio": "Shapes strategy, partnerships, and the long-term product direction.",
-      "imageAlt": "Ngome N. Lifanje, Chief Strategy Officer",
-      "linkedinHref": "",
-      "imageSrc": "/brand/team/ngome-n-lifanje.jpg?v=hd1"
-    },
-    {
-      "id": "eyere-obin",
-      "name": "Eyere Obin",
-      "role": "Project Director",
-      "bio": "Leads product and delivery priorities so teams ship clear, useful outcomes.",
-      "imageAlt": "Eyere Obin, Project Director",
-      "linkedinHref": "https://www.linkedin.com/in/eyere-obin/",
-      "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1"
-    },
-    {
-      "id": "tambe-blessing",
-      "name": "Tambe Blessing",
-      "role": "Digital Content Creator",
-      "bio": "Creates content that explains Promptstack’s work and Academy programs.",
-      "imageAlt": "Tambe Blessing, Digital Content Creator",
-      "linkedinHref": "",
-      "imageSrc": "/brand/team/tambe-blessing.jpg?v=hd1"
-    }
-  ],
-  "posts": [],
-  "legal": [
-    {
-      "slug": "privacy-policy",
-      "title": "Privacy Policy",
-      "body": "Draft privacy policy — replace with your final legal text in Admin."
-    },
-    {
-      "slug": "terms-of-service",
-      "title": "Terms of Service",
-      "body": "Draft terms of service — replace with your final legal text in Admin."
-    },
-    {
-      "slug": "cookie-policy",
-      "title": "Cookie Policy",
-      "body": "Draft cookie policy — replace with your final legal text in Admin."
-    }
-  ],
-  "portfolioPage": {
-    "hero": {
-      "eyebrow": "Web design portfolio",
-      "heading": "Selected work across brands and industries",
-      "body": "Showcasing our best web design projects — from finance and ecommerce to beauty, education, and technology.",
-      "primaryCta": {
-        "label": "Explore projects",
-        "href": "#portfolio-grid"
-      },
-      "secondaryCta": {
-        "label": "Start a project",
-        "href": "#book-discovery"
-      },
-      "imageSrc": "/brand/portfolio-hero.jpg?v=3"
-    },
-    "grid": {
-      "eyebrow": "Some examples of our work",
-      "heading": "Our web design portfolio",
-      "body": "We have delivered projects across varied business niches. Hover over a project to explore."
-    },
-    "cta": {
-      "heading": "Let’s create work worth adding to this portfolio.",
-      "body": "Tell us about your goals and we will recommend the right path.",
-      "cta": {
-        "label": "Book a discovery call",
-        "href": "#book-discovery"
-      }
-    },
-    "emptyState": "Portfolio projects will appear here once you add them in Admin → Portfolio."
-  },
   "portfolioItems": [
     {
       "id": "pf-finance",
@@ -1225,6 +1159,114 @@
       "imageSrc": "/brand/portfolio/abstract-web-design.png",
       "imageAlt": "Abstract web design project",
       "href": "/portfolio/abstract-web-design"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-corporate-sales-manager",
+      "slug": "corporate-sales-manager",
+      "title": "Corporate Sales Manager",
+      "employmentType": "Full-time",
+      "location": "Douala / Hybrid",
+      "workType": "Hybrid",
+      "summary": "Own enterprise and mid-market sales for Promptstack’s software, websites, automation, and digital growth services — from prospecting to signed delivery.",
+      "body": "As Corporate Sales Manager, you will build and run a professional sales pipeline for Promptstack Technologies. You will qualify opportunities, run discovery conversations, prepare proposals, and close engagements that our delivery team can execute with clarity.\n\nYou will work closely with founders and delivery leads, represent Promptstack with credibility, and keep CRM hygiene and forecast accuracy high.",
+      "responsibilities": [
+        "Prospect, qualify, and manage a corporate sales pipeline across target industries",
+        "Lead discovery calls and present Promptstack services with clear commercial framing",
+        "Prepare proposals, quotations, and follow-ups that convert interest into signed work",
+        "Coordinate handoff to delivery with accurate scope notes and next steps",
+        "Report weekly on pipeline, close rates, and revenue forecast"
+      ],
+      "requirements": [
+        "Proven B2B or corporate sales experience (technology, services, or digital preferred)",
+        "Strong communication skills in English; French is a strong plus",
+        "Comfortable owning targets, CRM updates, and professional client follow-up",
+        "Organized, self-driven, and confident presenting to decision-makers",
+        "Based in or able to work around Douala with hybrid availability"
+      ],
+      "published": true
+    },
+    {
+      "id": "job-digital-marketing-internship",
+      "slug": "digital-marketing-internship",
+      "title": "Digital Marketing Internship",
+      "employmentType": "Internship",
+      "location": "Douala / Hybrid",
+      "workType": "Hybrid",
+      "summary": "A structured internship for aspiring marketers who want hands-on experience in content, campaigns, analytics, and growth systems — not coffee runs.",
+      "body": "The Digital Marketing Internship at Promptstack is built for people who want to learn by shipping. You will support real campaigns and content workflows under mentorship, while building a portfolio of work you can show.\n\nThis is a professional internship track: clear expectations, weekly feedback, and exposure to how growth systems are planned and measured.",
+      "responsibilities": [
+        "Support content drafting, scheduling, and basic creative coordination",
+        "Assist with campaign setup, tracking checks, and weekly performance notes",
+        "Help research audiences, competitors, and channel opportunities",
+        "Maintain organized campaign assets and reporting sheets",
+        "Participate in reviews and apply feedback to improve output quality"
+      ],
+      "requirements": [
+        "Currently studying or recently graduated in marketing, communications, or a related field — or a strong self-taught portfolio",
+        "Curious about SEO, social, paid media, and analytics",
+        "Reliable writing skills and attention to detail",
+        "Comfortable with tools like Google Docs/Sheets; familiarity with Meta/Google Ads or Canva is a plus",
+        "Available for a structured internship schedule (hybrid in Douala preferred)"
+      ],
+      "published": true
+    }
+  ],
+  "team": [
+    {
+      "id": "arrey-johnson",
+      "name": "Arrey Johnson",
+      "role": "Chief Executive Officer",
+      "bio": "Software engineer and business developer with 8+ years across tech companies and multinational work. Leads Promptstack’s vision, delivery standards, and commercial growth.",
+      "imageSrc": "/brand/team/arrey-johnson.jpg?v=hd1",
+      "imageAlt": "Arrey Johnson, Chief Executive Officer",
+      "linkedinHref": "https://www.linkedin.com/in/arrey-johnson/"
+    },
+    {
+      "id": "ngome-n-lifanje",
+      "name": "Ngome N. Lifanje",
+      "role": "Chief Strategy Officer",
+      "bio": "Experienced strategist shaping partnerships, market positioning, and long-term product direction for Promptstack’s ecosystem.",
+      "imageSrc": "/brand/team/ngome-n-lifanje.jpg?v=hd1",
+      "imageAlt": "Ngome N. Lifanje, Chief Strategy Officer",
+      "linkedinHref": ""
+    },
+    {
+      "id": "eyere-obin",
+      "name": "Eyere Obin",
+      "role": "Project Director",
+      "bio": "Seasoned project director who aligns product and delivery priorities so teams ship clear, useful outcomes on time.",
+      "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1",
+      "imageAlt": "Eyere Obin, Project Director",
+      "linkedinHref": "https://www.linkedin.com/in/eyere-obin/"
+    },
+    {
+      "id": "tambe-blessing",
+      "name": "Tambe Blessing",
+      "role": "Digital Content Creator",
+      "bio": "Digital content creator who turns Promptstack’s delivery and Academy programs into clear stories brands and students can follow.",
+      "imageSrc": "/brand/team/tambe-blessing.jpg?v=hd1",
+      "imageAlt": "Tambe Blessing, Digital Content Creator",
+      "linkedinHref": ""
+    }
+  ],
+  "posts": [],
+  "legal": [
+    {
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "body": "Draft privacy policy — replace with your final legal text in Admin."
+    },
+    {
+      "slug": "terms-of-service",
+      "title": "Terms of Service",
+      "body": "Draft terms of service — replace with your final legal text in Admin."
+    },
+    {
+      "slug": "cookie-policy",
+      "title": "Cookie Policy",
+      "body": "Draft cookie policy — replace with your final legal text in Admin."
     }
   ]
 }

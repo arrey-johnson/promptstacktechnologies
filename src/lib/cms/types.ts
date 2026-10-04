@@ -181,8 +181,20 @@ export type HomeContent = {
 export type AboutContent = {
   hero: { eyebrow: string; heading: string; body: string };
   story: { eyebrow: string; heading: string; body: string[] };
+  vision: { eyebrow: string; heading: string; body: string[] };
+  howWeWin: { eyebrow: string; heading: string; body: string; items: FeatureItem[] };
   values: { eyebrow: string; heading: string; items: FeatureItem[] };
-  teamIntro: { heading: string; body: string };
+  ceoWord: {
+    eyebrow: string;
+    heading: string;
+    quote: string;
+    name: string;
+    role: string;
+    credentials: string;
+    imageSrc?: string;
+    imageAlt?: string;
+  };
+  teamIntro: { eyebrow?: string; heading: string; body: string };
   capabilities: { heading: string; body: string; items: FeatureItem[] };
   contactBand: { heading: string; body: string };
 };

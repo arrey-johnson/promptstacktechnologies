@@ -37,9 +37,9 @@ export default function AdminLoginPage() {
   return (
     <div className="mx-auto flex min-h-dvh max-w-md flex-col justify-center px-5">
       <PromptstackLogo className="mb-8 inline-flex items-center gap-3" href="/" />
-      <h1 className="text-2xl font-bold">Admin CMS</h1>
+      <h1 className="text-2xl font-bold">Website manager</h1>
       <p className="mt-2 text-sm text-text-muted">
-        Sign in to manage all website content.
+        Sign in to edit pages, team, jobs, and services with simple forms.
       </p>
       <form onSubmit={onSubmit} className="mt-8 space-y-4 rounded-2xl bg-white p-6 shadow-sm">
         <label className="block text-sm font-semibold">

@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { PageViewTracker } from "@/components/analytics/page-view-tracker";
 import { BookingProvider } from "@/components/booking/booking-provider";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -35,6 +37,9 @@ export default async function MarketingLayout({
       />
       <main id="main-content">{children}</main>
       <SiteFooter settings={settings} />
+      <Suspense fallback={null}>
+        <PageViewTracker locale={locale} />
+      </Suspense>
     </BookingProvider>
   );
 }

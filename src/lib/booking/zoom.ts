@@ -16,7 +16,9 @@ type LocalBooking = {
   end: string;
   name: string;
   email: string;
+  notes?: string;
   joinUrl: string;
+  startUrl?: string | null;
   createdAt: string;
 };
 
@@ -218,7 +220,9 @@ export async function createDiscoveryZoomMeeting(input: {
     end: input.end,
     name: input.name,
     email: input.email,
+    notes: input.notes || "",
     joinUrl,
+    startUrl: meeting.start_url || null,
     createdAt: new Date().toISOString(),
   });
   await writeLocalBookings(bookings);
