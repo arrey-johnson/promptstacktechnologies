@@ -24,10 +24,10 @@ export const teamMembersEn: TeamMember[] = [
   {
     id: "eyere-obin",
     name: "Eyere Obin",
-    role: "Chief Operating Officer",
-    bio: "Owns day-to-day operations, delivery cadence, and team coordination.",
+    role: "Product Manager",
+    bio: "Owns product direction, priorities, and the delivery path from idea to shipped work.",
     imageSrc: "/brand/team/eyere-obin.jpg?v=hd1",
-    imageAlt: "Eyere Obin, Chief Operating Officer",
+    imageAlt: "Eyere Obin, Product Manager",
     linkedinHref: "https://www.linkedin.com/in/eyere-obin/",
   },
   {
@@ -63,10 +63,10 @@ export const teamMembersFr: TeamMember[] = [
   {
     id: "eyere-obin",
     name: "Eyere Obin",
-    role: "Directeur des opérations",
-    bio: "Pilote les opérations quotidiennes, le rythme de livraison et la coordination des équipes.",
+    role: "Product Manager",
+    bio: "Porte la direction produit, les priorités et le chemin de livraison de l’idée au livrable.",
     imageSrc: "/brand/team/eyere-obin.jpg?v=hd1",
-    imageAlt: "Eyere Obin, Directeur des opérations",
+    imageAlt: "Eyere Obin, Product Manager",
     linkedinHref: "https://www.linkedin.com/in/eyere-obin/",
   },
   {

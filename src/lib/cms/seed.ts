@@ -224,7 +224,7 @@ export const cmsSeed: CmsData = {
     },
     teamIntro: {
       heading: "The Promptstack team",
-      body: "The people steering delivery, strategy, operations, and the content that tells our story.",
+      body: "The people steering delivery, strategy, product, and the content that tells our story.",
     },
     capabilities: {
       heading: "The Promptstack toolkit",

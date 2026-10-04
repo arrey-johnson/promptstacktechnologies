@@ -327,7 +327,7 @@
     },
     "teamIntro": {
       "heading": "The Promptstack team",
-      "body": "The people steering delivery, strategy, operations, and the content that tells our story."
+      "body": "The people steering delivery, strategy, product, and the content that tells our story."
     },
     "capabilities": {
       "heading": "The Promptstack toolkit",
@@ -899,9 +899,9 @@
     {
       "id": "eyere-obin",
       "name": "Eyere Obin",
-      "role": "Chief Operating Officer",
-      "bio": "Owns day-to-day operations, delivery cadence, and team coordination.",
-      "imageAlt": "Eyere Obin, Chief Operating Officer",
+      "role": "Product Manager",
+      "bio": "Owns product direction, priorities, and the delivery path from idea to shipped work.",
+      "imageAlt": "Eyere Obin, Product Manager",
       "linkedinHref": "https://www.linkedin.com/in/eyere-obin/",
       "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1"
     },

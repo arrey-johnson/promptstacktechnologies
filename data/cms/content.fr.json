@@ -327,7 +327,7 @@
     },
     "teamIntro": {
       "heading": "L’équipe Promptstack",
-      "body": "Les personnes qui pilotent la livraison, la stratégie, les opérations et le contenu qui raconte notre histoire."
+      "body": "Les personnes qui pilotent la livraison, la stratégie, le produit et le contenu qui raconte notre histoire."
     },
     "capabilities": {
       "heading": "La boîte à outils Promptstack",
@@ -899,9 +899,9 @@
     {
       "id": "eyere-obin",
       "name": "Eyere Obin",
-      "role": "Directeur des opérations",
-      "bio": "Pilote les opérations quotidiennes, le rythme de livraison et la coordination des équipes.",
-      "imageAlt": "Eyere Obin, Directeur des opérations",
+      "role": "Product Manager",
+      "bio": "Porte la direction produit, les priorités et le chemin de livraison de l’idée au livrable.",
+      "imageAlt": "Eyere Obin, Product Manager",
       "linkedinHref": "https://www.linkedin.com/in/eyere-obin/",
       "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1"
     },
