@@ -14,7 +14,11 @@ export type MediaItem = {
 };
 
 async function ensureDir() {
-  await fs.mkdir(UPLOAD_DIR, { recursive: true });
+  try {
+    await fs.mkdir(UPLOAD_DIR, { recursive: true });
+  } catch {
+    // Ignore on read-only filesystems.
+  }
 }
 
 function safeExt(fileName: string) {
@@ -50,11 +54,15 @@ async function collectImages(dir: string, urlPrefix: string, items: MediaItem[])
 }
 
 export async function listMedia(): Promise<MediaItem[]> {
-  await ensureDir();
-  const items: MediaItem[] = [];
-  await collectImages(UPLOAD_DIR, "/uploads", items);
-  await collectImages(path.join(process.cwd(), "public", "brand"), "/brand", items);
-  return items.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  try {
+    await ensureDir();
+    const items: MediaItem[] = [];
+    await collectImages(UPLOAD_DIR, "/uploads", items);
+    await collectImages(path.join(process.cwd(), "public", "brand"), "/brand", items);
+    return items.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  } catch {
+    return [];
+  }
 }
 
 export async function saveUploadedImage(input: {

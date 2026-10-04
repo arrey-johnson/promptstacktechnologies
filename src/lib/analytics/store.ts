@@ -22,12 +22,16 @@ const STORE_FILE = path.join(DATA_DIR, "events.json");
 const MAX_EVENTS = 20_000;
 
 async function ensureDir() {
-  await fs.mkdir(DATA_DIR, { recursive: true });
+  try {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+  } catch {
+    // Ignore on read-only filesystems.
+  }
 }
 
 async function readStore(): Promise<AnalyticsStore> {
-  await ensureDir();
   try {
+    await ensureDir();
     const raw = await fs.readFile(STORE_FILE, "utf8");
     const parsed = JSON.parse(raw) as AnalyticsStore;
     return { events: Array.isArray(parsed.events) ? parsed.events : [] };
@@ -38,7 +42,11 @@ async function readStore(): Promise<AnalyticsStore> {
 
 async function writeStore(store: AnalyticsStore) {
   await ensureDir();
-  await fs.writeFile(STORE_FILE, JSON.stringify(store, null, 2), "utf8");
+  try {
+    await fs.writeFile(STORE_FILE, JSON.stringify(store, null, 2), "utf8");
+  } catch (error) {
+    console.error("[analytics] write failed", error);
+  }
 }
 
 function dayKey(iso: string) {

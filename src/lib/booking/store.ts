@@ -27,7 +27,14 @@ export async function listBookings(): Promise<StoredBooking[]> {
   }
 }
 
-export async function getBookingStats() {
+export type BookingStats = {
+  total: number;
+  upcoming: number;
+  past: number;
+  next: StoredBooking | null;
+};
+
+export async function getBookingStats(): Promise<BookingStats> {
   const bookings = await listBookings();
   const now = Date.now();
   const upcoming = bookings
@@ -38,6 +45,6 @@ export async function getBookingStats() {
     total: bookings.length,
     upcoming: upcoming.length,
     past: past.length,
-    next: upcoming[0] || null,
+    next: upcoming[0] ?? null,
   };
 }

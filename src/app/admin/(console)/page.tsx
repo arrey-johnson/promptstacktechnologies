@@ -18,7 +18,37 @@ function formatWhen(iso?: string | null) {
 }
 
 export default async function AdminDashboardPage() {
-  const overview = await getDashboardOverview();
+  let overview;
+  try {
+    overview = await getDashboardOverview();
+  } catch (error) {
+    console.error("[admin/dashboard]", error);
+    return (
+      <div>
+        <h1 className="text-3xl font-bold text-brand-navy">Dashboard</h1>
+        <p className="mt-4 max-w-xl text-sm text-red-700">
+          The dashboard overview could not load on this host. You can still use the content
+          editors and inbox links below — refresh in a moment or check server logs if this
+          persists.
+        </p>
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {ADMIN_NAV_GROUPS.flatMap((group) =>
+            group.items.map((item) => (
+              <Link
+                key={item.key}
+                href={`/admin/edit/${item.key}`}
+                className="rounded-2xl border border-brand-navy/10 bg-white p-5 shadow-sm hover:border-brand-purple"
+              >
+                <h3 className="text-base font-bold text-brand-navy">{item.label}</h3>
+                <p className="mt-2 text-sm text-text-muted">{item.description}</p>
+              </Link>
+            )),
+          )}
+        </div>
+      </div>
+    );
+  }
+
   const a = overview.analytics;
 
   return (

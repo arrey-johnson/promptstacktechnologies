@@ -1,11 +1,18 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { isZoomBookingConfigured } from "@/lib/booking/config";
-import { getBookingStats, listBookings } from "@/lib/booking/store";
+import {
+  getBookingStats,
+  listBookings,
+  type BookingStats,
+  type StoredBooking,
+} from "@/lib/booking/store";
 import { listJobApplications } from "@/lib/applications/store";
 import { getCmsData } from "@/lib/cms/store";
-import { getAnalyticsSummary } from "@/lib/analytics/store";
+import { getAnalyticsSummary, type AnalyticsSummary } from "@/lib/analytics/store";
 import { listMedia } from "@/lib/media/store";
+import type { JobApplication } from "@/lib/applications/store";
+import type { CmsData } from "@/lib/cms/types";
 
 export type HealthCheck = {
   id: string;
@@ -17,13 +24,34 @@ export type HealthCheck = {
 export type DashboardOverview = {
   health: HealthCheck[];
   healthScore: number;
-  bookings: Awaited<ReturnType<typeof getBookingStats>>;
+  bookings: BookingStats;
   applications: { total: number; newCount: number };
   mediaCount: number;
-  analytics: Awaited<ReturnType<typeof getAnalyticsSummary>>;
+  analytics: AnalyticsSummary;
   zoomConnected: boolean;
-  recentBookings: Awaited<ReturnType<typeof listBookings>>;
+  recentBookings: StoredBooking[];
 };
+
+const emptyAnalytics = (): AnalyticsSummary => ({
+  totalPageViews: 0,
+  uniqueVisitors: 0,
+  sessions: 0,
+  todayPageViews: 0,
+  todayVisitors: 0,
+  last7DaysPageViews: 0,
+  last7DaysVisitors: 0,
+  topPages: [],
+  topReferrers: [],
+  daily: [],
+  recent: [],
+});
+
+const emptyBookingStats = (): BookingStats => ({
+  total: 0,
+  upcoming: 0,
+  past: 0,
+  next: null,
+});
 
 async function fileReadable(rel: string) {
   try {
@@ -34,16 +62,25 @@ async function fileReadable(rel: string) {
   }
 }
 
+async function settled<T>(promise: Promise<T>, fallback: T): Promise<T> {
+  try {
+    return await promise;
+  } catch (error) {
+    console.error("[admin/health]", error);
+    return fallback;
+  }
+}
+
 export async function getDashboardOverview(): Promise<DashboardOverview> {
   const [cmsEn, cmsFr, bookings, bookingStats, applications, media, analytics] =
     await Promise.all([
-      getCmsData("en"),
-      getCmsData("fr"),
-      listBookings(),
-      getBookingStats(),
-      listJobApplications(),
-      listMedia(),
-      getAnalyticsSummary(),
+      settled(getCmsData("en"), null as CmsData | null),
+      settled(getCmsData("fr"), null as CmsData | null),
+      settled(listBookings(), [] as StoredBooking[]),
+      settled(getBookingStats(), emptyBookingStats()),
+      settled(listJobApplications(), [] as JobApplication[]),
+      settled(listMedia(), []),
+      settled(getAnalyticsSummary(), emptyAnalytics()),
     ]);
 
   const zoomConnected = isZoomBookingConfigured();

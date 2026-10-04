@@ -24,12 +24,16 @@ const APPLICATIONS_FILE = path.join(DATA_DIR, "applications.json");
 const RESUMES_DIR = path.join(DATA_DIR, "resumes");
 
 async function ensureDirs() {
-  await fs.mkdir(RESUMES_DIR, { recursive: true });
+  try {
+    await fs.mkdir(RESUMES_DIR, { recursive: true });
+  } catch {
+    // Read-only hosts (e.g. serverless) may block mkdir — reads still try the path.
+  }
 }
 
 async function readAll(): Promise<JobApplication[]> {
-  await ensureDirs();
   try {
+    await ensureDirs();
     const raw = await fs.readFile(APPLICATIONS_FILE, "utf8");
     const parsed = JSON.parse(raw) as JobApplication[];
     return Array.isArray(parsed) ? parsed : [];

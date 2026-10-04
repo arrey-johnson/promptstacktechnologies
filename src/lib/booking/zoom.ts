@@ -37,8 +37,12 @@ async function readLocalBookings(): Promise<LocalBooking[]> {
 }
 
 async function writeLocalBookings(bookings: LocalBooking[]) {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-  await fs.writeFile(BOOKINGS_FILE, JSON.stringify(bookings, null, 2), "utf8");
+  try {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    await fs.writeFile(BOOKINGS_FILE, JSON.stringify(bookings, null, 2), "utf8");
+  } catch (error) {
+    console.error("[booking] could not persist local booking file", error);
+  }
 }
 
 async function getZoomAccessToken() {
