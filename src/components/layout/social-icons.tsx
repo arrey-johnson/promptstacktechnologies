@@ -35,15 +35,38 @@ function resolveIcon(label: string) {
 export function SocialIconLinks({
   socials,
   className = "",
+  tone = "onDark",
 }: {
   socials: NavLink[];
   className?: string;
+  tone?: "onDark" | "onLight";
 }) {
+  const linkClass =
+    tone === "onLight"
+      ? "inline-flex h-9 w-9 items-center justify-center rounded-md text-text-muted transition-colors hover:bg-brand-lavender/30 hover:text-brand-purple"
+      : "inline-flex h-8 w-8 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-white/10 hover:text-white";
+
   return (
     <div className={`flex items-center gap-1 ${className}`}>
       {socials.map((social) => {
         const Icon = resolveIcon(social.label);
-        if (!Icon) return null;
+        if (!Icon) {
+          return (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className={
+                tone === "onLight"
+                  ? "text-sm font-semibold text-text-muted hover:text-brand-purple"
+                  : "text-sm font-semibold text-white/90 hover:text-white"
+              }
+            >
+              {social.label}
+            </a>
+          );
+        }
         return (
           <a
             key={social.label}
@@ -51,7 +74,7 @@ export function SocialIconLinks({
             target="_blank"
             rel="noreferrer"
             aria-label={social.label}
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+            className={linkClass}
           >
             <Icon className="h-4 w-4" />
           </a>

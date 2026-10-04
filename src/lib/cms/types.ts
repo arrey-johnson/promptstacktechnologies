@@ -12,6 +12,12 @@ export type ServiceItem = {
   /** Longer detail shown on /services — keep home cards on summary + body */
   detailBody?: string;
   details?: string[];
+  /** Problem statement for the dedicated service sales page */
+  problem?: string;
+  /** Outcomes / results visitors can expect */
+  outcomes?: string[];
+  /** Who this service is for */
+  audience?: string;
   href: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -104,14 +110,13 @@ export type HomeContent = {
     heading: string;
     body: string;
   };
-  featuredWork: {
+  partners: {
     eyebrow: string;
     heading: string;
+    body: string;
     items: Array<{
-      title: string;
-      industry: string;
-      services: string[];
-      body: string;
+      name: string;
+      logoSrc: string;
     }>;
   };
   process: {
@@ -139,6 +144,7 @@ export type HomeContent = {
     heading: string;
     body: string;
     cta: Cta;
+    imageSrc?: string;
   };
 };
 
@@ -158,6 +164,37 @@ export type ServicesContent = {
 
 export type ProductsContent = {
   hero: { eyebrow?: string; heading: string; body: string };
+  emptyState: string;
+};
+
+export type PortfolioItem = {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  imageSrc: string;
+  imageAlt?: string;
+  href?: string;
+};
+
+export type PortfolioContent = {
+  hero: {
+    eyebrow?: string;
+    heading: string;
+    body: string;
+    primaryCta: Cta;
+    secondaryCta: Cta;
+  };
+  grid: {
+    eyebrow: string;
+    heading: string;
+    body: string;
+  };
+  cta: {
+    heading: string;
+    body: string;
+    cta: Cta;
+  };
   emptyState: string;
 };
 
@@ -189,10 +226,12 @@ export type CmsData = {
   about: AboutContent;
   servicesPage: ServicesContent;
   productsPage: ProductsContent;
+  portfolioPage: PortfolioContent;
   careersPage: CareersContent;
   contact: ContactContent;
   serviceItems: ServiceItem[];
   products: ProductItem[];
+  portfolioItems: PortfolioItem[];
   jobs: JobItem[];
   team: TeamMember[];
   posts: BlogPost[];

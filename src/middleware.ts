@@ -12,7 +12,8 @@ const REDIRECTS: Record<string, string> = {
   "/academy/application-received": "/contact",
   "/company/about": "/about",
   "/insights": "/blog",
-  "/work": "/products",
+  "/work": "/portfolio",
+  "/products": "/portfolio",
 };
 
 export function middleware(request: NextRequest) {
@@ -33,7 +34,13 @@ export function middleware(request: NextRequest) {
 
   if (pathname.startsWith("/work/")) {
     const url = request.nextUrl.clone();
-    url.pathname = pathname.replace("/work/", "/products/");
+    url.pathname = pathname.replace("/work/", "/portfolio/");
+    return NextResponse.redirect(url);
+  }
+
+  if (pathname.startsWith("/products/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/portfolio";
     return NextResponse.redirect(url);
   }
 
@@ -61,5 +68,7 @@ export const config = {
     "/company/:path*",
     "/insights/:path*",
     "/work/:path*",
+    "/products",
+    "/products/:path*",
   ],
 };

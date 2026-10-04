@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PartnersMarquee } from "@/components/home/partners-marquee";
+import { ProcessRoadmap } from "@/components/home/process-roadmap";
 import { AccentHeading } from "@/components/ui/accent-heading";
 import type { Locale } from "@/lib/i18n/locale";
 import type { HomeContent, ProductItem, ServiceItem } from "@/lib/cms/types";
@@ -87,31 +89,37 @@ export function HomeView({
           <h2 className="mt-4 heading-lg">{home.servicesIntro.heading}</h2>
           <p className="mt-4 body-muted">{home.servicesIntro.body}</p>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
           {services.map((service) => (
             <article
               key={service.id}
               id={service.id}
-              className="overflow-hidden rounded-(--radius-media) border border-brand-navy/10 bg-white"
+              className="flex h-full flex-col overflow-hidden rounded-(--radius-media) border border-brand-navy/10 bg-white"
             >
               {service.imageSrc ? (
-                <div className="relative aspect-[16/10] bg-brand-navy/5">
+                <div className="relative aspect-[5/3] bg-brand-navy/5">
                   <Image
                     src={service.imageSrc}
                     alt={service.imageAlt || service.name}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   />
                 </div>
               ) : null}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-brand-navy">{service.name}</h3>
-                <p className="mt-2 text-sm font-semibold text-brand-purple">{service.summary}</p>
-                <p className="mt-3 body-muted">{service.body}</p>
+              <div className="flex flex-1 flex-col p-4 sm:p-5">
+                <h3 className="text-base font-bold leading-snug text-brand-navy sm:text-lg">
+                  {service.name}
+                </h3>
+                <p className="mt-1.5 text-xs font-semibold leading-snug text-brand-purple sm:text-sm">
+                  {service.summary}
+                </p>
+                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-text-muted">
+                  {service.body}
+                </p>
                 <Link
                   href={service.href}
-                  className="mt-5 inline-flex text-sm font-semibold text-brand-purple"
+                  className="mt-auto pt-4 inline-flex text-sm font-semibold text-brand-purple"
                 >
                   {ui.learnMore}
                 </Link>
@@ -121,53 +129,39 @@ export function HomeView({
         </div>
       </section>
 
-      <section className="bg-brand-navy text-white">
+      <section className="bg-surface-soft">
         <div className="site-container section-space">
-          <p className="inline-flex rounded-(--radius-pill) bg-white/10 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">
-            {home.featuredWork.eyebrow}
-          </p>
-          <h2 className="mt-4 text-2xl font-bold sm:text-4xl">{home.featuredWork.heading}</h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {home.featuredWork.items.map((item) => (
-              <article key={item.title} className="rounded-(--radius-media) border border-white/15 p-6">
-                <p className="text-xs font-semibold tracking-wide text-brand-lavender uppercase">
-                  {item.industry}
-                </p>
-                <h3 className="mt-2 text-xl font-bold">{item.title}</h3>
-                <p className="mt-4 text-sm text-white/80">{item.body}</p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {item.services.map((service) => (
-                    <li
-                      key={service}
-                      className="rounded-(--radius-pill) bg-white/10 px-3 py-1 text-xs font-semibold"
-                    >
-                      {service}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+          <div className="max-w-2xl">
+            <p className="pill">{home.partners.eyebrow}</p>
+            <h2 className="mt-4 heading-lg">{home.partners.heading}</h2>
+            <p className="mt-4 body-muted">{home.partners.body}</p>
           </div>
+          <PartnersMarquee partners={home.partners.items} />
         </div>
       </section>
 
-      <section className="site-container section-space">
-        <div className="max-w-2xl">
-          <p className="pill">{home.process.eyebrow}</p>
-          <h2 className="mt-4 heading-lg">{home.process.heading}</h2>
-          <p className="mt-4 body-muted">{home.process.body}</p>
+      <section className="relative overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgb(203_174_211/0.28),transparent_55%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.4]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, rgb(27 38 59 / 0.07) 1px, transparent 0)",
+            backgroundSize: "22px 22px",
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative site-container section-space">
+          <div className="max-w-2xl">
+            <p className="pill">{home.process.eyebrow}</p>
+            <h2 className="mt-4 heading-lg">{home.process.heading}</h2>
+            <p className="mt-4 body-muted">{home.process.body}</p>
+          </div>
+          <ProcessRoadmap steps={home.process.steps} locale={locale} />
         </div>
-        <ol className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {home.process.steps.map((step, index) => (
-            <li key={step.title} className="rounded-(--radius-media) border border-brand-navy/10 p-5">
-              <p className="text-sm font-bold text-brand-purple">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-2 text-lg font-bold text-brand-navy">{step.title}</h3>
-              <p className="mt-2 body-muted">{step.body}</p>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* In the lab / products teaser — temporarily hidden
@@ -229,16 +223,37 @@ export function HomeView({
         </div>
       </section>
 
-      <section className="bg-brand-purple text-white">
-        <div className="site-container section-space text-center">
-          <h2 className="text-2xl font-bold sm:text-4xl">{home.finalCta.heading}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-white/90">{home.finalCta.body}</p>
-          <Link
-            href={home.finalCta.cta.href}
-            className="mt-8 inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) bg-white px-5 text-sm font-semibold text-brand-purple"
-          >
-            {home.finalCta.cta.label}
-          </Link>
+      <section className="relative isolate min-h-[22rem] overflow-hidden text-white sm:min-h-[26rem]">
+        <Image
+          src={home.finalCta.imageSrc || "/brand/cta-next-step.jpg"}
+          alt=""
+          fill
+          className="object-cover object-[70%_center] sm:object-[75%_center] lg:object-right"
+          sizes="100vw"
+          priority={false}
+        />
+        {/* Heavy purple over the copy; clear through where the subject sits */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(105deg,rgb(168_0_230/0.94)_0%,rgb(168_0_230/0.9)_34%,rgb(168_0_230/0.55)_58%,rgb(168_0_230/0.18)_78%,rgb(168_0_230/0.06)_100%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgb(168_0_230/0.55)_0%,transparent_55%)] sm:hidden"
+          aria-hidden="true"
+        />
+        <div className="relative site-container flex min-h-[22rem] items-center section-space sm:min-h-[26rem]">
+          <div className="max-w-md text-left sm:max-w-lg lg:max-w-xl">
+            <h2 className="text-2xl font-bold drop-shadow-sm sm:text-4xl">
+              {home.finalCta.heading}
+            </h2>
+            <p className="mt-4 text-white/95 drop-shadow-sm">{home.finalCta.body}</p>
+            <Link
+              href={home.finalCta.cta.href}
+              className="mt-8 inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) bg-white px-5 text-sm font-semibold text-brand-purple hover:bg-white/95"
+            >
+              {home.finalCta.cta.label}
+            </Link>
+          </div>
         </div>
       </section>
     </>

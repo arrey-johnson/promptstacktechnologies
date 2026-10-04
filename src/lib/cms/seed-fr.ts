@@ -1,3 +1,4 @@
+import { portfolioItemsFr } from "./portfolio-items";
 import type { CmsData } from "./types";
 
 export const cmsSeedFr: CmsData = {
@@ -11,7 +12,7 @@ export const cmsSeedFr: CmsData = {
       { label: "Accueil", href: "/" },
       { label: "À propos", href: "/about" },
       { label: "Services", href: "/services" },
-      { label: "Produits", href: "/products" },
+      { label: "Portfolio", href: "/portfolio" },
       { label: "Carrières", href: "/careers" },
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
@@ -30,23 +31,23 @@ export const cmsSeedFr: CmsData = {
       {
         title: "Ce que nous offrons",
         links: [
-          { label: "Logiciel", href: "/services#software" },
-          { label: "IA & Automatisation", href: "/services#ai-automation" },
-          { label: "Marketing digital", href: "/services#digital-marketing" },
-          { label: "Academy", href: "/services#academy" },
+          { label: "Logiciel & sites web", href: "/services/software" },
+          { label: "IA & Automatisation", href: "/services/ai-automation" },
+          { label: "Marketing digital", href: "/services/digital-marketing" },
+          { label: "Academy", href: "/services/academy" },
         ],
       },
       {
         title: "Academy",
         links: [
-          { label: "Programmes", href: "/services#academy" },
+          { label: "Programmes", href: "/services/academy" },
           { label: "Nous écrire", href: "/contact?subject=Demande%20Academy" },
         ],
       },
       {
         title: "Plus",
         links: [
-          { label: "Produits", href: "/products" },
+          { label: "Portfolio", href: "/portfolio" },
           { label: "Appel découverte", href: "#book-discovery" },
           { label: "Contact", href: "/contact" },
         ],
@@ -90,33 +91,27 @@ export const cmsSeedFr: CmsData = {
     },
     purpose: {
       eyebrow: "Le brief Promptstack",
-      heading: "Des systèmes que votre équipe peut faire tourner — et faire grandir.",
+      heading: "Arrêtez de combattre vos outils. Faites tourner l'entreprise.",
       body: [
-        "Promptstack Technologies se place à la croisée des opérations, de la croissance et des compétences. Nous aidons les organisations à arrêter de bricoler des outils et à livrer logiciels, automatisations et campagnes que les opérateurs peuvent vraiment posséder.",
-        "Nous associons la livraison à Promptstack Academy pour que la capacité ne parte pas avec le projet — elle s'accumule dans votre équipe.",
+        "Trop d'équipes perdent du temps chaque semaine à cause de passages de relais confus, de tableurs sans fin, et d'applis qui ne collent pas à la façon dont les gens travaillent vraiment. Le progrès ralentit — non pas par manque d'effort, mais parce que les outils gênent.",
+        "Promptstack Technologies construit les logiciels, automatisations et systèmes digitaux qui corrigent ça. Nous créons des outils adaptés à votre façon de travailler, pour que votre équipe aille plus vite, avec moins de bricolages, et un responsable clair pour chaque partie.",
       ],
     },
     servicesIntro: {
       eyebrow: "La stack Promptstack",
       heading: "Un partenaire. Quatre leviers reliés.",
-      body: "Choisissez le point d'entrée qui fait le plus mal aujourd'hui — logiciel sur mesure, IA & automatisation, marketing digital ou Academy — puis élargissez sans changer de prestataire en cours de route.",
+      body: "Choisissez le point d'entrée qui fait le plus mal aujourd'hui — sites web & logiciel, IA & automatisation, marketing digital ou Academy — puis élargissez sans changer de prestataire en cours de route.",
     },
-    featuredWork: {
-      eyebrow: "Ce que nous livrons typiquement",
-      heading: "Exemples de chantiers",
+    partners: {
+      eyebrow: "Partenaires techniques",
+      heading: "Les plateformes avec lesquelles nous construisons",
+      body: "Nous travaillons avec les outils et plateformes que les équipes utilisent déjà — pour livrer dans la stack que vous faites tourner aujourd'hui.",
       items: [
-        {
-          title: "Cockpit ops pour validations et relances",
-          industry: "Ops back-office",
-          services: ["Logiciel", "IA & Automatisation"],
-          body: "Un espace partagé qui remplace la chasse aux tableurs par des files claires, des rappels et une traçabilité.",
-        },
-        {
-          title: "Moteur de demande avec reporting honnête",
-          industry: "Équipes revenus",
-          services: ["Marketing digital", "Logiciel"],
-          body: "Campagnes, pages et tableaux de bord reliés pour que dépenses, leads et conversion racontent une seule histoire.",
-        },
+        { name: "Google", logoSrc: "/brand/partners/google.webp?v=4" },
+        { name: "Odoo", logoSrc: "/brand/partners/odoo.webp?v=4" },
+        { name: "Microsoft", logoSrc: "/brand/partners/microsoft.webp?v=4" },
+        { name: "Zoho", logoSrc: "/brand/partners/zoho.webp?v=3" },
+        { name: "cPanel", logoSrc: "/brand/partners/cpanel.png?v=4" },
       ],
     },
     process: {
@@ -181,6 +176,7 @@ export const cmsSeedFr: CmsData = {
       heading: "Envie d'une prochaine étape plus claire ?",
       body: "Réservez un appel découverte. Nous trancherons s'il vous faut un système, une automatisation, une poussée growth, l'Academy, ou un mix — et quoi faire en premier.",
       cta: { label: "Réserver un appel découverte", href: "#book-discovery" },
+      imageSrc: "/brand/cta-next-step.jpg",
     },
   },
   about: {
@@ -232,8 +228,8 @@ export const cmsSeedFr: CmsData = {
           body: "Nous partons du goulot — process, données, outils ou compétences — avant de proposer un build.",
         },
         {
-          title: "Logiciel sur mesure",
-          body: "Systèmes web et mobile calés sur vos vrais flux, pas sur des templates génériques.",
+          title: "Sites web & logiciel sur mesure",
+          body: "Sites d'entreprise, portails et apps calés sur vos vrais flux — pas des templates génériques.",
         },
         {
           title: "IA & automatisation",
@@ -261,7 +257,7 @@ export const cmsSeedFr: CmsData = {
   servicesPage: {
     hero: {
       heading: "Services",
-      body: "Quatre leviers reliés : logiciel sur mesure, IA & automatisation, marketing digital et Academy. Commencez là où la contrainte est la plus nette.",
+      body: "Quatre leviers reliés : sites web & logiciel sur mesure, IA & automatisation, marketing digital et Academy. Commencez là où la contrainte est la plus nette.",
     },
     cta: {
       heading: "Pas sûr du levier à tirer en premier ?",
@@ -276,6 +272,26 @@ export const cmsSeedFr: CmsData = {
       body: "Nous façonnons des ventures et outils qui méritent d'être publiés. Cette page s'ouvrira quand les premiers seront prêts à partager.",
     },
     emptyState: "Revenez bientôt — ou réservez un appel découverte pour un aperçu anticipé.",
+  },
+  portfolioPage: {
+    hero: {
+      eyebrow: "Portfolio web",
+      heading: "Travaux sélectionnés à travers marques et industries",
+      body: "Nos meilleurs projets de design web — de la finance et l'e-commerce à la beauté, l'éducation et la tech.",
+      primaryCta: { label: "Explorer les projets", href: "#portfolio-grid" },
+      secondaryCta: { label: "Démarrer un projet", href: "#book-discovery" },
+    },
+    grid: {
+      eyebrow: "Quelques exemples de notre travail",
+      heading: "Notre portfolio de design web",
+      body: "Nous avons livré des projets dans des niches variées. Survolez un projet pour explorer.",
+    },
+    cta: {
+      heading: "Créons un travail digne d'entrer dans ce portfolio.",
+      body: "Parlez-nous de vos objectifs et nous recommanderons le bon chemin.",
+      cta: { label: "Réserver un appel découverte", href: "#book-discovery" },
+    },
+    emptyState: "Les projets du portfolio apparaîtront ici une fois ajoutés dans Admin → Portfolio.",
   },
   careersPage: {
     hero: {
@@ -325,18 +341,27 @@ export const cmsSeedFr: CmsData = {
   serviceItems: [
     {
       id: "software",
-      name: "Logiciel",
-      summary: "Outils et plateformes calés sur vos vrais flux de travail.",
-      body: "Nous construisons des systèmes web et mobile que votre équipe peut faire tourner au quotidien — apps internes, portails clients et outils métier alignés sur le travail réel.",
+      name: "Logiciel & sites web",
+      summary: "Sites web, apps et outils calés sur votre façon de travailler.",
+      body: "Nous construisons des sites d'entreprise, des portails clients et des apps web sur mesure que votre équipe peut faire tourner au quotidien — alignés sur le travail réel, pas un template qui « presque » convient.",
       detailBody:
-        "Quand les tableurs, les fils de chat et les outils génériques ne suffisent plus, nous concevons et livrons un logiciel dans lequel vos opérateurs peuvent vraiment travailler. Flux clairs, permissions sensées, releases revoyables avant le go-live — pas une passation boîte noire.",
+        "Besoin d'un site d'entreprise clair, d'un portail client, ou d'un logiciel qui remplace des tableurs confus ? Nous le concevons et le livrons pour que votre équipe puisse vraiment s'en servir. Pages et flux clairs, permissions sensées, releases revoyables avant le go-live — pas une passation boîte noire.",
+      problem:
+        "Votre marque est floue en ligne, ou votre équipe fait encore tourner le travail critique dans des tableurs et des fils de chat parce qu'aucun outil ne convient vraiment. Les logiciels génériques imposent des bricolages. Un site faible fait perdre la confiance avant la première conversation.",
       details: [
-        "Ateliers de découverte pour cartographier le vrai flux avant de proposer des écrans",
-        "Apps web/mobile, portails et tableaux de bord ops calés sur votre process",
-        "Builds itératifs avec démos pour corriger le cap tant que changer coûte peu",
-        "Passation, formation et suivi optionnel pour que la propriété reste chez vous",
+        "Sites d'entreprise et pages d'atterrissage qui expliquent ce que vous faites et convertissent l'intérêt",
+        "Apps web, portails clients et tableaux de bord ops calés sur votre vrai process",
+        "Ateliers de découverte pour cartographier le travail avant de proposer des écrans",
+        "Builds itératifs avec démos, puis passation et formation pour que la propriété reste chez vous",
       ],
-      href: "/services#software",
+      outcomes: [
+        "Un site ou un produit que clients et équipe comprennent tout de suite",
+        "Moins de rustines manuelles entre outils et personnes",
+        "Une propriété claire après le lancement — pas un système que seul le prestataire peut toucher",
+      ],
+      audience:
+        "Les entreprises qui ont besoin d'un site professionnel, d'un portail client, ou d'un logiciel interne aligné sur le travail réel.",
+      href: "/services/software",
       imageSrc: "/brand/services/software.jpg",
       imageAlt: "Développeur travaillant tard devant plusieurs écrans de code",
     },
@@ -347,13 +372,22 @@ export const cmsSeedFr: CmsData = {
       body: "Nous repérons les handoffs, copier-coller et piles de validation à corriger — puis nous les automatisons avec des flux maintenables, pas du théâtre de démo.",
       detailBody:
         "Nous ciblons la corvée qui brûle des heures sans jugement — ressaisie, relances, mises à jour de statut, routage de documents — et la remplaçons par des automatisations que votre équipe comprend et peut maintenir. L'IA là où elle aide ; des flux fiables là où ils suffisent.",
+      problem:
+        "Les gens recopient des données entre outils, relancent des validations dans le chat, et retapent les mêmes mises à jour chaque jour. Des heures disparaissent dans un travail qui n'avait pas besoin d'un humain — et les erreurs arrivent quand quelqu'un est fatigué.",
       details: [
         "Audit de process pour repérer les automatisations à fort ROI",
         "Automatisation des formulaires, validations, notifications et handoffs",
         "Assistants IA pratiques quand ils réduisent l'erreur ou accélèrent les décisions",
         "Suivi et playbooks pour que les automatisations ne deviennent pas une dette obscure",
       ],
-      href: "/services#ai-automation",
+      outcomes: [
+        "Des heures récupérées chaque semaine sur les tâches qui traînaient",
+        "Moins de handoffs ratés et moins d'erreurs de copier-coller",
+        "Des automatisations que votre équipe peut expliquer et faire tenir",
+      ],
+      audience:
+        "Les équipes ops, admin et growth noyées sous des tâches répétables qui devraient déjà tourner seules.",
+      href: "/services/ai-automation",
       imageSrc: "/brand/services/ai-automation.jpg",
       imageAlt: "Poignée de main entre une main humaine et une main robotique",
     },
@@ -364,13 +398,22 @@ export const cmsSeedFr: CmsData = {
       body: "SEO, médias payants, contenu et analytics connectés pour transformer l'attention en pipeline — avec un reporting fiable pour les opérateurs.",
       detailBody:
         "Nous construisons des systèmes de croissance, pas des campagnes déconnectées. Canaux, pages et reporting restent reliés pour voir ce qui a coûté, ce qui a converti, et quoi faire ensuite — sans tableau de bord illisible.",
+      problem:
+        "Pubs, contenu et SEO tournent en silos. L'argent sort, les leads arrivent de façon inégale, et personne ne peut clairement dire ce qui a marché. Le reporting a l'air chargé mais n'aide pas les décisions de la semaine suivante.",
       details: [
         "Stratégie de canaux (SEO, paid, contenu) avec des priorités claires",
         "Pages et tunnels alignés sur l'offre et l'audience",
         "Tracking et analytics qui relient dépenses, leads et conversion",
         "Reporting utilisable semaine après semaine — pas seulement des vanity metrics",
       ],
-      href: "/services#digital-marketing",
+      outcomes: [
+        "Des canaux qui soutiennent un plan de croissance clair",
+        "Des dépenses reliées à des leads et conversions que vous pouvez suivre",
+        "Un reporting hebdo actionnable sans traducteur",
+      ],
+      audience:
+        "Fondateurs et responsables marketing qui veulent une croissance mesurable — pas des campagnes occupées et opaques.",
+      href: "/services/digital-marketing",
       imageSrc: "/brand/services/digital-marketing.jpg",
       imageAlt: "Professionnelle souriante en appel vidéo sur smartphone à son bureau",
     },
@@ -381,13 +424,22 @@ export const cmsSeedFr: CmsData = {
       body: "Promptstack Academy forme à livrer du travail fini — des projets qui démontrent la compétence, pas des certificats sans preuve.",
       detailBody:
         "Promptstack Academy s'adresse aux personnes et équipes qui veulent une capacité démontrable. Les apprenants construisent vers des projets finis — avec coaching, critique, et un parcours proche de notre livraison client — pour que les compétences survivent à la salle de classe.",
+      problem:
+        "La formation se termine par des slides et des certificats, mais l'équipe ne sait toujours pas livrer. Les compétences s'effacent parce que la pratique ne ressemblait jamais à une vraie livraison — et la capacité part quand le prestataire part.",
       details: [
         "Parcours par projets en logiciel, IA et compétences digitales associées",
         "Cycles de build mentorés avec revues, pas seulement des cours enregistrés",
         "Livrables portfolio qui prouvent ce que quelqu'un peut shipper",
         "Options d'upselling d'équipe quand vous voulez la capacité en interne",
       ],
-      href: "/services#academy",
+      outcomes: [
+        "Des personnes qui montrent du travail fini, pas seulement une attestation",
+        "Des compétences calées sur la façon dont les vrais projets se livrent",
+        "Plus de capacité qui reste dans votre équipe après l'engagement",
+      ],
+      audience:
+        "Les personnes qui construisent un portfolio et les entreprises qui veulent que leur équipe livre — pas seulement qu'elle assiste à une formation.",
+      href: "/services/academy",
       imageSrc: "/brand/services/academy.jpg",
       imageAlt: "Intervenante présentant devant des participants en atelier de formation",
     },
@@ -412,6 +464,7 @@ export const cmsSeedFr: CmsData = {
       ctaLabel: "Demander un accès anticipé",
     },
   ],
+  portfolioItems: portfolioItemsFr,
   jobs: [],
   team: [],
   posts: [],

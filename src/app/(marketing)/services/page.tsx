@@ -9,8 +9,7 @@ export const metadata: Metadata = { title: "Services" };
 export default async function ServicesPage() {
   const [cms, locale] = await Promise.all([getCmsData(), getRequestLocale()]);
   const { servicesPage, serviceItems } = cms;
-  const includedLabel = locale === "fr" ? "Ce que ça couvre" : "What this covers";
-  const ctaLabel = locale === "fr" ? "Réserver un appel découverte" : "Book a discovery call";
+  const learnMore = locale === "fr" ? "Voir le service" : "Explore this service";
 
   return (
     <>
@@ -19,56 +18,32 @@ export default async function ServicesPage() {
         <p className="mt-4 max-w-2xl body-muted">{servicesPage.hero.body}</p>
       </section>
 
-      <section className="site-container pb-16 grid gap-8">
+      <section className="site-container pb-16 grid gap-5 md:grid-cols-2">
         {serviceItems.map((service) => (
           <article
             key={service.id}
-            id={service.id}
-            className="scroll-mt-28 overflow-hidden rounded-(--radius-media) border border-brand-navy/10 lg:grid lg:grid-cols-[0.95fr_1.05fr]"
+            className="flex h-full flex-col overflow-hidden rounded-(--radius-media) border border-brand-navy/10 bg-white"
           >
             {service.imageSrc ? (
-              <div className="relative min-h-56 bg-brand-navy/5 lg:min-h-full">
+              <div className="relative aspect-[16/10] bg-brand-navy/5">
                 <Image
                   src={service.imageSrc}
                   alt={service.imageAlt || service.name}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-            ) : (
-              <div className="bg-surface-soft p-6 lg:p-8">
-                <h2 className="text-2xl font-bold text-brand-navy">{service.name}</h2>
-                <p className="mt-2 text-sm font-semibold text-brand-purple">{service.summary}</p>
-              </div>
-            )}
-            <div className="p-6 lg:p-8">
-              {service.imageSrc ? (
-                <>
-                  <h2 className="text-2xl font-bold text-brand-navy">{service.name}</h2>
-                  <p className="mt-2 text-sm font-semibold text-brand-purple">{service.summary}</p>
-                </>
-              ) : null}
-              <p className={`body-muted ${service.imageSrc ? "mt-4" : ""}`}>
-                {service.detailBody || service.body}
-              </p>
-              {service.details && service.details.length > 0 ? (
-                <div className="mt-6">
-                  <p className="text-sm font-bold tracking-wide text-brand-navy uppercase">
-                    {includedLabel}
-                  </p>
-                  <ul className="mt-3 space-y-2">
-                    {service.details.map((item) => (
-                      <li key={item} className="flex gap-2 body-muted">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-purple" aria-hidden />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-              <Link href="#book-discovery" className="btn-primary mt-6 inline-flex">
-                {ctaLabel}
+            ) : null}
+            <div className="flex flex-1 flex-col p-6">
+              <h2 className="text-xl font-bold text-brand-navy">{service.name}</h2>
+              <p className="mt-2 text-sm font-semibold text-brand-purple">{service.summary}</p>
+              <p className="mt-3 body-muted">{service.body}</p>
+              <Link
+                href={service.href || `/services/${service.id}`}
+                className="mt-auto pt-5 inline-flex text-sm font-semibold text-brand-purple"
+              >
+                {learnMore} →
               </Link>
             </div>
           </article>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PromptstackLogo } from "@/components/brand/promptstack-logo";
+import { SocialIconLinks } from "@/components/layout/social-icons";
 import type { SiteSettings } from "@/lib/cms/types";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 
@@ -41,19 +42,7 @@ export function SiteFooter({ settings }: SiteFooterProps) {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-brand-navy/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <PromptstackLogo className="inline-flex items-center gap-3" />
-          <div className="flex flex-wrap gap-4">
-            {settings.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                className="text-sm font-semibold text-text-muted hover:text-brand-purple"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {social.label}
-              </a>
-            ))}
-          </div>
+          <SocialIconLinks socials={settings.socials} tone="onLight" />
           <p className="text-sm text-text-muted">
             © {new Date().getFullYear()} {settings.siteName}
           </p>

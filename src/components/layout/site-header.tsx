@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { PromptstackLogo } from "@/components/brand/promptstack-logo";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { SocialIconLinks } from "@/components/layout/social-icons";
@@ -17,6 +17,7 @@ type SiteHeaderProps = {
   phone: string;
   location: string;
   socials: NavLink[];
+  serviceLinks?: NavLink[];
 };
 
 function phoneHref(phone: string) {
@@ -49,6 +50,10 @@ function IconPin({ className }: { className?: string }) {
   );
 }
 
+function isServicesNav(item: NavLink) {
+  return item.href === "/services" || item.href.startsWith("/services/");
+}
+
 export function SiteHeader({
   nav,
   cta,
@@ -57,14 +62,23 @@ export function SiteHeader({
   phone,
   location,
   socials,
+  serviceLinks = [],
 }: SiteHeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const desktopMenuRef = useRef<HTMLDivElement>(null);
+  const menuId = useId();
   const menuLabel = locale === "fr" ? "Ouvrir le menu" : "Open menu";
   const closeLabel = locale === "fr" ? "Fermer le menu" : "Close menu";
+  const overviewLabel = locale === "fr" ? "Vue d'ensemble" : "Overview";
+  const hasServiceMenu = serviceLinks.length > 0;
 
   useEffect(() => {
     setOpen(false);
+    setServicesOpen(false);
+    setMobileServicesOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -75,6 +89,24 @@ export function SiteHeader({
       document.body.style.overflow = previous;
     };
   }, [open]);
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    function onPointerDown(event: MouseEvent) {
+      if (!desktopMenuRef.current?.contains(event.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setServicesOpen(false);
+    }
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [servicesOpen]);
 
   return (
     <header className="sticky top-0 z-50">
@@ -114,6 +146,71 @@ export function SiteHeader({
                 item.href === "/"
                   ? pathname === "/"
                   : pathname === item.href || pathname.startsWith(`${item.href}/`);
+              const showSubmenu = hasServiceMenu && isServicesNav(item);
+
+              if (showSubmenu) {
+                return (
+                  <div key={item.href} className="relative" ref={desktopMenuRef}>
+                    <button
+                      type="button"
+                      className={`inline-flex items-center gap-1 text-sm font-semibold ${
+                        active ? "text-brand-purple" : "text-brand-navy hover:text-brand-purple"
+                      }`}
+                      aria-expanded={servicesOpen}
+                      aria-controls={menuId}
+                      onClick={() => setServicesOpen((value) => !value)}
+                      onMouseEnter={() => setServicesOpen(true)}
+                    >
+                      {item.label}
+                      <svg
+                        className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    {servicesOpen ? (
+                      <div
+                        id={menuId}
+                        className="absolute left-0 top-full z-50 w-64 pt-3"
+                        onMouseLeave={() => setServicesOpen(false)}
+                      >
+                        <div className="rounded-(--radius-media) border border-brand-navy/10 bg-white p-2 shadow-[0_16px_40px_rgba(15,23,42,0.14)]">
+                        <Link
+                          href="/services"
+                          className="block rounded-(--radius-btn) px-3 py-2.5 text-sm font-semibold text-brand-navy hover:bg-surface-soft hover:text-brand-purple"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {overviewLabel}
+                        </Link>
+                        <div className="my-1 border-t border-brand-navy/8" />
+                        {serviceLinks.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className={`block rounded-(--radius-btn) px-3 py-2.5 text-sm font-semibold hover:bg-surface-soft ${
+                              pathname === service.href
+                                ? "text-brand-purple"
+                                : "text-brand-navy hover:text-brand-purple"
+                            }`}
+                            onClick={() => setServicesOpen(false)}
+                          >
+                            {service.label}
+                          </Link>
+                        ))}
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.href}
@@ -170,16 +267,66 @@ export function SiteHeader({
               aria-label="Mobile"
             >
               <div className="site-container flex max-h-[min(70dvh,28rem)] flex-col gap-1 overflow-y-auto py-3">
-                {nav.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="rounded-(--radius-btn) px-3 py-3 text-sm font-semibold text-brand-navy hover:bg-surface-soft"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {nav.map((item) => {
+                  if (hasServiceMenu && isServicesNav(item)) {
+                    return (
+                      <div key={item.href} className="rounded-(--radius-btn)">
+                        <button
+                          type="button"
+                          className="flex w-full items-center justify-between rounded-(--radius-btn) px-3 py-3 text-left text-sm font-semibold text-brand-navy hover:bg-surface-soft"
+                          aria-expanded={mobileServicesOpen}
+                          onClick={() => setMobileServicesOpen((value) => !value)}
+                        >
+                          <span>{item.label}</span>
+                          <svg
+                            className={`h-4 w-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`}
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                        {mobileServicesOpen ? (
+                          <div className="mb-1 ml-2 border-l border-brand-navy/10 pl-2">
+                            <Link
+                              href="/services"
+                              className="block rounded-(--radius-btn) px-3 py-2.5 text-sm font-semibold text-brand-navy hover:bg-surface-soft"
+                              onClick={() => setOpen(false)}
+                            >
+                              {overviewLabel}
+                            </Link>
+                            {serviceLinks.map((service) => (
+                              <Link
+                                key={service.href}
+                                href={service.href}
+                                className="block rounded-(--radius-btn) px-3 py-2.5 text-sm font-semibold text-brand-navy hover:bg-surface-soft"
+                                onClick={() => setOpen(false)}
+                              >
+                                {service.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-(--radius-btn) px-3 py-3 text-sm font-semibold text-brand-navy hover:bg-surface-soft"
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
                 <Link
                   href={cta.href}
                   className="btn-primary mt-2 w-fit"

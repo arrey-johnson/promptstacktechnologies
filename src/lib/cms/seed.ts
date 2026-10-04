@@ -1,3 +1,4 @@
+import { portfolioItemsEn } from "./portfolio-items";
 import type { CmsData } from "./types";
 
 export const cmsSeed: CmsData = {
@@ -11,7 +12,7 @@ export const cmsSeed: CmsData = {
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
       { label: "Services", href: "/services" },
-      { label: "Products", href: "/products" },
+      { label: "Portfolio", href: "/portfolio" },
       { label: "Careers", href: "/careers" },
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
@@ -30,23 +31,23 @@ export const cmsSeed: CmsData = {
       {
         title: "What we offer",
         links: [
-          { label: "Software", href: "/services#software" },
-          { label: "AI & Automation", href: "/services#ai-automation" },
-          { label: "Digital Marketing", href: "/services#digital-marketing" },
-          { label: "Academy", href: "/services#academy" },
+          { label: "Software & websites", href: "/services/software" },
+          { label: "AI & Automation", href: "/services/ai-automation" },
+          { label: "Digital Marketing", href: "/services/digital-marketing" },
+          { label: "Academy", href: "/services/academy" },
         ],
       },
       {
         title: "Academy",
         links: [
-          { label: "Programs", href: "/services#academy" },
+          { label: "Programs", href: "/services/academy" },
           { label: "Enquire", href: "/contact?subject=Academy%20Enquiry" },
         ],
       },
       {
         title: "More",
         links: [
-          { label: "Products", href: "/products" },
+          { label: "Portfolio", href: "/portfolio" },
           { label: "Book a discovery call", href: "#book-discovery" },
           { label: "Contact", href: "/contact" },
         ],
@@ -90,33 +91,27 @@ export const cmsSeed: CmsData = {
     },
     purpose: {
       eyebrow: "The Promptstack brief",
-      heading: "Systems your team can run — and grow with.",
+      heading: "Stop fighting your tools. Start running the business.",
       body: [
-        "Promptstack Technologies sits where operations, growth, and skills meet. We help organisations stop duct-taping tools together and start shipping software, automation, and campaigns that operators can own.",
-        "We pair delivery with Promptstack Academy so capability doesn’t leave when a project ends — it compounds inside your team.",
+        "Too many teams lose time every week to messy handoffs, endless spreadsheets, and apps that don’t match how people really work. Progress slows — not because the team isn’t trying, but because the tools get in the way.",
+        "Promptstack Technologies builds the software, automation, and digital systems that fix that. We make tools that fit your process, so your team can work faster, with fewer workarounds, and with a clear owner for every part.",
       ],
     },
     servicesIntro: {
       eyebrow: "The Promptstack stack",
       heading: "One partner. Four connected levers.",
-      body: "Pick the entry point that hurts most today — custom software, AI & automation, digital marketing, or Academy — then expand without switching vendors mid-flight.",
+      body: "Pick the entry point that hurts most today — websites & software, AI & automation, digital marketing, or Academy — then expand without switching vendors mid-flight.",
     },
-    featuredWork: {
-      eyebrow: "Patterns we ship",
-      heading: "Examples of the work",
+    partners: {
+      eyebrow: "Technical partners",
+      heading: "Platforms we build with",
+      body: "We work across the tools and platforms teams already trust — so delivery fits the stack you run today.",
       items: [
-        {
-          title: "Ops cockpit for approvals and follow-ups",
-          industry: "Back-office ops",
-          services: ["Software", "AI & Automation"],
-          body: "A shared workspace that replaces spreadsheet chasing with clear queues, reminders, and audit trails.",
-        },
-        {
-          title: "Demand engine with honest reporting",
-          industry: "Revenue teams",
-          services: ["Digital Marketing", "Software"],
-          body: "Campaigns, landing pages, and dashboards wired so spend, leads, and conversion tell one story.",
-        },
+        { name: "Google", logoSrc: "/brand/partners/google.webp?v=4" },
+        { name: "Odoo", logoSrc: "/brand/partners/odoo.webp?v=4" },
+        { name: "Microsoft", logoSrc: "/brand/partners/microsoft.webp?v=4" },
+        { name: "Zoho", logoSrc: "/brand/partners/zoho.webp?v=3" },
+        { name: "cPanel", logoSrc: "/brand/partners/cpanel.png?v=4" },
       ],
     },
     process: {
@@ -181,6 +176,7 @@ export const cmsSeed: CmsData = {
       heading: "Want a clearer next step?",
       body: "Book a discovery call. We’ll sort whether you need a system, an automation, a growth push, Academy, or a mix — and what to do first.",
       cta: { label: "Book a discovery call", href: "#book-discovery" },
+      imageSrc: "/brand/cta-next-step.jpg",
     },
   },
   about: {
@@ -232,8 +228,8 @@ export const cmsSeed: CmsData = {
           body: "We start with the bottleneck — process, data, tools, or skills — before recommending a build.",
         },
         {
-          title: "Custom software",
-          body: "Web and mobile systems shaped around real workflows, not generic templates.",
+          title: "Websites & custom software",
+          body: "Company websites, portals, and apps shaped around real workflows — not generic templates.",
         },
         {
           title: "AI & automation",
@@ -261,7 +257,7 @@ export const cmsSeed: CmsData = {
   servicesPage: {
     hero: {
       heading: "Services",
-      body: "Four connected levers: custom software, AI & automation, digital marketing, and Academy. Start where the constraint is sharpest.",
+      body: "Four connected levers: websites & custom software, AI & automation, digital marketing, and Academy. Start where the constraint is sharpest.",
     },
     cta: {
       heading: "Not sure which lever to pull first?",
@@ -276,6 +272,26 @@ export const cmsSeed: CmsData = {
       body: "We’re shaping ventures and tools worth shipping. This page will open when the first ones are ready to share.",
     },
     emptyState: "Check back soon — or book a discovery call if you want an early look at what’s next.",
+  },
+  portfolioPage: {
+    hero: {
+      eyebrow: "Web design portfolio",
+      heading: "Selected work across brands and industries",
+      body: "Showcasing our best web design projects — from finance and ecommerce to beauty, education, and technology.",
+      primaryCta: { label: "Explore projects", href: "#portfolio-grid" },
+      secondaryCta: { label: "Start a project", href: "#book-discovery" },
+    },
+    grid: {
+      eyebrow: "Some examples of our work",
+      heading: "Our web design portfolio",
+      body: "We have delivered projects across varied business niches. Hover over a project to explore.",
+    },
+    cta: {
+      heading: "Let’s create work worth adding to this portfolio.",
+      body: "Tell us about your goals and we will recommend the right path.",
+      cta: { label: "Book a discovery call", href: "#book-discovery" },
+    },
+    emptyState: "Portfolio projects will appear here once you add them in Admin → Portfolio.",
   },
   careersPage: {
     hero: {
@@ -325,18 +341,27 @@ export const cmsSeed: CmsData = {
   serviceItems: [
     {
       id: "software",
-      name: "Software",
-      summary: "Custom tools and platforms shaped around your real workflows.",
-      body: "We build web and mobile systems your team can run day to day — internal apps, client portals, and line-of-business tools matched to how work actually moves.",
+      name: "Software & websites",
+      summary: "Websites, apps, and tools built around how your team works.",
+      body: "We build company websites, client portals, and custom web apps your team can run day to day — matched to how work actually moves, not a template that almost fits.",
       detailBody:
-        "When spreadsheets, chat threads, and off-the-shelf tools stop fitting, we design and ship software your operators can actually live in. That means clear workflows, sensible permissions, and releases you can review before go-live — not a black-box handoff.",
+        "Need a clear company website, a client portal, or software that replaces messy spreadsheets? We design and ship it so your team can actually use it. That means clear pages and workflows, sensible permissions, and releases you can review before go-live — not a black-box handoff.",
+      problem:
+        "Your brand looks unclear online, or your team still runs critical work in spreadsheets and chat threads because no tool quite fits. Off-the-shelf software forces workarounds. A weak website loses trust before the first conversation.",
       details: [
-        "Discovery workshops to map the real workflow before we propose screens",
-        "Web and mobile apps, portals, and ops dashboards shaped to your process",
-        "Iterative builds with demos so you can steer while change is still cheap",
-        "Handover, training, and optional aftercare so ownership stays with your team",
+        "Company websites and landing pages that explain what you do and convert interest",
+        "Web apps, client portals, and ops dashboards shaped to your real process",
+        "Discovery workshops to map the work before we propose screens",
+        "Iterative builds with demos, then handover and training so ownership stays with your team",
       ],
-      href: "/services#software",
+      outcomes: [
+        "A website or product your customers and team understand immediately",
+        "Fewer manual patches between tools and people",
+        "Clear ownership after launch — not a system only the vendor can touch",
+      ],
+      audience:
+        "Companies that need a professional website, a client-facing portal, or internal software that matches how work really gets done.",
+      href: "/services/software",
       imageSrc: "/brand/services/software.jpg",
       imageAlt: "Developer working late at a desk with code on multiple screens",
     },
@@ -347,13 +372,22 @@ export const cmsSeed: CmsData = {
       body: "We find the handoffs, copy-paste loops, and approval piles worth fixing — then automate them with maintainable workflows, not demo theatre.",
       detailBody:
         "We look for the grind that burns hours without adding judgment — re-keying, chasing approvals, status updates, document routing — and replace it with automations your team can understand and maintain. AI is used where it helps; boring reliable workflows win where they do.",
+      problem:
+        "People copy data between tools, chase approvals in chat, and retype the same updates every day. Hours disappear into work that never needed a human in the first place — and errors creep in when someone is tired.",
       details: [
         "Process audit to spot high-ROI automation candidates",
         "Workflow automation across forms, approvals, notifications, and handoffs",
         "Practical AI assist where it reduces error or speeds decisions",
         "Monitoring and playbooks so automations don’t become mysterious debts",
       ],
-      href: "/services#ai-automation",
+      outcomes: [
+        "Hours back each week on the tasks that used to drag",
+        "Fewer dropped handoffs and fewer copy-paste mistakes",
+        "Automations your team can explain and keep running",
+      ],
+      audience:
+        "Operations, admin, and growth teams drowning in repeatable tasks that should already run themselves.",
+      href: "/services/ai-automation",
       imageSrc: "/brand/services/ai-automation.jpg",
       imageAlt: "Human and robot hands shaking — partnership between people and automation",
     },
@@ -364,13 +398,22 @@ export const cmsSeed: CmsData = {
       body: "SEO, paid media, content, and analytics connected so attention turns into pipeline — with reporting operators can trust.",
       detailBody:
         "We build growth systems, not disconnected campaigns. Channels, landing experiences, and reporting stay wired together so you can see what spent money, what converted, and what to do next — without a dashboard that only a consultant can decode.",
+      problem:
+        "Ads, content, and SEO run in separate silos. Money goes out, leads come in unevenly, and nobody can clearly say what worked. Reporting looks busy but doesn’t help next week’s decisions.",
       details: [
         "Channel strategy across SEO, paid media, and content with clear priorities",
         "Landing pages and funnels aligned to the offer and audience",
         "Tracking and analytics that connect spend to leads and conversion",
         "Reporting your team can use week to week — not vanity metrics alone",
       ],
-      href: "/services#digital-marketing",
+      outcomes: [
+        "Channels that support one clear growth plan",
+        "Spend tied to leads and conversions you can track",
+        "Weekly reporting your team can act on without a translator",
+      ],
+      audience:
+        "Founders and marketing leads who want growth they can measure — not campaigns that look busy and stay opaque.",
+      href: "/services/digital-marketing",
       imageSrc: "/brand/services/digital-marketing.jpg",
       imageAlt: "Professional smiling during a video call on a smartphone at her desk",
     },
@@ -381,13 +424,22 @@ export const cmsSeed: CmsData = {
       body: "Promptstack Academy trains people to ship finished work — projects that demonstrate skill, not certificates without evidence.",
       detailBody:
         "Promptstack Academy is for people and teams who want capability they can show. Learners build toward finished projects — with coaching, critique, and a path that mirrors how we deliver client work — so skills survive past the classroom.",
+      problem:
+        "Training ends with slides and certificates, but the team still can’t ship. Skills fade because practice never looked like real delivery — and capability leaves when a contractor does.",
       details: [
         "Project-based paths across software, AI, and related digital skills",
         "Mentored build cycles with reviews, not only recorded lectures",
         "Portfolio-ready outputs that prove what someone can ship",
         "Team upskilling options when you want delivery capacity in-house",
       ],
-      href: "/services#academy",
+      outcomes: [
+        "People who can show finished work, not only course completion",
+        "Skills shaped around how real projects get delivered",
+        "More capability staying inside your team after the engagement",
+      ],
+      audience:
+        "Individuals building a portfolio and companies that want their team to ship — not only to attend training.",
+      href: "/services/academy",
       imageSrc: "/brand/services/academy.jpg",
       imageAlt: "Speaker presenting to attendees at a professional training workshop",
     },
@@ -412,6 +464,7 @@ export const cmsSeed: CmsData = {
       ctaLabel: "Request early access",
     },
   ],
+  portfolioItems: portfolioItemsEn,
   jobs: [],
   team: [],
   posts: [],
