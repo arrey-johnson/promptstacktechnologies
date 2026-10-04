@@ -305,6 +305,7 @@ export const cmsSeedFr: CmsData = {
     hero: {
       heading: "Carrières chez Promptstack",
       body: "Construisez une carrière dans une entreprise techno qui livre sites, logiciels, automatisations et systèmes de croissance pour de vrais clients. Postulez directement sur ce site — chaque candidature arrive dans notre back-office.",
+      imageSrc: "/brand/careers-hero.jpg?v=2",
     },
     whyJoin: {
       heading: "Pourquoi on nous rejoint",

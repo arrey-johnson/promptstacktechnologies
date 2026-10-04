@@ -10,7 +10,7 @@ export const teamMembersEn: TeamMember[] = [
     bio: "Leads Promptstack’s vision, delivery standards, and growth.",
     imageSrc: "/brand/team/arrey-johnson.jpg?v=hd1",
     imageAlt: "Arrey Johnson, Chief Executive Officer",
-    linkedinHref: "",
+    linkedinHref: "https://www.linkedin.com/in/arrey-johnson/",
   },
   {
     id: "ngome-n-lifanje",
@@ -24,10 +24,10 @@ export const teamMembersEn: TeamMember[] = [
   {
     id: "eyere-obin",
     name: "Eyere Obin",
-    role: "Product Manager",
-    bio: "Owns product direction, priorities, and the delivery path from idea to shipped work.",
+    role: "Project Director",
+    bio: "Leads product and delivery priorities so teams ship clear, useful outcomes.",
     imageSrc: "/brand/team/eyere-obin.jpg?v=hd1",
-    imageAlt: "Eyere Obin, Product Manager",
+    imageAlt: "Eyere Obin, Project Director",
     linkedinHref: "https://www.linkedin.com/in/eyere-obin/",
   },
   {
@@ -49,7 +49,7 @@ export const teamMembersFr: TeamMember[] = [
     bio: "Porte la vision, les standards de livraison et la croissance de Promptstack.",
     imageSrc: "/brand/team/arrey-johnson.jpg?v=hd1",
     imageAlt: "Arrey Johnson, Directeur général",
-    linkedinHref: "",
+    linkedinHref: "https://www.linkedin.com/in/arrey-johnson/",
   },
   {
     id: "ngome-n-lifanje",
@@ -63,10 +63,10 @@ export const teamMembersFr: TeamMember[] = [
   {
     id: "eyere-obin",
     name: "Eyere Obin",
-    role: "Product Manager",
-    bio: "Porte la direction produit, les priorités et le chemin de livraison de l’idée au livrable.",
+    role: "Directrice de projet",
+    bio: "Porte les priorités produit et de livraison pour que les équipes livrent des résultats clairs et utiles.",
     imageSrc: "/brand/team/eyere-obin.jpg?v=hd1",
-    imageAlt: "Eyere Obin, Product Manager",
+    imageAlt: "Eyere Obin, Directrice de projet",
     linkedinHref: "https://www.linkedin.com/in/eyere-obin/",
   },
   {

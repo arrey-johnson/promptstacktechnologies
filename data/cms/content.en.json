@@ -389,7 +389,8 @@
   "careersPage": {
     "hero": {
       "heading": "Careers at Promptstack",
-      "body": "Build a career with a technology company that ships websites, software, automation, and growth systems for real clients. Apply directly on this website — every application is received in our back office."
+      "body": "Build a career with a technology company that ships websites, software, automation, and growth systems for real clients. Apply directly on this website — every application is received in our back office.",
+      "imageSrc": "/brand/careers-hero.jpg?v=2"
     },
     "whyJoin": {
       "heading": "Why people join us",
@@ -884,7 +885,7 @@
       "role": "Chief Executive Officer",
       "bio": "Leads Promptstack’s vision, delivery standards, and growth.",
       "imageAlt": "Arrey Johnson, Chief Executive Officer",
-      "linkedinHref": "",
+      "linkedinHref": "https://www.linkedin.com/in/arrey-johnson/",
       "imageSrc": "/brand/team/arrey-johnson.jpg?v=hd1"
     },
     {
@@ -899,9 +900,9 @@
     {
       "id": "eyere-obin",
       "name": "Eyere Obin",
-      "role": "Product Manager",
-      "bio": "Owns product direction, priorities, and the delivery path from idea to shipped work.",
-      "imageAlt": "Eyere Obin, Product Manager",
+      "role": "Project Director",
+      "bio": "Leads product and delivery priorities so teams ship clear, useful outcomes.",
+      "imageAlt": "Eyere Obin, Project Director",
       "linkedinHref": "https://www.linkedin.com/in/eyere-obin/",
       "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1"
     },

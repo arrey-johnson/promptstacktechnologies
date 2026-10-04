@@ -389,7 +389,8 @@
   "careersPage": {
     "hero": {
       "heading": "Carrières chez Promptstack",
-      "body": "Construisez une carrière dans une entreprise techno qui livre sites, logiciels, automatisations et systèmes de croissance pour de vrais clients. Postulez directement sur ce site — chaque candidature arrive dans notre back-office."
+      "body": "Construisez une carrière dans une entreprise techno qui livre sites, logiciels, automatisations et systèmes de croissance pour de vrais clients. Postulez directement sur ce site — chaque candidature arrive dans notre back-office.",
+      "imageSrc": "/brand/careers-hero.jpg?v=2"
     },
     "whyJoin": {
       "heading": "Pourquoi on nous rejoint",
@@ -884,7 +885,7 @@
       "role": "Directeur général",
       "bio": "Porte la vision, les standards de livraison et la croissance de Promptstack.",
       "imageAlt": "Arrey Johnson, Directeur général",
-      "linkedinHref": "",
+      "linkedinHref": "https://www.linkedin.com/in/arrey-johnson/",
       "imageSrc": "/brand/team/arrey-johnson.jpg?v=hd1"
     },
     {
@@ -899,9 +900,9 @@
     {
       "id": "eyere-obin",
       "name": "Eyere Obin",
-      "role": "Product Manager",
-      "bio": "Porte la direction produit, les priorités et le chemin de livraison de l’idée au livrable.",
-      "imageAlt": "Eyere Obin, Product Manager",
+      "role": "Directrice de projet",
+      "bio": "Porte les priorités produit et de livraison pour que les équipes livrent des résultats clairs et utiles.",
+      "imageAlt": "Eyere Obin, Directrice de projet",
       "linkedinHref": "https://www.linkedin.com/in/eyere-obin/",
       "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1"
     },

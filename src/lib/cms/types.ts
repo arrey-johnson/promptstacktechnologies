@@ -230,7 +230,7 @@ export type PortfolioContent = {
 };
 
 export type CareersContent = {
-  hero: { heading: string; body: string };
+  hero: { heading: string; body: string; imageSrc?: string };
   whyJoin: { heading: string; body: string; items: string[] };
   openRolesHeading: string;
   emptyState: string;
