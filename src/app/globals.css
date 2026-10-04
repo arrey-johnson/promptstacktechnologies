@@ -114,6 +114,20 @@
   .portfolio-preview:focus-visible .portfolio-preview-image {
     transform: translateY(calc(-100% + 100cqh));
   }
+
+  .whatsapp-float {
+    animation: whatsapp-float-in 0.45s ease-out both;
+  }
+
+  .whatsapp-float::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgb(168 0 230 / 0.35);
+    animation: whatsapp-pulse 2.4s ease-out infinite;
+    z-index: -1;
+  }
 }
 
 @keyframes partner-marquee {
@@ -122,6 +136,32 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes whatsapp-float-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
   }
 }
 
@@ -172,5 +212,10 @@
   .portfolio-preview:hover .portfolio-preview-image,
   .portfolio-preview:focus-visible .portfolio-preview-image {
     transform: none !important;
+  }
+
+  .whatsapp-float,
+  .whatsapp-float::before {
+    animation: none !important;
   }
 }

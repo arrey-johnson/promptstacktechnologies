@@ -3,6 +3,7 @@ import { PageViewTracker } from "@/components/analytics/page-view-tracker";
 import { BookingProvider } from "@/components/booking/booking-provider";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { WhatsAppFloat } from "@/components/layout/whatsapp-float";
 import { getCmsData, getCollection } from "@/lib/cms/store";
 import { getRequestLocale } from "@/lib/i18n/locale";
 
@@ -37,6 +38,7 @@ export default async function MarketingLayout({
       />
       <main id="main-content">{children}</main>
       <SiteFooter settings={settings} />
+      <WhatsAppFloat phone={settings.phone} />
       <Suspense fallback={null}>
         <PageViewTracker locale={locale} />
       </Suspense>
