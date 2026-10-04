@@ -13,12 +13,31 @@ const schema = z.object({
 export async function POST(request: Request) {
   try {
     const body = schema.parse(await request.json());
-    await recordPageView({
+    const result = await recordPageView({
       ...body,
       userAgent: request.headers.get("user-agent") || undefined,
     });
-    return NextResponse.json({ ok: true });
+
+    if (!result.ok) {
+      return NextResponse.json(
+        {
+          ok: false,
+          persisted: false,
+          backend: result.backend,
+          message:
+            result.error ||
+            "Visitor stats could not be saved on this host. Configure Upstash Redis for production.",
+        },
+        { status: 503 },
+      );
+    }
+
+    return NextResponse.json({
+      ok: true,
+      persisted: true,
+      backend: result.backend,
+    });
   } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+    return NextResponse.json({ ok: false, persisted: false }, { status: 400 });
   }
 }

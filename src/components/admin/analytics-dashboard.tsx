@@ -97,6 +97,23 @@ export function AnalyticsDashboard() {
         </button>
       </div>
 
+      {!a.writable ? (
+        <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
+          <p className="font-bold">Live visitor stats cannot persist on this host yet</p>
+          <p className="mt-1">{a.persistenceDetail}</p>
+          <p className="mt-2 text-xs">
+            These zeros are real empty counts — not demo numbers. Configure Upstash Redis
+            (`UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`), redeploy, then browse the
+            public website to start collecting.
+          </p>
+        </div>
+      ) : (
+        <p className="mt-4 text-xs text-text-muted">
+          Live data via <span className="font-semibold text-brand-navy">{a.backend}</span> —{" "}
+          {a.persistenceDetail}
+        </p>
+      )}
+
       <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard label="Visitors today" value={a.todayVisitors} hint={`${a.todayPageViews} page views`} />
         <StatCard

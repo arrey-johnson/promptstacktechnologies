@@ -56,8 +56,30 @@ export default async function AdminDashboardPage() {
       <h1 className="text-3xl font-bold text-brand-navy">Dashboard</h1>
       <p className="mt-2 max-w-2xl text-sm text-text-muted">
         Website health, visitors, Zoom bookings, and quick links to edit content — no technical
-        skills needed.
+        skills needed. Numbers below are live counts (not sample data).
       </p>
+
+      {!a.writable ? (
+        <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
+          <p className="font-bold">Visitor tracking is not saving yet</p>
+          <p className="mt-1">
+            {a.persistenceDetail} Add these to your host environment, redeploy, then visit the
+            public site once and refresh this dashboard:
+          </p>
+          <code className="mt-2 block rounded-lg bg-white/80 px-3 py-2 text-xs">
+            UPSTASH_REDIS_REST_URL=…{"\n"}UPSTASH_REDIS_REST_TOKEN=…
+          </code>
+          <p className="mt-2 text-xs">
+            Free setup: create a Redis database at upstash.com → copy REST URL + token into Vercel
+            (or your host) env vars.
+          </p>
+        </div>
+      ) : (
+        <p className="mt-4 text-xs text-text-muted">
+          Tracking backend: <span className="font-semibold text-brand-navy">{a.backend}</span> —{" "}
+          {a.persistenceDetail}
+        </p>
+      )}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <div className="rounded-2xl border border-brand-navy/10 bg-white p-5 shadow-sm">

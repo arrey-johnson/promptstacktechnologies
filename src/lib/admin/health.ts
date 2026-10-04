@@ -9,7 +9,11 @@ import {
 } from "@/lib/booking/store";
 import { listJobApplications } from "@/lib/applications/store";
 import { getCmsData } from "@/lib/cms/store";
-import { getAnalyticsSummary, type AnalyticsSummary } from "@/lib/analytics/store";
+import {
+  emptyAnalyticsSummary,
+  getAnalyticsSummary,
+  type AnalyticsSummary,
+} from "@/lib/analytics/store";
 import { listMedia } from "@/lib/media/store";
 import type { JobApplication } from "@/lib/applications/store";
 import type { CmsData } from "@/lib/cms/types";
@@ -31,20 +35,6 @@ export type DashboardOverview = {
   zoomConnected: boolean;
   recentBookings: StoredBooking[];
 };
-
-const emptyAnalytics = (): AnalyticsSummary => ({
-  totalPageViews: 0,
-  uniqueVisitors: 0,
-  sessions: 0,
-  todayPageViews: 0,
-  todayVisitors: 0,
-  last7DaysPageViews: 0,
-  last7DaysVisitors: 0,
-  topPages: [],
-  topReferrers: [],
-  daily: [],
-  recent: [],
-});
 
 const emptyBookingStats = (): BookingStats => ({
   total: 0,
@@ -80,7 +70,10 @@ export async function getDashboardOverview(): Promise<DashboardOverview> {
       settled(getBookingStats(), emptyBookingStats()),
       settled(listJobApplications(), [] as JobApplication[]),
       settled(listMedia(), []),
-      settled(getAnalyticsSummary(), emptyAnalytics()),
+      settled(
+        getAnalyticsSummary(),
+        emptyAnalyticsSummary("Analytics summary unavailable."),
+      ),
     ]);
 
   const zoomConnected = isZoomBookingConfigured();
@@ -135,6 +128,12 @@ export async function getDashboardOverview(): Promise<DashboardOverview> {
       label: "Job applications",
       status: applications.some((a) => a.status === "new") ? "warn" : "ok",
       detail: `${applications.length} total · ${applications.filter((a) => a.status === "new").length} new`,
+    },
+    {
+      id: "analytics",
+      label: "Visitor tracking",
+      status: analytics.writable ? "ok" : "error",
+      detail: analytics.persistenceDetail,
     },
   ];
 
