@@ -146,12 +146,12 @@
     ],
     "newsletter": {
       "heading": "Get Promptstack notes",
-      "body": "Short updates on products, Academy cohorts, and practical delivery lessons — no spam cadence.",
-      "consent": "Yes, email me occasional Promptstack updates about products, Academy, and events."
+      "body": "Short updates on delivery work, Academy cohorts (web development, digital marketing, AI), and practical lessons — no spam.",
+      "consent": "Yes, email me occasional Promptstack updates about products, Academy training, and events."
     },
     "seo": {
       "title": "Promptstack Technologies",
-      "description": "Promptstack Technologies helps businesses solve operational and growth problems through software, AI & automation, digital marketing, and Academy."
+      "description": "Promptstack Technologies helps businesses with software, AI & automation, and digital marketing — and trains students and aspiring tech pros through Academy in web development, digital marketing, and AI."
     }
   },
   "home": {
@@ -162,7 +162,7 @@
         "better",
         "Automate"
       ],
-      "supporting": "Software, AI & automation, digital marketing, and Promptstack Academy — so your team ships clearer processes, faster decisions, and growth you can measure.",
+      "supporting": "Software, AI & automation, digital marketing, and Promptstack Academy — where students and aspiring tech pros train in web development, digital marketing, and AI.",
       "primaryCta": {
         "label": "Book a discovery call",
         "href": "#book-discovery"
@@ -182,9 +182,18 @@
       ]
     },
     "servicesIntro": {
-      "eyebrow": "The Promptstack stack",
-      "heading": "One partner. Four connected levers.",
-      "body": "Pick the entry point that hurts most today — websites & software, AI & automation, digital marketing, or Academy — then expand without switching vendors mid-flight."
+      "eyebrow": "Our services",
+      "heading": "Services built to work together.",
+      "body": "Start with the service you need most — websites & software, AI & automation, digital marketing, or Academy training — then add more without switching partners."
+    },
+    "portfolioTeaser": {
+      "eyebrow": "Selected work",
+      "heading": "Recent websites we’ve shipped.",
+      "body": "A snapshot of client sites and product interfaces — hover a card to scroll the full page, or open any project for detail.",
+      "cta": {
+        "label": "View full portfolio",
+        "href": "/portfolio"
+      }
     },
     "process": {
       "eyebrow": "Working with Promptstack",
@@ -205,7 +214,7 @@
         },
         {
           "title": "Transfer ownership",
-          "body": "Go-live includes training, docs, and an owner map. Academy paths are available when you want skills to stay in-house."
+          "body": "Go-live includes training, docs, and an owner map so your team can run what we shipped."
         }
       ]
     },
@@ -215,43 +224,42 @@
       "body": "Placeholder product cards for ideas Promptstack is exploring. Rename, restatus, or replace them anytime under Admin → Products."
     },
     "aboutTeaser": {
-      "eyebrow": "Who we are",
-      "heading": "Built around services that move real work.",
+      "eyebrow": "Is Promptstack a fit?",
+      "heading": "Call us when the work is stuck — not when you need another company bio.",
       "body": [
-        "Promptstack is a technology company focused on software, AI & automation, digital marketing, and Academy — shipping systems teams can run, and skills that stick.",
-        "We design for lean teams, practical constraints, and leaders who need proof faster than a long strategy deck."
+        "If one of these is true, a discovery call is worth 30 minutes. If none are, we’re probably not the right team yet."
       ]
     },
     "whyUs": {
-      "eyebrow": "What you get with Promptstack",
-      "heading": "Delivery plus capability — not slides alone.",
+      "eyebrow": "You're a fit if",
+      "heading": "Four signals we can help this month.",
       "items": [
         {
-          "title": "Connected stack, not siloed vendors",
-          "body": "Software, automation, marketing, and Academy can reinforce each other instead of fighting for budget in four different companies."
+          "title": "Tools don't match how the team works",
+          "body": "Spreadsheets, workarounds, and half-used software. We rebuild around the real process so people stop fighting the system."
         },
         {
-          "title": "Operator-first design",
-          "body": "Interfaces and workflows are judged by the people who click them every day — not only by the steering committee."
+          "title": "Manual work is eating the week",
+          "body": "Repeating ops that should run themselves. We find the high-ROI automations, ship them, and name who owns them."
         },
         {
-          "title": "Demo-driven progress",
-          "body": "You see working software and campaign artefacts often enough to steer. Surprises stay small and fixable."
+          "title": "Marketing can't prove what moved",
+          "body": "Campaigns without a clean path to leads or revenue. We connect tracking, funnels, and follow-up so you can steer."
         },
         {
-          "title": "Skills that stay after we leave",
-          "body": "When you want it, Academy paths turn delivery into internal capability — so the win isn’t rented forever."
+          "title": "You’re growing talent for tech roles",
+          "body": "Academy trains students and aspiring tech professionals in web development, digital marketing, and AI — with practical projects, not slide-only courses."
         }
       ]
     },
     "finalCta": {
       "heading": "Want a clearer next step?",
-      "body": "Book a discovery call. We’ll sort whether you need a system, an automation, a growth push, Academy, or a mix — and what to do first.",
+      "body": "Book a discovery call. We’ll sort whether you need a system, an automation, a growth push, Academy training, or a mix — and what to do first.",
       "cta": {
         "label": "Book a discovery call",
         "href": "#book-discovery"
       },
-      "imageSrc": "/brand/cta-next-step.jpg"
+      "imageSrc": "/brand/cta-next-step.jpg?v=3"
     },
     "partners": {
       "eyebrow": "Technical partners",
@@ -285,14 +293,14 @@
     "hero": {
       "eyebrow": "Promptstack Technologies",
       "heading": "About Promptstack",
-      "body": "We build software, automation, digital marketing systems, and Academy programs — so teams can run clearer operations and grow with skills that stick."
+      "body": "We build software, automation, and digital marketing systems for businesses — and run Academy programs that train students and aspiring tech pros in web development, digital marketing, and AI."
     },
     "story": {
       "eyebrow": "How we got here",
       "heading": "Focused on the stack that actually moves work.",
       "body": [
-        "Promptstack started from a simple frustration: too many organisations juggle tools that don’t talk to each other, campaigns that don’t report cleanly, and training that never reaches production.",
-        "We narrowed in on four connected levers — software, AI & automation, digital marketing, and Academy — so delivery and capability grow together instead of as separate side quests."
+        "Promptstack started from a simple frustration: too many organisations juggle tools that don’t talk to each other, campaigns that don’t report cleanly, and talent that can’t get practical tech skills.",
+        "We deliver software, AI & automation, and digital marketing for businesses — and Academy trains the next wave of talent in web development, digital marketing, and AI."
       ]
     },
     "values": {
@@ -301,7 +309,7 @@
       "items": [
         {
           "title": "Services first, operator mindset",
-          "body": "Our identity is the work we ship — software, automation, growth systems, and Academy — designed for lean teams and leaders who need proof faster than a long strategy deck."
+          "body": "Our identity is the work we ship — software, automation, and growth systems for lean teams — plus Academy training for people entering tech."
         },
         {
           "title": "Ship what people can run",
@@ -312,14 +320,14 @@
           "body": "Scope, risk, and timelines get named in plain language. Surprises should be rare and small."
         },
         {
-          "title": "Leave capability behind",
-          "body": "When it fits, Academy paths turn project work into internal muscle — not rented forever."
+          "title": "Train people who can ship",
+          "body": "Academy focuses on students and aspiring tech professionals — web development, digital marketing, and AI — with projects they can show."
         }
       ]
     },
     "teamIntro": {
-      "heading": "The people behind Promptstack",
-      "body": "Add real names, roles, and short bios in Admin when you’re ready to publish the team."
+      "heading": "The Promptstack team",
+      "body": "The people steering delivery, strategy, operations, and the content that tells our story."
     },
     "capabilities": {
       "heading": "The Promptstack toolkit",
@@ -342,8 +350,8 @@
           "body": "Acquisition, content, and analytics wired so attention connects to pipeline."
         },
         {
-          "title": "Academy paths",
-          "body": "Learn by shipping finished work — evidence over slide decks."
+          "title": "Academy training",
+          "body": "Web development, digital marketing, and AI for students and aspiring tech professionals — learn by building real projects."
         },
         {
           "title": "Handover & aftercare",
@@ -359,7 +367,7 @@
   "servicesPage": {
     "hero": {
       "heading": "Services",
-      "body": "Four connected levers: websites & custom software, AI & automation, digital marketing, and Academy. Start where the constraint is sharpest."
+      "body": "Websites & custom software, AI & automation, digital marketing, and Academy (web development, digital marketing, and AI training). Start where you need us most."
     },
     "cta": {
       "heading": "Not sure which lever to pull first?",
@@ -380,15 +388,15 @@
   },
   "careersPage": {
     "hero": {
-      "heading": "Work at Promptstack",
-      "body": "Join a team that ships software, automation, growth systems, and Academy — with craft, clarity, and room to level up."
+      "heading": "Careers at Promptstack",
+      "body": "Build a career with a technology company that ships websites, software, automation, and growth systems for real clients. Apply directly on this website — every application is received in our back office."
     },
     "whyJoin": {
       "heading": "Why people join us",
       "body": "Real client constraints, a connected stack, and peers who care about usable outcomes.",
       "items": [
         "Ship systems operators can actually run day to day",
-        "Work across software, automation, marketing, and Academy",
+        "Support Academy training in web development, digital marketing, and AI",
         "Grow through demos, reviews, and finished work — not busywork"
       ]
     },
@@ -402,7 +410,8 @@
   "contact": {
     "hero": {
       "heading": "Contact Promptstack",
-      "body": "Tell us the constraint you’re facing — system, automation, growth, Academy, or something else — and we’ll reply with a clear next step."
+      "body": "Tell us what you need — a system, automation, growth work, Academy training (web development, digital marketing, or AI), or something else — and we’ll reply with a clear next step.",
+      "imageSrc": "/brand/contact-hero.jpg?v=2"
     },
     "intents": [
       "Book a discovery call",
@@ -429,20 +438,69 @@
       "name": "Software & websites",
       "summary": "Websites, apps, and tools built around how your team works.",
       "body": "We build company websites, client portals, and custom web apps your team can run day to day — matched to how work actually moves, not a template that almost fits.",
-      "detailBody": "Need a clear company website, a client portal, or software that replaces messy spreadsheets? We design and ship it so your team can actually use it. That means clear pages and workflows, sensible permissions, and releases you can review before go-live — not a black-box handoff.",
-      "problem": "Your brand looks unclear online, or your team still runs critical work in spreadsheets and chat threads because no tool quite fits. Off-the-shelf software forces workarounds. A weak website loses trust before the first conversation.",
+      "detailBody": "Need a clear company website, a client portal, or software that replaces messy spreadsheets? We design and ship it so your team can actually use it — clear pages and workflows, sensible permissions, and releases you can review before go-live.",
+      "problem": "Your brand looks unclear online, or your team still runs critical work in spreadsheets and chat because no tool quite fits. Off-the-shelf software forces workarounds. A weak website loses trust before the first conversation.",
       "details": [
         "Company websites and landing pages that explain what you do and convert interest",
         "Web apps, client portals, and ops dashboards shaped to your real process",
         "Discovery workshops to map the work before we propose screens",
-        "Iterative builds with demos, then handover and training so ownership stays with your team"
+        "Iterative builds with demos, then handover and training so ownership stays with your team",
+        "Responsive design, SEO basics, and performance tuned for real visitors",
+        "Admin access, documentation, and training so you’re not locked to us forever"
+      ],
+      "process": [
+        {
+          "title": "Discover",
+          "body": "We map goals, audiences, content, and the workflows the site or app must support."
+        },
+        {
+          "title": "Design & plan",
+          "body": "Information architecture, key screens, and a build sequence you can review before we code."
+        },
+        {
+          "title": "Build in slices",
+          "body": "Weekly demos of working pages and features — feedback while change is still cheap."
+        },
+        {
+          "title": "Launch & hand over",
+          "body": "Go-live checklist, training, docs, and named owners on your side."
+        }
+      ],
+      "modules": [
+        {
+          "title": "Company websites that convert",
+          "body": "Clear story, services, proof, and contact paths — built to load fast on mobile and desktop, with forms and analytics wired in."
+        },
+        {
+          "title": "Client portals & web apps",
+          "body": "Login areas, dashboards, and tools that replace spreadsheet chaos — permissions, notifications, and flows that match how your team works."
+        },
+        {
+          "title": "Maintainable delivery",
+          "body": "Clean structure, sensible CMS or admin where needed, and documentation so updates don’t require a rescue mission."
+        }
       ],
       "outcomes": [
-        "A website or product your customers and team understand immediately",
+        "A website or product customers and your team understand immediately",
         "Fewer manual patches between tools and people",
-        "Clear ownership after launch — not a system only the vendor can touch"
+        "Clear ownership after launch — not a system only the vendor can touch",
+        "A foundation you can grow without rebuilding from zero"
       ],
       "audience": "Companies that need a professional website, a client-facing portal, or internal software that matches how work really gets done.",
+      "faqs": [
+        {
+          "title": "Do you rebuild from scratch or improve what we have?",
+          "body": "Either. We’ll recommend the lighter path when an existing site or app can be fixed; we rebuild when the foundation can’t support the outcome you need."
+        },
+        {
+          "title": "Will our team be able to update content?",
+          "body": "Yes when it matters. We set up editing paths and train the people who will own day-to-day updates."
+        },
+        {
+          "title": "How long does a typical project take?",
+          "body": "A focused marketing site can move in weeks; portals and custom apps take longer depending on workflows and integrations. We lock a useful first win early."
+        }
+      ],
       "href": "/services/software",
       "imageSrc": "/brand/services/software.jpg",
       "imageAlt": "Developer working late at a desk with code on multiple screens"
@@ -452,20 +510,69 @@
       "name": "AI & Automation",
       "summary": "Automate the repetitive steps that steal your week.",
       "body": "We find the handoffs, copy-paste loops, and approval piles worth fixing — then automate them with maintainable workflows, not demo theatre.",
-      "detailBody": "We look for the grind that burns hours without adding judgment — re-keying, chasing approvals, status updates, document routing — and replace it with automations your team can understand and maintain. AI is used where it helps; boring reliable workflows win where they do.",
-      "problem": "People copy data between tools, chase approvals in chat, and retype the same updates every day. Hours disappear into work that never needed a human in the first place — and errors creep in when someone is tired.",
+      "detailBody": "We look for the grind that burns hours without adding judgment — re-keying, chasing approvals, status updates, document routing — and replace it with automations your team can understand and maintain. AI is used where it helps; reliable workflows win where they do.",
+      "problem": "People copy data between tools, chase approvals in chat, and retype the same updates every day. Hours disappear into work that never needed a human — and errors creep in when someone is tired.",
       "details": [
         "Process audit to spot high-ROI automation candidates",
         "Workflow automation across forms, approvals, notifications, and handoffs",
         "Practical AI assist where it reduces error or speeds decisions",
-        "Monitoring and playbooks so automations don’t become mysterious debts"
+        "Integrations between the tools you already use",
+        "Monitoring and playbooks so automations don’t become mysterious debts",
+        "Training so operators know what to check when something fails"
+      ],
+      "process": [
+        {
+          "title": "Audit the grind",
+          "body": "We sit with the people doing the work and list repeatable steps that cost time or create errors."
+        },
+        {
+          "title": "Prioritise ROI",
+          "body": "We score candidates by impact vs effort and pick a first automation worth shipping soon."
+        },
+        {
+          "title": "Build & test",
+          "body": "We implement, edge-case test, and put monitoring in place before you rely on it daily."
+        },
+        {
+          "title": "Hand over with playbooks",
+          "body": "Docs, owners, and a simple runbook — so the automation stays yours."
+        }
+      ],
+      "modules": [
+        {
+          "title": "Ops & admin automation",
+          "body": "Approvals, reminders, data sync, document routing, and status updates that used to live in chat and spreadsheets."
+        },
+        {
+          "title": "Practical AI assists",
+          "body": "Drafting, classification, extraction, and decision support — only where accuracy and review paths make sense."
+        },
+        {
+          "title": "Reliable operations",
+          "body": "Alerts, logs, and fallbacks so a failed step doesn’t silently break the week."
+        }
       ],
       "outcomes": [
-        "Hours back each week on the tasks that used to drag",
+        "Hours back each week on tasks that used to drag",
         "Fewer dropped handoffs and fewer copy-paste mistakes",
-        "Automations your team can explain and keep running"
+        "Automations your team can explain and keep running",
+        "A clearer path from “we should automate this” to something live"
       ],
       "audience": "Operations, admin, and growth teams drowning in repeatable tasks that should already run themselves.",
+      "faqs": [
+        {
+          "title": "Do you only use AI?",
+          "body": "No. Many wins are solid workflow automation. We add AI when it clearly reduces effort or error — not for the pitch deck."
+        },
+        {
+          "title": "Can you work with our existing tools?",
+          "body": "Usually yes. We start with what you already use and only introduce new tools when they earn their place."
+        },
+        {
+          "title": "What if an automation breaks?",
+          "body": "We design monitoring and a simple playbook so your team knows what to check — and we can support aftercare when you want it."
+        }
+      ],
       "href": "/services/ai-automation",
       "imageSrc": "/brand/services/ai-automation.jpg",
       "imageAlt": "Human and robot hands shaking — partnership between people and automation"
@@ -475,20 +582,69 @@
       "name": "Digital Marketing",
       "summary": "Acquisition and content tied to numbers you can defend.",
       "body": "SEO, paid media, content, and analytics connected so attention turns into pipeline — with reporting operators can trust.",
-      "detailBody": "We build growth systems, not disconnected campaigns. Channels, landing experiences, and reporting stay wired together so you can see what spent money, what converted, and what to do next — without a dashboard that only a consultant can decode.",
+      "detailBody": "We build growth systems, not disconnected campaigns. Channels, landing experiences, and reporting stay wired together so you can see what spent money, what converted, and what to do next.",
       "problem": "Ads, content, and SEO run in separate silos. Money goes out, leads come in unevenly, and nobody can clearly say what worked. Reporting looks busy but doesn’t help next week’s decisions.",
       "details": [
         "Channel strategy across SEO, paid media, and content with clear priorities",
         "Landing pages and funnels aligned to the offer and audience",
         "Tracking and analytics that connect spend to leads and conversion",
+        "Content systems that support search and sales conversations",
+        "Campaign setup, optimisation, and creative iteration",
         "Reporting your team can use week to week — not vanity metrics alone"
+      ],
+      "process": [
+        {
+          "title": "Diagnose the funnel",
+          "body": "We review offer, audience, channels, tracking, and where leads drop today."
+        },
+        {
+          "title": "Set the growth plan",
+          "body": "Priorities, budget logic, and success metrics for the next useful period — not a fantasy annual roadmap."
+        },
+        {
+          "title": "Ship and measure",
+          "body": "Launch pages, campaigns, and content with tracking in place from day one."
+        },
+        {
+          "title": "Optimise weekly",
+          "body": "Review what moved, cut what didn’t, and double down with clear next actions."
+        }
+      ],
+      "modules": [
+        {
+          "title": "Acquisition systems",
+          "body": "SEO foundations, paid media structure, and campaigns aimed at qualified interest — not noise."
+        },
+        {
+          "title": "Conversion paths",
+          "body": "Landing pages, offers, and follow-up flows that turn attention into conversations and leads."
+        },
+        {
+          "title": "Measurement you can trust",
+          "body": "Clean tracking, dashboards, and weekly reporting tied to leads and revenue signals."
+        }
       ],
       "outcomes": [
         "Channels that support one clear growth plan",
         "Spend tied to leads and conversions you can track",
-        "Weekly reporting your team can act on without a translator"
+        "Weekly reporting your team can act on without a translator",
+        "A repeatable way to test offers instead of guessing"
       ],
       "audience": "Founders and marketing leads who want growth they can measure — not campaigns that look busy and stay opaque.",
+      "faqs": [
+        {
+          "title": "Do you run ads only, or full-funnel work?",
+          "body": "We connect channels to landing experiences and tracking. Ads alone without a conversion path usually waste money."
+        },
+        {
+          "title": "Can you work with our existing website?",
+          "body": "Yes. We’ll improve what converts and recommend rebuilds only when the current site blocks growth."
+        },
+        {
+          "title": "How do you report results?",
+          "body": "Plain-language weekly or bi-weekly reporting: what we spent, what came in, what changed, and what we do next."
+        }
+      ],
       "href": "/services/digital-marketing",
       "imageSrc": "/brand/services/digital-marketing.jpg",
       "imageAlt": "Professional smiling during a video call on a smartphone at her desk"
@@ -496,22 +652,154 @@
     {
       "id": "academy",
       "name": "Academy",
-      "summary": "Learn by building. Leave with proof, not just slides.",
-      "body": "Promptstack Academy trains people to ship finished work — projects that demonstrate skill, not certificates without evidence.",
-      "detailBody": "Promptstack Academy is for people and teams who want capability they can show. Learners build toward finished projects — with coaching, critique, and a path that mirrors how we deliver client work — so skills survive past the classroom.",
-      "problem": "Training ends with slides and certificates, but the team still can’t ship. Skills fade because practice never looked like real delivery — and capability leaves when a contractor does.",
+      "summary": "Train for web development, digital marketing, and AI.",
+      "body": "Promptstack Academy trains students and aspiring tech professionals in web development, digital marketing, and AI — through practical projects, not slide-only courses.",
+      "detailBody": "Promptstack Academy is built for students and aspiring tech professionals who want job-ready skills. Choose a focused track — Web Development, Digital Marketing, or AI Training — learn by building, get mentored feedback, and leave with projects you can show employers.",
+      "problem": "Many courses stop at theory and certificates. Graduates still can’t build a site, run a campaign, or apply AI to real tasks — so employers don’t trust the résumé.",
       "details": [
-        "Project-based paths across software, AI, and related digital skills",
-        "Mentored build cycles with reviews, not only recorded lectures",
-        "Portfolio-ready outputs that prove what someone can ship",
-        "Team upskilling options when you want delivery capacity in-house"
+        "Three focused tracks: Web Development, Digital Marketing, and AI Training",
+        "Project-based learning with mentored reviews",
+        "Portfolio-ready outputs you can show in interviews",
+        "Practical tools and workflows used in real delivery",
+        "Clear fees in FCFA — no vague “contact for pricing” games",
+        "Supportive cohort environment for students and career switchers"
       ],
+      "process": [
+        {
+          "title": "Choose your track",
+          "body": "Pick Web Development, Digital Marketing, or AI Training based on the career path you want."
+        },
+        {
+          "title": "Learn by building",
+          "body": "Lessons are tied to exercises and projects — not endless theory with no output."
+        },
+        {
+          "title": "Get reviewed",
+          "body": "Mentors critique your work so you improve the way real teams improve: with feedback."
+        },
+        {
+          "title": "Show your proof",
+          "body": "Finish with portfolio pieces and clearer language for applications and interviews."
+        }
+      ],
+      "modules": [
+        {
+          "title": "Who Academy is for",
+          "body": "Students, recent graduates, and aspiring tech professionals who want practical skills in web development, digital marketing, or AI — not another certificate with nothing to show."
+        },
+        {
+          "title": "How classes run",
+          "body": "Structured lessons, hands-on practice, project milestones, and mentor feedback. You leave with work products, not only notes."
+        },
+        {
+          "title": "What “done” looks like",
+          "body": "Completed projects, a clearer skill story for your CV, and confidence using the tools of your track."
+        }
+      ],
+      "courses": [
+        {
+          "id": "web-development",
+          "name": "Web Development",
+          "fee": "250,000 FCFA",
+          "duration": "Full practical track",
+          "summary": "Learn to build modern websites and web interfaces employers can evaluate — from structure and styling to interactive pages and deployment basics.",
+          "curriculum": [
+            "Internet, browsers, and how websites actually work",
+            "HTML structure for real pages (not toy demos)",
+            "CSS layout, responsive design, and clean visual hierarchy",
+            "JavaScript fundamentals for interactive interfaces",
+            "Working with components, forms, and basic app logic",
+            "Using Git for version control and collaboration habits",
+            "APIs and data: fetch, display, and handle simple backend responses",
+            "Hosting, deployment, and going live with a project",
+            "Debugging, accessibility basics, and performance hygiene",
+            "Capstone: ship a complete portfolio-ready website or web app"
+          ],
+          "outcomes": [
+            "A live or deployable project you can show",
+            "Confidence building pages and interfaces from scratch",
+            "A clearer path into junior web / frontend roles"
+          ]
+        },
+        {
+          "id": "digital-marketing",
+          "name": "Digital Marketing",
+          "fee": "250,000 FCFA",
+          "duration": "Full practical track",
+          "summary": "Learn how modern acquisition works end to end — content, campaigns, landing pages, and measurement — so you can run growth work with evidence.",
+          "curriculum": [
+            "Digital marketing foundations and the customer journey",
+            "Brand positioning, offers, and audience clarity",
+            "Content marketing: planning, writing, and distribution",
+            "Social media strategy and campaign execution basics",
+            "SEO fundamentals: search intent, on-page, and content structure",
+            "Paid media basics: account structure, targeting, and creative tests",
+            "Landing pages and conversion-minded page structure",
+            "Email / follow-up flows and lead nurture basics",
+            "Analytics & tracking: what to measure and how to read it",
+            "Capstone: plan and present a full campaign with reporting logic"
+          ],
+          "outcomes": [
+            "A campaign plan and artefacts you can show in interviews",
+            "Ability to connect channels to conversion and reporting",
+            "Practical skills for marketing assistant / coordinator roles"
+          ]
+        },
+        {
+          "id": "ai-training",
+          "name": "AI Training",
+          "fee": "100,000 FCFA",
+          "duration": "Focused practical track",
+          "summary": "Learn to use AI tools productively for real work — prompting, workflows, quality control, and practical use cases — without the hype.",
+          "curriculum": [
+            "What AI can and cannot reliably do today",
+            "Prompting fundamentals for clear, reusable results",
+            "Using AI for research, drafting, and summarisation",
+            "AI for productivity workflows (docs, email, planning)",
+            "Image and media assist use cases (where appropriate)",
+            "Quality control: fact-checking, bias awareness, and human review",
+            "Building simple AI-assisted workflows for school or work",
+            "Ethics, privacy, and responsible use",
+            "Portfolio mini-project: an AI workflow that solves a real task",
+            "How to talk about AI skills clearly on a CV or in interviews"
+          ],
+          "outcomes": [
+            "Practical AI workflows you can reuse immediately",
+            "Better judgment on when to trust or override AI output",
+            "A mini-project that proves applied AI skill"
+          ]
+        }
+      ],
+      "feeNote": "Fees are listed per track in FCFA. Ask us about current cohort dates, payment options, and which track fits your goals.",
       "outcomes": [
-        "People who can show finished work, not only course completion",
-        "Skills shaped around how real projects get delivered",
-        "More capability staying inside your team after the engagement"
+        "Job-ready practice in web development, digital marketing, or AI",
+        "Finished projects that strengthen applications and interviews",
+        "Mentored feedback instead of learning alone in silence",
+        "A clearer story about what you can actually do"
       ],
-      "audience": "Individuals building a portfolio and companies that want their team to ship — not only to attend training.",
+      "audience": "Students and aspiring tech professionals who want practical training in web development, digital marketing, or AI.",
+      "faqs": [
+        {
+          "title": "Who can join Academy?",
+          "body": "Students, recent graduates, and aspiring tech professionals. No need to already work at a company — motivation and consistency matter most."
+        },
+        {
+          "title": "Are the fees per course?",
+          "body": "Yes. Web Development is 250,000 FCFA, Digital Marketing is 250,000 FCFA, and AI Training is 100,000 FCFA."
+        },
+        {
+          "title": "Do I get a certificate?",
+          "body": "You’ll get recognition for completion — but the priority is portfolio proof and skills you can demonstrate, not a paper certificate alone."
+        },
+        {
+          "title": "Can I take more than one track?",
+          "body": "Yes. Many learners start with one track, then add another. We’ll help you sequence them if you’re unsure."
+        },
+        {
+          "title": "Is this online or in person?",
+          "body": "Ask us for the current cohort format (in-person, online, or hybrid) and schedule for your preferred track."
+        }
+      ],
       "href": "/services/academy",
       "imageSrc": "/brand/services/academy.jpg",
       "imageAlt": "Speaker presenting to attendees at a professional training workshop"
@@ -537,8 +825,96 @@
       "ctaLabel": "Request early access"
     }
   ],
-  "jobs": [],
-  "team": [],
+  "jobs": [
+    {
+      "id": "job-corporate-sales-manager",
+      "slug": "corporate-sales-manager",
+      "title": "Corporate Sales Manager",
+      "employmentType": "Full-time",
+      "location": "Douala / Hybrid",
+      "workType": "Hybrid",
+      "summary": "Own enterprise and mid-market sales for Promptstack’s software, websites, automation, and digital growth services — from prospecting to signed delivery.",
+      "body": "As Corporate Sales Manager, you will build and run a professional sales pipeline for Promptstack Technologies. You will qualify opportunities, run discovery conversations, prepare proposals, and close engagements that our delivery team can execute with clarity.\n\nYou will work closely with founders and delivery leads, represent Promptstack with credibility, and keep CRM hygiene and forecast accuracy high.",
+      "responsibilities": [
+        "Prospect, qualify, and manage a corporate sales pipeline across target industries",
+        "Lead discovery calls and present Promptstack services with clear commercial framing",
+        "Prepare proposals, quotations, and follow-ups that convert interest into signed work",
+        "Coordinate handoff to delivery with accurate scope notes and next steps",
+        "Report weekly on pipeline, close rates, and revenue forecast"
+      ],
+      "requirements": [
+        "Proven B2B or corporate sales experience (technology, services, or digital preferred)",
+        "Strong communication skills in English; French is a strong plus",
+        "Comfortable owning targets, CRM updates, and professional client follow-up",
+        "Organized, self-driven, and confident presenting to decision-makers",
+        "Based in or able to work around Douala with hybrid availability"
+      ],
+      "published": true
+    },
+    {
+      "id": "job-digital-marketing-internship",
+      "slug": "digital-marketing-internship",
+      "title": "Digital Marketing Internship",
+      "employmentType": "Internship",
+      "location": "Douala / Hybrid",
+      "workType": "Hybrid",
+      "summary": "A structured internship for aspiring marketers who want hands-on experience in content, campaigns, analytics, and growth systems — not coffee runs.",
+      "body": "The Digital Marketing Internship at Promptstack is built for people who want to learn by shipping. You will support real campaigns and content workflows under mentorship, while building a portfolio of work you can show.\n\nThis is a professional internship track: clear expectations, weekly feedback, and exposure to how growth systems are planned and measured.",
+      "responsibilities": [
+        "Support content drafting, scheduling, and basic creative coordination",
+        "Assist with campaign setup, tracking checks, and weekly performance notes",
+        "Help research audiences, competitors, and channel opportunities",
+        "Maintain organized campaign assets and reporting sheets",
+        "Participate in reviews and apply feedback to improve output quality"
+      ],
+      "requirements": [
+        "Currently studying or recently graduated in marketing, communications, or a related field — or a strong self-taught portfolio",
+        "Curious about SEO, social, paid media, and analytics",
+        "Reliable writing skills and attention to detail",
+        "Comfortable with tools like Google Docs/Sheets; familiarity with Meta/Google Ads or Canva is a plus",
+        "Available for a structured internship schedule (hybrid in Douala preferred)"
+      ],
+      "published": true
+    }
+  ],
+  "team": [
+    {
+      "id": "arrey-johnson",
+      "name": "Arrey Johnson",
+      "role": "Chief Executive Officer",
+      "bio": "Leads Promptstack’s vision, delivery standards, and growth.",
+      "imageAlt": "Arrey Johnson, Chief Executive Officer",
+      "linkedinHref": "",
+      "imageSrc": "/brand/team/arrey-johnson.jpg?v=hd1"
+    },
+    {
+      "id": "ngome-n-lifanje",
+      "name": "Ngome N. Lifanje",
+      "role": "Chief Strategy Officer",
+      "bio": "Shapes strategy, partnerships, and the long-term product direction.",
+      "imageAlt": "Ngome N. Lifanje, Chief Strategy Officer",
+      "linkedinHref": "",
+      "imageSrc": "/brand/team/ngome-n-lifanje.jpg?v=hd1"
+    },
+    {
+      "id": "eyere-obin",
+      "name": "Eyere Obin",
+      "role": "Chief Operating Officer",
+      "bio": "Owns day-to-day operations, delivery cadence, and team coordination.",
+      "imageAlt": "Eyere Obin, Chief Operating Officer",
+      "linkedinHref": "https://www.linkedin.com/in/eyere-obin/",
+      "imageSrc": "/brand/team/eyere-obin.jpg?v=hd1"
+    },
+    {
+      "id": "tambe-blessing",
+      "name": "Tambe Blessing",
+      "role": "Digital Content Creator",
+      "bio": "Creates content that explains Promptstack’s work and Academy programs.",
+      "imageAlt": "Tambe Blessing, Digital Content Creator",
+      "linkedinHref": "",
+      "imageSrc": "/brand/team/tambe-blessing.jpg?v=hd1"
+    }
+  ],
   "posts": [],
   "legal": [
     {
@@ -569,7 +945,8 @@
       "secondaryCta": {
         "label": "Start a project",
         "href": "#book-discovery"
-      }
+      },
+      "imageSrc": "/brand/portfolio-hero.jpg?v=3"
     },
     "grid": {
       "eyebrow": "Some examples of our work",

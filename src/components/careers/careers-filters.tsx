@@ -8,10 +8,14 @@ export function CareersFilters({
   jobs,
   emptyState,
   allLabel,
+  viewRoleLabel = "View role",
+  applyLabel = "Apply",
 }: {
   jobs: JobItem[];
   emptyState: string;
   allLabel: string;
+  viewRoleLabel?: string;
+  applyLabel?: string;
 }) {
   const [employmentType, setEmploymentType] = useState("All");
   const [workType, setWorkType] = useState("All");
@@ -43,6 +47,7 @@ export function CareersFilters({
           value={employmentType}
           onChange={(e) => setEmploymentType(e.target.value)}
           className="min-h-11 rounded-(--radius-btn) border border-brand-navy/15 px-3 text-sm"
+          aria-label="Employment type"
         >
           {employmentOptions.map((option) => (
             <option key={option} value={option}>
@@ -54,6 +59,7 @@ export function CareersFilters({
           value={workType}
           onChange={(e) => setWorkType(e.target.value)}
           className="min-h-11 rounded-(--radius-btn) border border-brand-navy/15 px-3 text-sm"
+          aria-label="Work type"
         >
           {workOptions.map((option) => (
             <option key={option} value={option}>
@@ -63,21 +69,43 @@ export function CareersFilters({
         </select>
       </div>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-8 grid gap-4">
         {filtered.length === 0 ? (
           <p className="body-muted">{emptyState}</p>
         ) : (
           filtered.map((job) => (
-            <article key={job.id} className="rounded-(--radius-media) border border-brand-navy/10 p-5">
-              <h3 className="text-xl font-bold text-brand-navy">
-                <Link href={`/careers/${job.slug}`} className="hover:text-brand-purple">
-                  {job.title}
-                </Link>
-              </h3>
-              <p className="mt-2 text-sm text-text-muted">
-                {job.employmentType} · {job.location} · {job.workType}
-              </p>
-              <p className="mt-3 body-muted">{job.summary}</p>
+            <article
+              key={job.id}
+              className="rounded-(--radius-media) border border-brand-navy/10 bg-white p-5 sm:p-6"
+            >
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div className="min-w-0">
+                  <h3 className="text-xl font-bold text-brand-navy">
+                    <Link href={`/careers/${job.slug}`} className="hover:text-brand-purple">
+                      {job.title}
+                    </Link>
+                  </h3>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {[job.employmentType, job.location, job.workType].map((tag) => (
+                      <span
+                        key={`${job.id}-${tag}`}
+                        className="rounded-(--radius-pill) bg-surface-soft px-2.5 py-1 text-xs font-semibold text-brand-navy"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-3 max-w-2xl body-muted">{job.summary}</p>
+                </div>
+                <div className="flex shrink-0 flex-wrap gap-2">
+                  <Link href={`/careers/${job.slug}`} className="btn-secondary">
+                    {viewRoleLabel}
+                  </Link>
+                  <Link href={`/careers/${job.slug}#apply`} className="btn-primary">
+                    {applyLabel}
+                  </Link>
+                </div>
+              </div>
             </article>
           ))
         )}

@@ -6,3 +6,5 @@ node_modules
 .env*.local
 !.env.example
 data/booking/bookings.json
+data/applications/applications.json
+data/applications/resumes/

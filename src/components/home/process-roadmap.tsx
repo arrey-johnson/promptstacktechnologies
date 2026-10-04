@@ -5,25 +5,21 @@ const PHASE_META = [
   {
     labelEn: "Discover",
     labelFr: "Découvrir",
-    accent: "from-[#a800e6] to-[#6b21a8]",
     Icon: IconDiscover,
   },
   {
     labelEn: "Define",
     labelFr: "Définir",
-    accent: "from-[#7c3aed] to-[#1b263b]",
     Icon: IconDefine,
   },
   {
     labelEn: "Deliver",
     labelFr: "Livrer",
-    accent: "from-[#c026d3] to-[#a800e6]",
     Icon: IconDeliver,
   },
   {
     labelEn: "Own",
     labelFr: "Transférer",
-    accent: "from-[#1b263b] to-[#a800e6]",
     Icon: IconOwn,
   },
 ] as const;
@@ -37,25 +33,20 @@ export function ProcessRoadmap({
 }) {
   return (
     <div className="relative mt-12">
-      <div
-        className="pointer-events-none absolute -inset-x-8 -top-6 h-40 rounded-full bg-[radial-gradient(ellipse_at_center,rgb(168_0_230/0.12),transparent_70%)] blur-2xl"
-        aria-hidden="true"
-      />
-
       {/* Desktop / tablet horizontal roadmap */}
       <ol className="relative hidden md:grid md:grid-cols-4 md:gap-0">
         <div
-          className="pointer-events-none absolute top-[2.65rem] right-[12.5%] left-[12.5%] h-[3px] overflow-hidden rounded-full bg-brand-navy/10"
+          className="pointer-events-none absolute top-[2.75rem] right-[12.5%] left-[12.5%] h-px bg-brand-navy/12"
           aria-hidden="true"
         >
-          <div className="roadmap-progress-x h-full w-full origin-left rounded-full bg-gradient-to-r from-brand-purple via-brand-lavender to-brand-purple" />
+          <div className="roadmap-progress-x h-full w-full origin-left bg-gradient-to-r from-brand-purple via-brand-lavender to-brand-purple" />
         </div>
 
         {steps.map((step, index) => {
           const meta = PHASE_META[index] ?? PHASE_META[0];
           const label = locale === "fr" ? meta.labelFr : meta.labelEn;
           const Icon = meta.Icon;
-          const phase = `Phase ${String(index + 1).padStart(2, "0")}`;
+          const phaseNum = String(index + 1).padStart(2, "0");
 
           return (
             <li
@@ -63,20 +54,28 @@ export function ProcessRoadmap({
               className="group relative flex flex-col items-center px-3 text-center"
             >
               <div
-                className="roadmap-node relative z-10 flex h-[5.5rem] w-[5.5rem] items-center justify-center"
+                className="roadmap-node relative z-10"
                 style={{ animationDelay: `${120 + index * 110}ms` }}
               >
-                <span
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${meta.accent} opacity-90 shadow-[0_12px_28px_-10px_rgb(168_0_230/0.55)] transition-transform duration-300 group-hover:scale-105`}
-                />
-                <span className="absolute inset-[3px] rounded-full bg-white/15" />
-                <Icon className="relative h-8 w-8 text-white" />
+                <div className="relative flex h-[5.5rem] w-[5.5rem] items-center justify-center">
+                  <span
+                    className="absolute inset-0 rounded-[1.35rem] bg-surface-soft ring-1 ring-brand-navy/8 transition-all duration-300 group-hover:-translate-y-1 group-hover:ring-brand-purple/35 group-hover:shadow-[0_18px_36px_-22px_rgb(168_0_230/0.55)]"
+                    aria-hidden="true"
+                  />
+                  <span
+                    className="absolute -top-2 -right-2 flex h-7 min-w-7 items-center justify-center rounded-md bg-brand-purple px-1.5 text-[0.7rem] font-bold tracking-wide text-white shadow-sm"
+                    aria-hidden="true"
+                  >
+                    {phaseNum}
+                  </span>
+                  <Icon className="relative h-9 w-9 text-brand-purple" />
+                </div>
               </div>
 
               <p className="mt-5 text-[0.68rem] font-semibold tracking-[0.18em] text-brand-purple uppercase">
-                {phase}
+                Phase {phaseNum}
               </p>
-              <p className="mt-1 inline-flex items-center rounded-(--radius-pill) bg-brand-lavender/30 px-2.5 py-0.5 text-xs font-bold text-brand-navy">
+              <p className="mt-1 text-xs font-bold tracking-wide text-brand-navy/70">
                 {label}
               </p>
               <h3 className="mt-3 max-w-[14rem] text-lg font-bold tracking-tight text-brand-navy">
@@ -93,35 +92,44 @@ export function ProcessRoadmap({
       {/* Mobile vertical roadmap */}
       <ol className="relative space-y-0 md:hidden">
         <div
-          className="pointer-events-none absolute top-6 bottom-6 left-[1.65rem] w-[3px] rounded-full bg-brand-navy/10"
+          className="pointer-events-none absolute top-7 bottom-7 left-[1.7rem] w-px bg-brand-navy/12"
           aria-hidden="true"
         >
-          <div className="roadmap-progress-y h-full w-full origin-top rounded-full bg-gradient-to-b from-brand-purple via-brand-lavender to-brand-purple" />
+          <div className="roadmap-progress-y h-full w-full origin-top bg-gradient-to-b from-brand-purple via-brand-lavender to-brand-purple" />
         </div>
 
         {steps.map((step, index) => {
           const meta = PHASE_META[index] ?? PHASE_META[0];
           const label = locale === "fr" ? meta.labelFr : meta.labelEn;
           const Icon = meta.Icon;
-          const phase = `Phase ${String(index + 1).padStart(2, "0")}`;
+          const phaseNum = String(index + 1).padStart(2, "0");
 
           return (
             <li key={step.title} className="relative flex gap-4 py-4 pl-1">
               <div
-                className="roadmap-node relative z-10 flex h-14 w-14 shrink-0 items-center justify-center"
+                className="roadmap-node relative z-10 shrink-0"
                 style={{ animationDelay: `${80 + index * 90}ms` }}
               >
-                <span
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${meta.accent} shadow-[0_10px_22px_-8px_rgb(168_0_230/0.5)]`}
-                />
-                <Icon className="relative h-6 w-6 text-white" />
+                <div className="relative flex h-14 w-14 items-center justify-center">
+                  <span
+                    className="absolute inset-0 rounded-[0.95rem] bg-surface-soft ring-1 ring-brand-navy/8"
+                    aria-hidden="true"
+                  />
+                  <span
+                    className="absolute -top-1.5 -right-1.5 flex h-5 min-w-5 items-center justify-center rounded bg-brand-purple px-1 text-[0.6rem] font-bold text-white"
+                    aria-hidden="true"
+                  >
+                    {phaseNum}
+                  </span>
+                  <Icon className="relative h-7 w-7 text-brand-purple" />
+                </div>
               </div>
               <div className="min-w-0 pt-0.5">
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                   <p className="text-[0.68rem] font-semibold tracking-[0.18em] text-brand-purple uppercase">
-                    {phase}
+                    Phase {phaseNum}
                   </p>
-                  <span className="rounded-(--radius-pill) bg-brand-lavender/30 px-2 py-0.5 text-xs font-bold text-brand-navy">
+                  <span className="text-xs font-bold tracking-wide text-brand-navy/70">
                     {label}
                   </span>
                 </div>
@@ -140,12 +148,31 @@ export function ProcessRoadmap({
 
 function IconDiscover({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <circle cx="14" cy="14" r="7" stroke="currentColor" strokeWidth="2.2" />
-      <path d="M19.5 19.5 26 26" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <svg className={className} viewBox="0 0 40 40" fill="none" aria-hidden="true">
       <path
-        d="M11 14h6M14 11v6"
+        d="M8 20c0-6.627 5.373-12 12-12s12 5.373 12 12"
         stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.35"
+      />
+      <path
+        d="M11 20c0-4.97 4.03-9 9-9s9 4.03 9 9"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.55"
+      />
+      <circle cx="20" cy="20" r="5.5" fill="currentColor" />
+      <path
+        d="M24.2 24.2 31 31"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 17.2v5.6M17.2 20h5.6"
+        stroke="white"
         strokeWidth="1.8"
         strokeLinecap="round"
       />
@@ -155,14 +182,38 @@ function IconDiscover({ className }: { className?: string }) {
 
 function IconDefine({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <circle cx="16" cy="16" r="9" stroke="currentColor" strokeWidth="2.2" />
-      <circle cx="16" cy="16" r="3.2" fill="currentColor" />
-      <path
-        d="M16 5v3.2M16 23.8V27M5 16h3.2M23.8 16H27"
+    <svg className={className} viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <rect
+        x="9"
+        y="7"
+        width="22"
+        height="26"
+        rx="3.5"
+        fill="currentColor"
+        opacity="0.14"
+      />
+      <rect
+        x="9"
+        y="7"
+        width="22"
+        height="26"
+        rx="3.5"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2"
+      />
+      <path
+        d="M15 14h10M15 20h10M15 26h6"
+        stroke="currentColor"
+        strokeWidth="2"
         strokeLinecap="round"
+      />
+      <circle cx="28.5" cy="27.5" r="5.5" fill="currentColor" />
+      <path
+        d="M26.2 27.6l1.5 1.5 3.2-3.4"
+        stroke="white"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -170,43 +221,57 @@ function IconDefine({ className }: { className?: string }) {
 
 function IconDeliver({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
+    <svg className={className} viewBox="0 0 40 40" fill="none" aria-hidden="true">
       <path
-        d="M7 20.5 16 6l9 14.5H7Z"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinejoin="round"
+        d="M8 22.5 20 8l12 14.5H8Z"
+        fill="currentColor"
+        opacity="0.14"
       />
-      <path d="M16 13v11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       <path
-        d="M11.5 26h9"
+        d="M8 22.5 20 8l12 14.5H8Z"
         stroke="currentColor"
         strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20 16v14"
+        stroke="currentColor"
+        strokeWidth="2.2"
         strokeLinecap="round"
       />
+      <path
+        d="M14.5 24.5 20 30l5.5-5.5"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <rect x="12" y="31.5" width="16" height="2.5" rx="1.25" fill="currentColor" />
     </svg>
   );
 }
 
 function IconOwn({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
+    <svg className={className} viewBox="0 0 40 40" fill="none" aria-hidden="true">
       <path
-        d="M9 15.5V12a7 7 0 0 1 14 0v3.5"
+        d="M20 6.5 30 11.2v8.3c0 6.1-4.1 11.7-10 13-5.9-1.3-10-6.9-10-13v-8.3L20 6.5Z"
+        fill="currentColor"
+        opacity="0.14"
+      />
+      <path
+        d="M20 6.5 30 11.2v8.3c0 6.1-4.1 11.7-10 13-5.9-1.3-10-6.9-10-13v-8.3L20 6.5Z"
         stroke="currentColor"
-        strokeWidth="2.2"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14.8 20.2 18.2 23.5 25.4 16"
+        stroke="currentColor"
+        strokeWidth="2.3"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <rect
-        x="7"
-        y="15.5"
-        width="18"
-        height="11"
-        rx="2.5"
-        stroke="currentColor"
-        strokeWidth="2.2"
-      />
-      <circle cx="16" cy="20.5" r="1.6" fill="currentColor" />
     </svg>
   );
 }

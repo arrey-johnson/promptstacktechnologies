@@ -4,6 +4,16 @@ export type Cta = { label: string; href: string };
 export type FeatureItem = { title: string; body: string };
 export type ProcessStep = { title: string; body: string };
 
+export type ServiceCourse = {
+  id: string;
+  name: string;
+  fee: string;
+  duration?: string;
+  summary: string;
+  curriculum: string[];
+  outcomes?: string[];
+};
+
 export type ServiceItem = {
   id: string;
   name: string;
@@ -14,10 +24,19 @@ export type ServiceItem = {
   details?: string[];
   /** Problem statement for the dedicated service sales page */
   problem?: string;
+  /** How delivery / training runs */
+  process?: FeatureItem[];
+  /** Deeper content blocks */
+  modules?: FeatureItem[];
+  /** Academy (and similar) course tracks with curriculum + fees */
+  courses?: ServiceCourse[];
+  /** Note under course fees */
+  feeNote?: string;
   /** Outcomes / results visitors can expect */
   outcomes?: string[];
   /** Who this service is for */
   audience?: string;
+  faqs?: FeatureItem[];
   href: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -42,6 +61,8 @@ export type JobItem = {
   workType: string;
   summary: string;
   body: string;
+  responsibilities?: string[];
+  requirements?: string[];
   published: boolean;
 };
 
@@ -49,7 +70,10 @@ export type TeamMember = {
   id: string;
   name: string;
   role: string;
-  bio: string;
+  bio?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  linkedinHref?: string;
 };
 
 export type BlogPost = {
@@ -109,6 +133,12 @@ export type HomeContent = {
     eyebrow: string;
     heading: string;
     body: string;
+  };
+  portfolioTeaser: {
+    eyebrow: string;
+    heading: string;
+    body: string;
+    cta: Cta;
   };
   partners: {
     eyebrow: string;
@@ -184,6 +214,7 @@ export type PortfolioContent = {
     body: string;
     primaryCta: Cta;
     secondaryCta: Cta;
+    imageSrc?: string;
   };
   grid: {
     eyebrow: string;
@@ -207,7 +238,7 @@ export type CareersContent = {
 };
 
 export type ContactContent = {
-  hero: { heading: string; body: string };
+  hero: { heading: string; body: string; imageSrc?: string };
   intents: string[];
   formLabels: {
     name: string;

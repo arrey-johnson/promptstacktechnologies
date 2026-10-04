@@ -25,6 +25,12 @@ export default async function AdminConsoleLayout({
           <Link href="/admin" className="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-surface-soft">
             Dashboard
           </Link>
+          <Link
+            href="/admin/applications"
+            className="block rounded-lg px-3 py-2 text-sm font-semibold text-brand-purple hover:bg-surface-soft"
+          >
+            Job applications
+          </Link>
           {CMS_COLLECTIONS.map((item) => (
             <Link
               key={item.key}

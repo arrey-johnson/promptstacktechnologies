@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
+import { TeamSection } from "@/components/about/team-section";
 import { ContactForm } from "@/components/forms/contact-form";
 import { getCmsData } from "@/lib/cms/store";
-import { Suspense } from "react";
 
 export const metadata: Metadata = { title: "About" };
 
 export default async function AboutPage() {
   const cms = await getCmsData();
-  const { about, contact } = cms;
+  const { about, contact, team } = cms;
 
   return (
     <>
@@ -47,23 +48,11 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* The people behind Promptstack — temporarily hidden
-      <section className="bg-surface-soft">
-        <div className="site-container section-space">
-          <h2 className="heading-lg">{about.teamIntro.heading}</h2>
-          <p className="mt-3 max-w-2xl body-muted">{about.teamIntro.body}</p>
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {team.map((member) => (
-              <article key={member.id} className="rounded-(--radius-media) bg-white p-5 border border-brand-navy/10">
-                <h3 className="text-lg font-bold text-brand-navy">{member.name}</h3>
-                <p className="mt-1 text-sm font-semibold text-brand-purple">{member.role}</p>
-                <p className="mt-3 body-muted">{member.bio}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
+      <TeamSection
+        heading={about.teamIntro.heading}
+        body={about.teamIntro.body}
+        members={team}
+      />
 
       <section className="site-container section-space">
         <h2 className="heading-lg">{about.capabilities.heading}</h2>

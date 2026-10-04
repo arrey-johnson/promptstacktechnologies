@@ -9,6 +9,7 @@ export default async function HomePage() {
       home={cms.home}
       services={cms.serviceItems}
       products={cms.products}
+      portfolioItems={cms.portfolioItems}
       locale={locale}
     />
   );

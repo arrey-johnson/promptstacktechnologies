@@ -16,30 +16,38 @@ export default async function CareersPage() {
           <Link href="/">{locale === "fr" ? "Accueil" : "Homepage"}</Link> /{" "}
           {locale === "fr" ? "Carrières" : "Careers"}
         </nav>
+        <p className="pill mt-6">{locale === "fr" ? "Carrières" : "Careers"}</p>
         <h1 className="mt-4 heading-xl">{page.hero.heading}</h1>
         <p className="mt-4 max-w-2xl body-muted">{page.hero.body}</p>
       </section>
 
-      <section className="bg-surface-soft">
-        <div className="site-container section-space">
-          <h2 className="heading-lg">{page.whyJoin.heading}</h2>
-          <p className="mt-3 max-w-2xl body-muted">{page.whyJoin.body}</p>
-          <ul className="mt-6 space-y-3">
-            {page.whyJoin.items.map((item) => (
-              <li key={item} className="font-semibold text-brand-navy">
-                {item}
-              </li>
-            ))}
-          </ul>
+      <section className="site-container pb-16">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="heading-lg">{page.openRolesHeading}</h2>
+            <p className="mt-2 max-w-xl text-sm text-text-muted">
+              {locale === "fr"
+                ? "Sélectionnez un poste pour lire le détail et postuler directement sur le site."
+                : "Select a role to review the details and apply directly on this website."}
+            </p>
+          </div>
+          <p className="text-sm font-semibold text-brand-purple">
+            {published.length}{" "}
+            {locale === "fr"
+              ? published.length === 1
+                ? "poste ouvert"
+                : "postes ouverts"
+              : published.length === 1
+                ? "open role"
+                : "open roles"}
+          </p>
         </div>
-      </section>
-
-      <section className="site-container section-space">
-        <h2 className="heading-lg">{page.openRolesHeading}</h2>
         <CareersFilters
           jobs={published}
           emptyState={page.emptyState}
           allLabel={locale === "fr" ? "Tous" : "All"}
+          viewRoleLabel={locale === "fr" ? "Voir le poste" : "View role"}
+          applyLabel={locale === "fr" ? "Postuler" : "Apply"}
         />
       </section>
 

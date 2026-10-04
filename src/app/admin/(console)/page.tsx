@@ -42,6 +42,15 @@ export default function AdminDashboardPage() {
           and keep the slot busy.
         </p>
       </div>
+      <div className="mt-8 rounded-2xl border border-brand-navy/10 bg-white p-5">
+        <h2 className="text-lg font-bold">Job applications</h2>
+        <p className="mt-2 text-sm text-text-muted">
+          Review careers applications submitted on the website, download resumes, and update status.
+        </p>
+        <Link href="/admin/applications" className="btn-primary mt-4 inline-flex">
+          Open applications inbox
+        </Link>
+      </div>
       <div className="mt-8 flex flex-wrap gap-3">
         <Link href="/" className="btn-secondary">
           View website

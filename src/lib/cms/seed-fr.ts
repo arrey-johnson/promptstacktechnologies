@@ -1,4 +1,6 @@
 import { portfolioItemsFr } from "./portfolio-items";
+import { serviceItemsFr } from "./service-items-fr";
+import { teamMembersFr } from "./team-members";
 import type { CmsData } from "./types";
 
 export const cmsSeedFr: CmsData = {
@@ -68,14 +70,14 @@ export const cmsSeedFr: CmsData = {
     ],
     newsletter: {
       heading: "Notes Promptstack",
-      body: "Des updates courts sur les produits, les cohortes Academy et des leçons de livraison — sans spam.",
+      body: "Des updates courts sur nos livraisons, les cohortes Academy (développement web, marketing digital, IA) et des leçons pratiques — sans spam.",
       consent:
-        "Oui, envoyez-moi occasionnellement des updates Promptstack sur les produits, l'Academy et les événements.",
+        "Oui, envoyez-moi occasionnellement des updates Promptstack sur les produits, la formation Academy et les événements.",
     },
     seo: {
       title: "Promptstack Technologies",
       description:
-        "Promptstack Technologies aide les entreprises à résoudre leurs défis opérationnels et de croissance grâce au logiciel, à l'IA & l'automatisation, au marketing digital et à l'Academy.",
+        "Promptstack Technologies aide les entreprises avec le logiciel, l'IA & l'automatisation et le marketing digital — et forme étudiants et aspirants tech via l'Academy au développement web, au marketing digital et à l'IA.",
     },
   },
   home: {
@@ -84,7 +86,7 @@ export const cmsSeedFr: CmsData = {
       heading: "Construisez de meilleurs systèmes. Automatisez ce qui vous ralentit.",
       accentWords: ["meilleurs", "Automatisez"],
       supporting:
-        "Logiciel, IA & automatisation, marketing digital et Promptstack Academy — pour des processus plus clairs, des décisions plus rapides et une croissance mesurable.",
+        "Logiciel, IA & automatisation, marketing digital et Promptstack Academy — où étudiants et aspirants tech se forment au développement web, au marketing digital et à l'IA.",
       primaryCta: { label: "Réserver un appel découverte", href: "#book-discovery" },
       secondaryCta: { label: "Voir nos services", href: "/services" },
       videoSrc: "/brand/hero-background.mp4",
@@ -98,9 +100,15 @@ export const cmsSeedFr: CmsData = {
       ],
     },
     servicesIntro: {
-      eyebrow: "La stack Promptstack",
-      heading: "Un partenaire. Quatre leviers reliés.",
-      body: "Choisissez le point d'entrée qui fait le plus mal aujourd'hui — sites web & logiciel, IA & automatisation, marketing digital ou Academy — puis élargissez sans changer de prestataire en cours de route.",
+      eyebrow: "Nos services",
+      heading: "Des services conçus pour travailler ensemble.",
+      body: "Commencez par le service dont vous avez le plus besoin — sites web & logiciel, IA & automatisation, marketing digital ou formation Academy — puis ajoutez-en d'autres sans changer de partenaire.",
+    },
+    portfolioTeaser: {
+      eyebrow: "Travaux sélectionnés",
+      heading: "Des sites récents que nous avons livrés.",
+      body: "Un aperçu de sites clients et d’interfaces produit — survolez une carte pour faire défiler la page, ou ouvrez un projet pour le détail.",
+      cta: { label: "Voir tout le portfolio", href: "/portfolio" },
     },
     partners: {
       eyebrow: "Partenaires techniques",
@@ -133,7 +141,7 @@ export const cmsSeedFr: CmsData = {
         },
         {
           title: "Transférer la propriété",
-          body: "Le go-live inclut formation, docs et carte des responsables. Des parcours Academy sont dispo quand vous voulez garder les compétences en interne.",
+          body: "Le go-live inclut formation, docs et carte des responsables pour que votre équipe fasse tourner ce que nous avons livré.",
         },
       ],
     },
@@ -143,54 +151,53 @@ export const cmsSeedFr: CmsData = {
       body: "Cartes placeholder pour les idées que Promptstack explore. Renommez, changez le statut ou remplacez-les dans Admin → Produits.",
     },
     aboutTeaser: {
-      eyebrow: "Qui nous sommes",
-      heading: "Construit autour de services qui font avancer le travail réel.",
+      eyebrow: "Promptstack est-il adapté ?",
+      heading: "Appelez-nous quand le travail est bloqué — pas pour une autre bio d’entreprise.",
       body: [
-        "Promptstack est une entreprise techno centrée sur le logiciel, l'IA & l'automatisation, le marketing digital et l'Academy — pour livrer des systèmes que les équipes peuvent faire tourner, et des compétences qui restent.",
-        "Nous concevons pour des équipes lean, des contraintes concrètes, et des dirigeants qui veulent des preuves plus vite qu'un long deck stratégique.",
+        "Si l’un de ces points est vrai, un appel découverte vaut 30 minutes. Sinon, nous ne sommes probablement pas la bonne équipe pour l’instant.",
       ],
     },
     whyUs: {
-      eyebrow: "Ce que vous gagnez avec Promptstack",
-      heading: "Livraison plus capacité — pas seulement des slides.",
+      eyebrow: "Vous êtes concernés si",
+      heading: "Quatre signaux que nous pouvons aider ce mois-ci.",
       items: [
         {
-          title: "Une stack reliée, pas des silos",
-          body: "Logiciel, automatisation, marketing et Academy peuvent se renforcer au lieu de se battre pour le budget chez quatre prestataires différents.",
+          title: "Les outils ne collent pas au vrai process",
+          body: "Tableurs, contournements et logiciels à moitié utilisés. Nous reconstruisons autour du travail réel pour que l’équipe arrête de se battre contre le système.",
         },
         {
-          title: "Design orienté opérateurs",
-          body: "Interfaces et flux sont jugés par ceux qui cliquent chaque jour — pas seulement par le comité de pilotage.",
+          title: "Le manuel mange la semaine",
+          body: "Des tâches répétitives qui devraient tourner seules. Nous ciblons les automatisations à fort ROI, les livrons, et nommons les responsables.",
         },
         {
-          title: "Progrès par démos",
-          body: "Vous voyez assez souvent du logiciel et des artefacts de campagne pour corriger le cap. Les surprises restent petites et corrigeables.",
+          title: "Le marketing ne prouve pas ce qui a bougé",
+          body: "Des campagnes sans chemin clair vers les leads ou le chiffre. Nous relions tracking, tunnels et suivi pour que vous puissiez piloter.",
         },
         {
-          title: "Des compétences qui restent",
-          body: "Quand vous le voulez, l'Academy transforme la livraison en capacité interne — pour que le gain ne soit pas loué pour toujours.",
+          title: "Vous formez des talents pour la tech",
+          body: "L’Academy forme étudiants et aspirants professionnels tech au développement web, au marketing digital et à l’IA — avec des projets concrets, pas seulement des slides.",
         },
       ],
     },
     finalCta: {
       heading: "Envie d'une prochaine étape plus claire ?",
-      body: "Réservez un appel découverte. Nous trancherons s'il vous faut un système, une automatisation, une poussée growth, l'Academy, ou un mix — et quoi faire en premier.",
+      body: "Réservez un appel découverte. Nous trancherons s'il vous faut un système, une automatisation, une poussée growth, une formation Academy, ou un mix — et quoi faire en premier.",
       cta: { label: "Réserver un appel découverte", href: "#book-discovery" },
-      imageSrc: "/brand/cta-next-step.jpg",
+      imageSrc: "/brand/cta-next-step.jpg?v=3",
     },
   },
   about: {
     hero: {
       eyebrow: "Promptstack Technologies",
       heading: "À propos de Promptstack",
-      body: "Nous construisons logiciels, automatisations, systèmes de marketing digital et programmes Academy — pour des opérations plus claires et des compétences qui restent.",
+      body: "Nous construisons logiciels, automatisations et systèmes de marketing digital pour les entreprises — et animons l'Academy pour former étudiants et aspirants tech au développement web, au marketing digital et à l'IA.",
     },
     story: {
       eyebrow: "Comment nous en sommes arrivés là",
       heading: "Concentrés sur la stack qui fait vraiment avancer le travail.",
       body: [
-        "Promptstack part d'une frustration simple : trop d'organisations jonglent avec des outils qui ne se parlent pas, des campagnes illisibles, et des formations qui n'arrivent jamais en production.",
-        "Nous nous sommes recentrés sur quatre leviers reliés — logiciel, IA & automatisation, marketing digital et Academy — pour que livraison et capacité grandissent ensemble.",
+        "Promptstack part d'une frustration simple : trop d'organisations jonglent avec des outils qui ne se parlent pas, des campagnes illisibles, et des talents sans compétences tech pratiques.",
+        "Nous livrons logiciel, IA & automatisation et marketing digital pour les entreprises — et l'Academy forme la prochaine vague de talents au développement web, au marketing digital et à l'IA.",
       ],
     },
     values: {
@@ -199,7 +206,7 @@ export const cmsSeedFr: CmsData = {
       items: [
         {
           title: "Les services d'abord, esprit opérateur",
-          body: "Notre identité, c'est le travail que nous livrons — logiciel, automatisation, systèmes de croissance et Academy — conçu pour des équipes lean et des dirigeants qui veulent des preuves vite.",
+          body: "Notre identité, c'est le travail que nous livrons — logiciel, automatisation et systèmes de croissance pour des équipes lean — plus la formation Academy pour ceux qui entrent dans la tech.",
         },
         {
           title: "Livrer ce que les gens peuvent faire tourner",
@@ -210,14 +217,14 @@ export const cmsSeedFr: CmsData = {
           body: "Périmètre, risques et délais sont nommés clairement. Les surprises doivent rester rares et petites.",
         },
         {
-          title: "Laisser de la capacité derrière",
-          body: "Quand c'est pertinent, l'Academy transforme le projet en muscle interne — pas une location permanente.",
+          title: "Former des personnes qui savent livrer",
+          body: "L'Academy s'adresse aux étudiants et aspirants professionnels tech — développement web, marketing digital et IA — avec des projets qu'ils peuvent montrer.",
         },
       ],
     },
     teamIntro: {
-      heading: "Les personnes derrière Promptstack",
-      body: "Ajoutez vrais noms, rôles et bios dans l'Admin quand vous êtes prêts à publier l'équipe.",
+      heading: "L’équipe Promptstack",
+      body: "Les personnes qui pilotent la livraison, la stratégie, les opérations et le contenu qui raconte notre histoire.",
     },
     capabilities: {
       heading: "La boîte à outils Promptstack",
@@ -240,8 +247,8 @@ export const cmsSeedFr: CmsData = {
           body: "Acquisition, contenu et analytics reliés pour que l'attention rejoigne le pipeline.",
         },
         {
-          title: "Parcours Academy",
-          body: "Apprendre en livrant du travail fini — des preuves plutôt que des slides.",
+          title: "Formation Academy",
+          body: "Développement web, marketing digital et IA pour étudiants et aspirants professionnels tech — apprendre en construisant de vrais projets.",
         },
         {
           title: "Passation & suivi",
@@ -257,7 +264,7 @@ export const cmsSeedFr: CmsData = {
   servicesPage: {
     hero: {
       heading: "Services",
-      body: "Quatre leviers reliés : sites web & logiciel sur mesure, IA & automatisation, marketing digital et Academy. Commencez là où la contrainte est la plus nette.",
+      body: "Sites web & logiciel sur mesure, IA & automatisation, marketing digital, et Academy (formation en développement web, marketing digital et IA). Commencez là où vous avez le plus besoin de nous.",
     },
     cta: {
       heading: "Pas sûr du levier à tirer en premier ?",
@@ -280,6 +287,7 @@ export const cmsSeedFr: CmsData = {
       body: "Nos meilleurs projets de design web — de la finance et l'e-commerce à la beauté, l'éducation et la tech.",
       primaryCta: { label: "Explorer les projets", href: "#portfolio-grid" },
       secondaryCta: { label: "Démarrer un projet", href: "#book-discovery" },
+      imageSrc: "/brand/portfolio-hero.jpg?v=3",
     },
     grid: {
       eyebrow: "Quelques exemples de notre travail",
@@ -295,15 +303,15 @@ export const cmsSeedFr: CmsData = {
   },
   careersPage: {
     hero: {
-      heading: "Travailler chez Promptstack",
-      body: "Rejoignez une équipe qui livre logiciel, automatisation, systèmes de croissance et Academy — avec craft, clarté, et de la place pour monter en niveau.",
+      heading: "Carrières chez Promptstack",
+      body: "Construisez une carrière dans une entreprise techno qui livre sites, logiciels, automatisations et systèmes de croissance pour de vrais clients. Postulez directement sur ce site — chaque candidature arrive dans notre back-office.",
     },
     whyJoin: {
       heading: "Pourquoi on nous rejoint",
       body: "Des contraintes clients réelles, une stack reliée, et des pairs qui visent des résultats utilisables.",
       items: [
         "Livrer des systèmes que les opérateurs peuvent vraiment faire tourner",
-        "Travailler entre logiciel, automatisation, marketing et Academy",
+        "Soutenir la formation Academy en développement web, marketing digital et IA",
         "Grandir par démos, revues et travail fini — pas par du remplissage",
       ],
     },
@@ -317,7 +325,8 @@ export const cmsSeedFr: CmsData = {
   contact: {
     hero: {
       heading: "Contacter Promptstack",
-      body: "Dites-nous la contrainte — système, automatisation, croissance, Academy ou autre — et nous répondrons avec une prochaine étape claire.",
+      body: "Dites-nous ce dont vous avez besoin — un système, une automatisation, de la croissance, une formation Academy (développement web, marketing digital ou IA), ou autre — et nous répondrons avec une prochaine étape claire.",
+      imageSrc: "/brand/contact-hero.jpg?v=2",
     },
     intents: [
       "Réserver un appel découverte",
@@ -338,112 +347,7 @@ export const cmsSeedFr: CmsData = {
       submit: "Envoyer",
     },
   },
-  serviceItems: [
-    {
-      id: "software",
-      name: "Logiciel & sites web",
-      summary: "Sites web, apps et outils calés sur votre façon de travailler.",
-      body: "Nous construisons des sites d'entreprise, des portails clients et des apps web sur mesure que votre équipe peut faire tourner au quotidien — alignés sur le travail réel, pas un template qui « presque » convient.",
-      detailBody:
-        "Besoin d'un site d'entreprise clair, d'un portail client, ou d'un logiciel qui remplace des tableurs confus ? Nous le concevons et le livrons pour que votre équipe puisse vraiment s'en servir. Pages et flux clairs, permissions sensées, releases revoyables avant le go-live — pas une passation boîte noire.",
-      problem:
-        "Votre marque est floue en ligne, ou votre équipe fait encore tourner le travail critique dans des tableurs et des fils de chat parce qu'aucun outil ne convient vraiment. Les logiciels génériques imposent des bricolages. Un site faible fait perdre la confiance avant la première conversation.",
-      details: [
-        "Sites d'entreprise et pages d'atterrissage qui expliquent ce que vous faites et convertissent l'intérêt",
-        "Apps web, portails clients et tableaux de bord ops calés sur votre vrai process",
-        "Ateliers de découverte pour cartographier le travail avant de proposer des écrans",
-        "Builds itératifs avec démos, puis passation et formation pour que la propriété reste chez vous",
-      ],
-      outcomes: [
-        "Un site ou un produit que clients et équipe comprennent tout de suite",
-        "Moins de rustines manuelles entre outils et personnes",
-        "Une propriété claire après le lancement — pas un système que seul le prestataire peut toucher",
-      ],
-      audience:
-        "Les entreprises qui ont besoin d'un site professionnel, d'un portail client, ou d'un logiciel interne aligné sur le travail réel.",
-      href: "/services/software",
-      imageSrc: "/brand/services/software.jpg",
-      imageAlt: "Développeur travaillant tard devant plusieurs écrans de code",
-    },
-    {
-      id: "ai-automation",
-      name: "IA & Automatisation",
-      summary: "Automatisez les étapes répétitives qui mangent votre semaine.",
-      body: "Nous repérons les handoffs, copier-coller et piles de validation à corriger — puis nous les automatisons avec des flux maintenables, pas du théâtre de démo.",
-      detailBody:
-        "Nous ciblons la corvée qui brûle des heures sans jugement — ressaisie, relances, mises à jour de statut, routage de documents — et la remplaçons par des automatisations que votre équipe comprend et peut maintenir. L'IA là où elle aide ; des flux fiables là où ils suffisent.",
-      problem:
-        "Les gens recopient des données entre outils, relancent des validations dans le chat, et retapent les mêmes mises à jour chaque jour. Des heures disparaissent dans un travail qui n'avait pas besoin d'un humain — et les erreurs arrivent quand quelqu'un est fatigué.",
-      details: [
-        "Audit de process pour repérer les automatisations à fort ROI",
-        "Automatisation des formulaires, validations, notifications et handoffs",
-        "Assistants IA pratiques quand ils réduisent l'erreur ou accélèrent les décisions",
-        "Suivi et playbooks pour que les automatisations ne deviennent pas une dette obscure",
-      ],
-      outcomes: [
-        "Des heures récupérées chaque semaine sur les tâches qui traînaient",
-        "Moins de handoffs ratés et moins d'erreurs de copier-coller",
-        "Des automatisations que votre équipe peut expliquer et faire tenir",
-      ],
-      audience:
-        "Les équipes ops, admin et growth noyées sous des tâches répétables qui devraient déjà tourner seules.",
-      href: "/services/ai-automation",
-      imageSrc: "/brand/services/ai-automation.jpg",
-      imageAlt: "Poignée de main entre une main humaine et une main robotique",
-    },
-    {
-      id: "digital-marketing",
-      name: "Marketing digital",
-      summary: "Acquisition et contenu reliés à des chiffres défendables.",
-      body: "SEO, médias payants, contenu et analytics connectés pour transformer l'attention en pipeline — avec un reporting fiable pour les opérateurs.",
-      detailBody:
-        "Nous construisons des systèmes de croissance, pas des campagnes déconnectées. Canaux, pages et reporting restent reliés pour voir ce qui a coûté, ce qui a converti, et quoi faire ensuite — sans tableau de bord illisible.",
-      problem:
-        "Pubs, contenu et SEO tournent en silos. L'argent sort, les leads arrivent de façon inégale, et personne ne peut clairement dire ce qui a marché. Le reporting a l'air chargé mais n'aide pas les décisions de la semaine suivante.",
-      details: [
-        "Stratégie de canaux (SEO, paid, contenu) avec des priorités claires",
-        "Pages et tunnels alignés sur l'offre et l'audience",
-        "Tracking et analytics qui relient dépenses, leads et conversion",
-        "Reporting utilisable semaine après semaine — pas seulement des vanity metrics",
-      ],
-      outcomes: [
-        "Des canaux qui soutiennent un plan de croissance clair",
-        "Des dépenses reliées à des leads et conversions que vous pouvez suivre",
-        "Un reporting hebdo actionnable sans traducteur",
-      ],
-      audience:
-        "Fondateurs et responsables marketing qui veulent une croissance mesurable — pas des campagnes occupées et opaques.",
-      href: "/services/digital-marketing",
-      imageSrc: "/brand/services/digital-marketing.jpg",
-      imageAlt: "Professionnelle souriante en appel vidéo sur smartphone à son bureau",
-    },
-    {
-      id: "academy",
-      name: "Academy",
-      summary: "Apprendre en construisant. Partir avec des preuves, pas seulement des slides.",
-      body: "Promptstack Academy forme à livrer du travail fini — des projets qui démontrent la compétence, pas des certificats sans preuve.",
-      detailBody:
-        "Promptstack Academy s'adresse aux personnes et équipes qui veulent une capacité démontrable. Les apprenants construisent vers des projets finis — avec coaching, critique, et un parcours proche de notre livraison client — pour que les compétences survivent à la salle de classe.",
-      problem:
-        "La formation se termine par des slides et des certificats, mais l'équipe ne sait toujours pas livrer. Les compétences s'effacent parce que la pratique ne ressemblait jamais à une vraie livraison — et la capacité part quand le prestataire part.",
-      details: [
-        "Parcours par projets en logiciel, IA et compétences digitales associées",
-        "Cycles de build mentorés avec revues, pas seulement des cours enregistrés",
-        "Livrables portfolio qui prouvent ce que quelqu'un peut shipper",
-        "Options d'upselling d'équipe quand vous voulez la capacité en interne",
-      ],
-      outcomes: [
-        "Des personnes qui montrent du travail fini, pas seulement une attestation",
-        "Des compétences calées sur la façon dont les vrais projets se livrent",
-        "Plus de capacité qui reste dans votre équipe après l'engagement",
-      ],
-      audience:
-        "Les personnes qui construisent un portfolio et les entreprises qui veulent que leur équipe livre — pas seulement qu'elle assiste à une formation.",
-      href: "/services/academy",
-      imageSrc: "/brand/services/academy.jpg",
-      imageAlt: "Intervenante présentant devant des participants en atelier de formation",
-    },
-  ],
+  serviceItems: serviceItemsFr,
   products: [
     {
       id: "prod-1",
@@ -465,8 +369,61 @@ export const cmsSeedFr: CmsData = {
     },
   ],
   portfolioItems: portfolioItemsFr,
-  jobs: [],
-  team: [],
+  jobs: [
+    {
+      id: "job-corporate-sales-manager",
+      slug: "corporate-sales-manager",
+      title: "Corporate Sales Manager",
+      employmentType: "Temps plein",
+      location: "Douala / Hybride",
+      workType: "Hybride",
+      summary:
+        "Pilotez les ventes mid-market et entreprise pour les services Promptstack — sites, logiciels, automatisation et croissance digitale — de la prospection jusqu'à la signature.",
+      body: "En tant que Corporate Sales Manager, vous construisez et animez un pipeline de vente professionnel pour Promptstack Technologies. Vous qualifiez les opportunités, menez les conversations de découverte, préparez les propositions et concluez des engagements que l'équipe de livraison peut exécuter clairement.\n\nVous travaillez avec les fondateurs et les leads delivery, représentez Promptstack avec crédibilité, et maintenez une hygiène CRM et une précision de forecast élevées.",
+      responsibilities: [
+        "Prospecter, qualifier et gérer un pipeline de ventes corporate sur des industries cibles",
+        "Mener les appels de découverte et présenter les services Promptstack avec un cadrage commercial clair",
+        "Préparer propositions, devis et relances qui transforment l'intérêt en travail signé",
+        "Coordonner la passation vers la livraison avec des notes de périmètre précises",
+        "Reporter chaque semaine sur le pipeline, les taux de closing et le forecast",
+      ],
+      requirements: [
+        "Expérience prouvée en vente B2B ou corporate (techno, services ou digital de préférence)",
+        "Excellente communication en anglais ; le français est un atout fort",
+        "À l'aise avec les objectifs, le CRM et le suivi client professionnel",
+        "Organisé(e), autonome, et à l'aise devant des décideurs",
+        "Basé(e) à Douala ou capable d'y travailler en hybride",
+      ],
+      published: true,
+    },
+    {
+      id: "job-digital-marketing-internship",
+      slug: "digital-marketing-internship",
+      title: "Stage — Digital Marketing",
+      employmentType: "Stage",
+      location: "Douala / Hybride",
+      workType: "Hybride",
+      summary:
+        "Un stage structuré pour les marketeurs en devenir qui veulent une expérience concrète en contenu, campagnes, analytics et systèmes de croissance — pas des courses café.",
+      body: "Le stage Digital Marketing chez Promptstack est conçu pour apprendre en livrant. Vous soutenez de vraies campagnes et workflows de contenu avec mentorat, tout en construisant un portfolio que vous pouvez montrer.\n\nC'est une voie de stage professionnelle : attentes claires, feedback hebdomadaire, et exposition à la façon dont les systèmes de croissance sont planifiés et mesurés.",
+      responsibilities: [
+        "Soutenir la rédaction de contenu, la planification et la coordination créative de base",
+        "Aider à la mise en place de campagnes, aux contrôles de tracking et aux notes de performance",
+        "Contribuer à la recherche d'audiences, de concurrents et d'opportunités de canaux",
+        "Maintenir des assets de campagne et des feuilles de reporting organisés",
+        "Participer aux revues et appliquer le feedback pour améliorer la qualité",
+      ],
+      requirements: [
+        "Études en cours ou diplôme récent en marketing, communication ou domaine proche — ou un portfolio autodidacte solide",
+        "Curiosité pour le SEO, le social, le paid media et l'analytics",
+        "Écriture fiable et souci du détail",
+        "À l'aise avec Docs/Sheets ; Meta/Google Ads ou Canva est un plus",
+        "Disponible pour un planning de stage structuré (hybride à Douala de préférence)",
+      ],
+      published: true,
+    },
+  ],
+  team: teamMembersFr,
   posts: [],
   legal: [
     {

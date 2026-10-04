@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getCmsData } from "@/lib/cms/store";
 import { getRequestLocale } from "@/lib/i18n/locale";
@@ -9,32 +10,51 @@ export default async function PortfolioPage() {
   const [cms, locale] = await Promise.all([getCmsData(), getRequestLocale()]);
   const { portfolioPage, portfolioItems } = cms;
   const exploreLabel = locale === "fr" ? "Explorer" : "Explore";
+  const heroImage = portfolioPage.hero.imageSrc || "/brand/portfolio-hero.jpg?v=3";
 
   return (
     <>
-      <section className="relative overflow-hidden bg-surface-soft">
+      <section className="relative isolate min-h-[22rem] overflow-hidden text-white sm:min-h-[26rem]">
+        <Image
+          src={heroImage}
+          alt=""
+          fill
+          priority
+          quality={95}
+          className="object-cover object-[78%_center] sm:object-right"
+          sizes="100vw"
+        />
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.4]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgb(27 38 59 / 0.07) 1px, transparent 0)",
-            backgroundSize: "22px 22px",
-          }}
+          className="absolute inset-0 bg-[linear-gradient(105deg,rgb(168_0_230/0.92)_0%,rgb(168_0_230/0.82)_38%,rgb(168_0_230/0.35)_68%,rgb(168_0_230/0.12)_100%)]"
           aria-hidden="true"
         />
-        <div className="relative site-container section-space">
-          {portfolioPage.hero.eyebrow ? (
-            <p className="pill">{portfolioPage.hero.eyebrow}</p>
-          ) : null}
-          <h1 className="mt-4 max-w-3xl heading-xl">{portfolioPage.hero.heading}</h1>
-          <p className="mt-4 max-w-2xl body-muted">{portfolioPage.hero.body}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={portfolioPage.hero.primaryCta.href} className="btn-primary">
-              {portfolioPage.hero.primaryCta.label}
-            </Link>
-            <Link href={portfolioPage.hero.secondaryCta.href} className="btn-secondary">
-              {portfolioPage.hero.secondaryCta.label}
-            </Link>
+        <div className="relative site-container flex min-h-[22rem] items-center section-space sm:min-h-[26rem]">
+          <div className="max-w-xl">
+            {portfolioPage.hero.eyebrow ? (
+              <p className="inline-flex items-center rounded-(--radius-pill) bg-white/15 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-white uppercase">
+                {portfolioPage.hero.eyebrow}
+              </p>
+            ) : null}
+            <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
+              {portfolioPage.hero.heading}
+            </h1>
+            <p className="mt-4 text-base leading-relaxed text-white/92">
+              {portfolioPage.hero.body}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href={portfolioPage.hero.primaryCta.href}
+                className="inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) bg-white px-5 text-sm font-semibold text-brand-purple hover:bg-white/95"
+              >
+                {portfolioPage.hero.primaryCta.label}
+              </Link>
+              <Link
+                href={portfolioPage.hero.secondaryCta.href}
+                className="inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) border border-white/70 px-5 text-sm font-semibold text-white hover:bg-white/10"
+              >
+                {portfolioPage.hero.secondaryCta.label}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -69,15 +89,17 @@ export default async function PortfolioPage() {
                       loading="lazy"
                     />
                     <div
-                      className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent px-4 pb-4 pt-16"
+                      className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy via-brand-navy/75 to-transparent px-4 pb-4 pt-20"
                       aria-hidden="true"
                     />
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
-                      <p className="text-xs font-semibold tracking-[0.14em] text-brand-lavender uppercase">
+                      <span className="inline-flex items-center rounded-(--radius-pill) bg-white/95 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.12em] text-brand-purple uppercase shadow-sm backdrop-blur-sm">
                         {item.category}
-                      </p>
-                      <h3 className="mt-1 text-lg font-bold text-white">{item.title}</h3>
-                      <p className="mt-1 text-sm font-semibold text-white/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      </span>
+                      <h3 className="mt-2 text-lg font-bold text-white drop-shadow-sm">
+                        {item.title}
+                      </h3>
+                      <p className="mt-1 text-sm font-semibold text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         {exploreLabel} →
                       </p>
                     </div>
