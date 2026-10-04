@@ -64,9 +64,9 @@ export const cmsSeedFr: CmsData = {
       },
     ],
     socials: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/promptstack-technologies/" },
       { label: "X", href: "https://x.com/" },
-      { label: "TikTok", href: "https://www.tiktok.com/" },
+      { label: "TikTok", href: "https://www.tiktok.com/@promptstacktechnologies" },
     ],
     newsletter: {
       heading: "Notes Promptstack",
