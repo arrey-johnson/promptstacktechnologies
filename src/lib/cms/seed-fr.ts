@@ -1,3 +1,4 @@
+import { blogPostsFr } from "./blog-posts-fr";
 import { legalPagesFr } from "./legal-pages-fr";
 import { portfolioItemsFr } from "./portfolio-items";
 import { serviceItemsFr } from "./service-items-fr";
@@ -108,13 +109,13 @@ export const cmsSeedFr: CmsData = {
     portfolioTeaser: {
       eyebrow: "Travaux sélectionnés",
       heading: "Des sites récents que nous avons livrés.",
-      body: "Un aperçu de sites clients et d’interfaces produit — survolez une carte pour faire défiler la page, ou ouvrez un projet pour le détail.",
+      body: "Un aperçu de sites clients et d’interfaces produit — ouvrez un projet pour l’étude de cas : contexte client, défi, périmètre et résultat.",
       cta: { label: "Voir tout le portfolio", href: "/portfolio" },
     },
     partners: {
-      eyebrow: "Partenaires techniques",
-      heading: "Les plateformes avec lesquelles nous construisons",
-      body: "Nous travaillons avec les outils et plateformes que les équipes utilisent déjà — pour livrer dans la stack que vous faites tourner aujourd'hui.",
+      eyebrow: "Écosystème technologique",
+      heading: "Plateformes & outils avec lesquels nous travaillons",
+      body: "Nous livrons sur les plateformes que les équipes utilisent déjà — pour coller à votre stack, sans laisser entendre un partenariat commercial officiel avec chaque logo affiché.",
       items: [
         { name: "Google", logoSrc: "/brand/partners/google.webp?v=4" },
         { name: "Odoo", logoSrc: "/brand/partners/odoo.webp?v=4" },
@@ -327,17 +328,17 @@ export const cmsSeedFr: CmsData = {
   },
   portfolioPage: {
     hero: {
-      eyebrow: "Portfolio web",
-      heading: "Travaux sélectionnés à travers marques et industries",
-      body: "Nos meilleurs projets de design web — de la finance et l'e-commerce à la beauté, l'éducation et la tech.",
+      eyebrow: "Travaux sélectionnés",
+      heading: "Des études de cas — pas seulement des captures d’écran",
+      body: "Chaque projet ouvre sur le contexte client, le défi, le rôle de Promptstack, le périmètre et le résultat — la preuve qu’attendent les acheteurs corporate.",
       primaryCta: { label: "Explorer les projets", href: "#portfolio-grid" },
       secondaryCta: { label: "Démarrer un projet", href: "#book-discovery" },
       imageSrc: "/brand/portfolio-hero.jpg?v=3",
     },
     grid: {
-      eyebrow: "Quelques exemples de notre travail",
-      heading: "Notre portfolio de design web",
-      body: "Nous avons livré des projets dans des niches variées. Survolez un projet pour explorer.",
+      eyebrow: "Preuve de livraison",
+      heading: "Sites et systèmes numériques que nous avons livrés",
+      body: "Ouvrez un projet pour l’étude de cas complète. Les clients nommés n’apparaissent que lorsqu’ils sont approuvés pour publication ; sinon nous utilisons des libellés sectoriels confidentiels.",
     },
     cta: {
       heading: "Créons un travail digne d'entrer dans ce portfolio.",
@@ -421,7 +422,7 @@ export const cmsSeedFr: CmsData = {
       slug: "corporate-sales-manager",
       title: "Corporate Sales Manager",
       employmentType: "Temps plein",
-      location: "Douala / Hybride",
+      location: "Douala",
       workType: "Hybride",
       summary:
         "Pilotez les ventes mid-market et entreprise pour les services Promptstack — sites, logiciels, automatisation et croissance digitale — de la prospection jusqu'à la signature.",
@@ -447,7 +448,7 @@ export const cmsSeedFr: CmsData = {
       slug: "digital-marketing-internship",
       title: "Stage — Digital Marketing",
       employmentType: "Stage",
-      location: "Douala / Hybride",
+      location: "Douala",
       workType: "Hybride",
       summary:
         "Un stage structuré pour les marketeurs en devenir qui veulent une expérience concrète en contenu, campagnes, analytics et systèmes de croissance — pas des courses café.",
@@ -470,6 +471,6 @@ export const cmsSeedFr: CmsData = {
     },
   ],
   team: teamMembersFr,
-  posts: [],
+  posts: blogPostsFr,
   legal: legalPagesFr,
 };

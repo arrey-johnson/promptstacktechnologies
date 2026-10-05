@@ -44,7 +44,14 @@ export default async function JobDetailPage({ params }: Props) {
         <p className="pill mt-6">{job.employmentType}</p>
         <h1 className="mt-4 heading-xl">{job.title}</h1>
         <div className="mt-4 flex flex-wrap gap-2">
-          {[job.location, job.workType].map((tag) => (
+          {Array.from(
+            new Set(
+              [job.location, job.workType]
+                .map((tag) => tag?.trim())
+                .filter(Boolean)
+                .filter((tag) => !(tag === job.workType && job.location?.includes(job.workType))),
+            ),
+          ).map((tag) => (
             <span
               key={tag}
               className="rounded-(--radius-pill) bg-surface-soft px-2.5 py-1 text-xs font-semibold text-brand-navy"

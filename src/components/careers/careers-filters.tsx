@@ -86,7 +86,18 @@ export function CareersFilters({
                     </Link>
                   </h3>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {[job.employmentType, job.location, job.workType].map((tag) => (
+                    {Array.from(
+                      new Set(
+                        [job.employmentType, job.location, job.workType]
+                          .map((tag) => tag?.trim())
+                          .filter(Boolean)
+                          .filter((tag) => {
+                            // Drop workType when it is already contained in location (e.g. "Douala / Hybrid")
+                            if (tag === job.workType && job.location?.includes(job.workType)) return false;
+                            return true;
+                          }),
+                      ),
+                    ).map((tag) => (
                       <span
                         key={`${job.id}-${tag}`}
                         className="rounded-(--radius-pill) bg-surface-soft px-2.5 py-1 text-xs font-semibold text-brand-navy"

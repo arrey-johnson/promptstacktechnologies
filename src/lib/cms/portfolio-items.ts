@@ -1,4 +1,5 @@
 import type { PortfolioItem } from "./types";
+import { portfolioCaseStudiesEn, portfolioCaseStudiesFr } from "./portfolio-case-studies";
 
 /** Shared Promptstack web-design portfolio (owned work). */
 const basePortfolioItems: Omit<PortfolioItem, "href">[] = [
@@ -238,40 +239,46 @@ const basePortfolioItems: Omit<PortfolioItem, "href">[] = [
 
 export const portfolioItemsEn: PortfolioItem[] = basePortfolioItems.map((item) => ({
   ...item,
+  ...(portfolioCaseStudiesEn[item.id] || {}),
   href: `/portfolio/${item.slug}`,
 }));
 
-export const portfolioItemsFr: PortfolioItem[] = portfolioItemsEn.map((item) => ({
-  ...item,
-  title: item.title
-    .replace("Web Design", "Design web")
-    .replace("Portfolio Design", "Design portfolio")
-    .replace("Brand Design", "Design de marque")
-    .replace("Lady Care Design", "Design Lady Care")
-    .replace("Body Trimmer Design", "Design Body Trimmer")
-    .replace("Temporary Number", "Temporary Number")
-    .replace("E-commerce", "E-commerce"),
-  category: ({
-    Finance: "Finance",
-    Photography: "Photographie",
-    Beauty: "Beauté",
-    Business: "Business",
-    Crypto: "Crypto",
-    "Home care": "Aide à domicile",
-    Product: "Produit",
-    Fashion: "Mode",
-    Food: "Food",
-    Brand: "Marque",
-    "E-commerce": "E-commerce",
-    Company: "Entreprise",
-    Faith: "Foi",
-    NGO: "ONG",
-    Hosting: "Hébergement",
-    Jewelry: "Bijoux",
-    Education: "Éducation",
-    Research: "Recherche",
-    Agency: "Agence",
-    Creative: "Créatif",
-  }[item.category] || item.category),
-  imageAlt: item.imageAlt?.replace("web design project", "projet de design web"),
-}));
+export const portfolioItemsFr: PortfolioItem[] = portfolioItemsEn.map((item) => {
+  const frStudy = portfolioCaseStudiesFr[item.id];
+  return {
+    ...item,
+    ...(frStudy || {}),
+    title: item.title
+      .replace("Web Design", "Design web")
+      .replace("Portfolio Design", "Design portfolio")
+      .replace("Brand Design", "Design de marque")
+      .replace("Lady Care Design", "Design Lady Care")
+      .replace("Body Trimmer Design", "Design Body Trimmer")
+      .replace("Temporary Number", "Temporary Number")
+      .replace("E-commerce", "E-commerce"),
+    category:
+      ({
+        Finance: "Finance",
+        Photography: "Photographie",
+        Beauty: "Beauté",
+        Business: "Business",
+        Crypto: "Crypto",
+        "Home care": "Aide à domicile",
+        Product: "Produit",
+        Fashion: "Mode",
+        Food: "Food",
+        Brand: "Marque",
+        "E-commerce": "E-commerce",
+        Company: "Entreprise",
+        Faith: "Foi",
+        NGO: "ONG",
+        Hosting: "Hébergement",
+        Jewelry: "Bijoux",
+        Education: "Éducation",
+        Research: "Recherche",
+        Agency: "Agence",
+        Creative: "Créatif",
+      }[item.category] || item.category),
+    imageAlt: item.imageAlt?.replace("web design project", "projet de design web"),
+  };
+});

@@ -93,9 +93,16 @@ export default async function PortfolioPage() {
                       aria-hidden="true"
                     />
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
-                      <span className="inline-flex items-center rounded-(--radius-pill) bg-white/95 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.12em] text-brand-purple uppercase shadow-sm backdrop-blur-sm">
-                        {item.category}
-                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="inline-flex items-center rounded-(--radius-pill) bg-white/95 px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.12em] text-brand-purple uppercase shadow-sm backdrop-blur-sm">
+                          {item.category}
+                        </span>
+                        {item.challenge || item.role ? (
+                          <span className="inline-flex items-center rounded-(--radius-pill) bg-brand-purple px-2.5 py-1 text-[0.68rem] font-semibold tracking-[0.12em] text-white uppercase shadow-sm">
+                            {locale === "fr" ? "Étude de cas" : "Case study"}
+                          </span>
+                        ) : null}
+                      </div>
                       <h3 className="mt-2 text-lg font-bold text-white drop-shadow-sm">
                         {item.title}
                       </h3>

@@ -1,3 +1,4 @@
+import { blogPostsEn } from "./blog-posts-en";
 import { legalPagesEn } from "./legal-pages-en";
 import { portfolioItemsEn } from "./portfolio-items";
 import { serviceItemsEn } from "./service-items";
@@ -108,13 +109,13 @@ export const cmsSeed: CmsData = {
     portfolioTeaser: {
       eyebrow: "Selected work",
       heading: "Recent websites we’ve shipped.",
-      body: "A snapshot of client sites and product interfaces — hover a card to scroll the full page, or open any project for detail.",
+      body: "A snapshot of client sites and product interfaces — open any project for the case study: client context, challenge, scope, and outcome.",
       cta: { label: "View full portfolio", href: "/portfolio" },
     },
     partners: {
-      eyebrow: "Technical partners",
-      heading: "Platforms we build with",
-      body: "We work across the tools and platforms teams already trust — so delivery fits the stack you run today.",
+      eyebrow: "Technology ecosystem",
+      heading: "Platforms & tools we work with",
+      body: "We deliver on the platforms teams already trust — so solutions fit the stack you run today, without implying a formal partnership with every vendor logo shown.",
       items: [
         { name: "Google", logoSrc: "/brand/partners/google.webp?v=4" },
         { name: "Odoo", logoSrc: "/brand/partners/odoo.webp?v=4" },
@@ -327,17 +328,17 @@ export const cmsSeed: CmsData = {
   },
   portfolioPage: {
     hero: {
-      eyebrow: "Web design portfolio",
-      heading: "Selected work across brands and industries",
-      body: "Showcasing our best web design projects — from finance and ecommerce to beauty, education, and technology.",
+      eyebrow: "Selected work",
+      heading: "Case studies across industries — not just screenshots",
+      body: "Each project opens with client context, challenge, Promptstack’s role, scope, and outcome — the proof corporate buyers expect before a serious conversation.",
       primaryCta: { label: "Explore projects", href: "#portfolio-grid" },
       secondaryCta: { label: "Start a project", href: "#book-discovery" },
       imageSrc: "/brand/portfolio-hero.jpg?v=3",
     },
     grid: {
-      eyebrow: "Some examples of our work",
-      heading: "Our web design portfolio",
-      body: "We have delivered projects across varied business niches. Hover over a project to explore.",
+      eyebrow: "Delivery proof",
+      heading: "Websites and digital systems we have shipped",
+      body: "Open any project for the full case study. Named clients appear only when approved for publication; otherwise we use confidential sector labels.",
     },
     cta: {
       heading: "Let’s create work worth adding to this portfolio.",
@@ -421,7 +422,7 @@ export const cmsSeed: CmsData = {
       slug: "corporate-sales-manager",
       title: "Corporate Sales Manager",
       employmentType: "Full-time",
-      location: "Douala / Hybrid",
+      location: "Douala",
       workType: "Hybrid",
       summary:
         "Own enterprise and mid-market sales for Promptstack’s software, websites, automation, and digital growth services — from prospecting to signed delivery.",
@@ -447,7 +448,7 @@ export const cmsSeed: CmsData = {
       slug: "digital-marketing-internship",
       title: "Digital Marketing Internship",
       employmentType: "Internship",
-      location: "Douala / Hybrid",
+      location: "Douala",
       workType: "Hybrid",
       summary:
         "A structured internship for aspiring marketers who want hands-on experience in content, campaigns, analytics, and growth systems — not coffee runs.",
@@ -470,6 +471,6 @@ export const cmsSeed: CmsData = {
     },
   ],
   team: teamMembersEn,
-  posts: [],
+  posts: blogPostsEn,
   legal: legalPagesEn,
 };

@@ -7,7 +7,7 @@ export function PartnersMarquee({ partners }: { partners: Partner[] }) {
   const loop = [...partners, ...partners];
 
   return (
-    <div className="relative mt-10 overflow-hidden" aria-label="Technical partners">
+    <div className="relative mt-10 overflow-hidden" aria-label="Technology ecosystem">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-surface-soft to-transparent sm:w-24" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-surface-soft to-transparent sm:w-24" />
       <div className="partner-marquee flex w-max items-center gap-8 py-3 sm:gap-12">

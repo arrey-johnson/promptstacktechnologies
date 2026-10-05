@@ -189,7 +189,7 @@
     "portfolioTeaser": {
       "eyebrow": "Travaux sélectionnés",
       "heading": "Des sites récents que nous avons livrés.",
-      "body": "Un aperçu de sites clients et d’interfaces produit — survolez une carte pour faire défiler la page, ou ouvrez un projet pour le détail.",
+      "body": "Un aperçu de sites clients et d’interfaces produit — ouvrez un projet pour l’étude de cas : contexte client, défi, périmètre et résultat.",
       "cta": {
         "label": "Voir tout le portfolio",
         "href": "/portfolio"
@@ -262,9 +262,9 @@
       "imageSrc": "/brand/cta-next-step.jpg?v=3"
     },
     "partners": {
-      "eyebrow": "Partenaires techniques",
-      "heading": "Les plateformes avec lesquelles nous construisons",
-      "body": "Nous travaillons avec les outils et plateformes que les équipes utilisent déjà — pour livrer dans la stack que vous faites tourner aujourd'hui.",
+      "eyebrow": "Écosystème technologique",
+      "heading": "Plateformes & outils avec lesquels nous travaillons",
+      "body": "Nous livrons sur les plateformes que les équipes utilisent déjà — pour coller à votre stack, sans laisser entendre un partenariat commercial officiel avec chaque logo affiché.",
       "items": [
         {
           "name": "Google",
@@ -874,7 +874,7 @@
       "slug": "corporate-sales-manager",
       "title": "Corporate Sales Manager",
       "employmentType": "Temps plein",
-      "location": "Douala / Hybride",
+      "location": "Douala",
       "workType": "Hybride",
       "summary": "Pilotez les ventes mid-market et entreprise pour les services Promptstack — sites, logiciels, automatisation et croissance digitale — de la prospection jusqu'à la signature.",
       "body": "En tant que Corporate Sales Manager, vous construisez et animez un pipeline de vente professionnel pour Promptstack Technologies. Vous qualifiez les opportunités, menez les conversations de découverte, préparez les propositions et concluez des engagements que l'équipe de livraison peut exécuter clairement.\n\nVous travaillez avec les fondateurs et les leads delivery, représentez Promptstack avec crédibilité, et maintenez une hygiène CRM et une précision de forecast élevées.",
@@ -899,7 +899,7 @@
       "slug": "digital-marketing-internship",
       "title": "Stage — Digital Marketing",
       "employmentType": "Stage",
-      "location": "Douala / Hybride",
+      "location": "Douala",
       "workType": "Hybride",
       "summary": "Un stage structuré pour les marketeurs en devenir qui veulent une expérience concrète en contenu, campagnes, analytics et systèmes de croissance — pas des courses café.",
       "body": "Le stage Digital Marketing chez Promptstack est conçu pour apprendre en livrant. Vous soutenez de vraies campagnes et workflows de contenu avec mentorat, tout en construisant un portfolio que vous pouvez montrer.\n\nC'est une voie de stage professionnelle : attentes claires, feedback hebdomadaire, et exposition à la façon dont les systèmes de croissance sont planifiés et mesurés.",
@@ -958,7 +958,58 @@
       "linkedinHref": ""
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "id": "post-diagnose-first",
+      "slug": "diagnose-before-you-build",
+      "title": "Diagnostiquer avant de construire : pourquoi tant de projets numériques échouent dès la semaine 1",
+      "excerpt": "Acheter un logiciel ou une refonte sans nommer le goulot, c’est financer de l’activité au lieu de résultats. Voici la discipline de diagnostic que Promptstack utilise avant tout build.",
+      "category": "Livraison",
+      "publishedAt": "2026-09-15",
+      "published": true,
+      "body": "Ils n’échouent pas dans le code. Ils échouent dans le brief.\n\nUne entreprise décide qu’elle « a besoin d’un site », « d’un CRM » ou « d’automatisation ». Un prestataire chiffre. Des écrans apparaissent. Trois mois plus tard, l’équipe travaille encore sur WhatsApp et Excel — et le nouveau système devient un onglet que personne n’ouvre.\n\nL’étape manquante : le diagnostic.\n\nCe que nous entendons par diagnostiquer\nAvant de proposer des outils, nous travaillons avec les gens qui font le travail et répondons à quatre questions en langage clair :\n\n1. Où disparaît vraiment le temps chaque semaine ?\n2. Quel handoff crée le plus de reprises ou de blâme ?\n3. À quoi ressemble « mieux » en 30–60 jours — pas dans une roadmap de trois ans ?\n4. Qui possédera le système après le go-live ?\n\nSi les réponses sont floues, le build le sera aussi.\n\nUn premier gain utile bat une architecture fantaisiste\nLes acheteurs corporate demandent parfois une plateforme complète dès le jour 1. L’ambition est bonne — mais la première livraison doit protéger un gain mesurable : moins de relances manquées, renouvellements plus fluides, facturation plus claire, un site qui qualifie vraiment les leads.\n\nLe modèle Promptstack est volontaire : diagnostiquer → définir → livrer → transférer la propriété. La première phase existe pour éviter de payer le mauvais système.\n\nPour votre prochain appel d’offres\nDemandez à chaque prestataire — y compris nous — comment il découvrira le goulot avant de vendre des écrans. Si la proposition saute directement aux fonctionnalités, vous achetez un catalogue, pas une transformation."
+    },
+    {
+      "id": "post-ownership-transfer",
+      "slug": "transfer-ownership-after-go-live",
+      "title": "Le go-live n’est pas la ligne d’arrivée : transférer une propriété qui tient",
+      "excerpt": "Les systèmes les plus coûteux sont ceux que seul le prestataire peut toucher. Cartes de propriété, formation et design admin décident si l’investissement compose ou se dégrade.",
+      "category": "Opérations",
+      "publishedAt": "2026-09-22",
+      "published": true,
+      "body": "Le jour du lancement ressemble à un succès. Des captures circulent. La direction souffle. Puis quelqu’un part, un mot de passe disparaît, et le « nouveau système » revient tranquillement à Excel.\n\nCe n’est pas d’abord un problème de personnes. C’est un problème de conception de la livraison.\n\nLa propriété est un livrable\nChez Promptstack, le handover fait partie du produit :\n\n• Propriétaires nommés pour contenu, opérations et accès technique\n• Chemins admin alignés sur la façon dont votre équipe met vraiment à jour le travail\n• Formation courte centrée sur les tâches hebdomadaires — pas un PDF de 40 pages\n• Documentation qui répond à « qu’est-ce qui casse si je change ceci ? »\n\nPourquoi les entreprises devraient s’en soucier\nQuand vous achetez un engagement à ₣2M–₣10M, vous achetez de la continuité. Un portail ou une automatisation que seule l’agence peut modifier devient une prise d’otage — ou un échec silencieux.\n\nQuestions avant de signer\n• Qui, de notre côté, pourra publier, valider et rapporter sans appeler le prestataire ?\n• Que se passe-t-il au mois 4 quand une campagne exige une nouvelle landing ?\n• Quels accès et environnements sont documentés ?\n\nSi la proposition ne répond pas, vous louez une démo — vous n’achetez pas une capacité opérationnelle."
+    },
+    {
+      "id": "post-beyond-brochure",
+      "slug": "beyond-the-brochure-website",
+      "title": "Au-delà du site brochure : quand votre site doit devenir une surface d’exploitation",
+      "excerpt": "Une jolie homepage n’est pas un système de croissance. Comment savoir si vous avez besoin d’une brochure, d’un portail ou d’une stack connectée — et budgéter en conséquence.",
+      "category": "Stratégie",
+      "publishedAt": "2026-09-29",
+      "published": true,
+      "body": "Beaucoup d’organisations achètent encore des sites comme des brochures avec un formulaire. Cela peut suffire — jusqu’à ce que renouvellements, inscriptions, facturation, portails partenaires ou suivi commercial deviennent la vraie contrainte.\n\nTrois niveaux de maturité\n1. Présence brochure — marque, services, preuves, contact.\n2. Site opérationnel — candidatures, réservations, workflows contenu, handoff CRM basique.\n3. Stack connectée — site + CRM + e-mail automation + admin + intégrations.\n\nLa plupart des demandes « on a besoin d’un nouveau site » sont des problèmes de niveau 2 ou 3 déguisés en niveau 1.\n\nComment Promptstack cadre\nNous partons du goulot, pas du template. Si votre équipe perd des renouvellements dans les boîtes mail, une refonte seule ne suffira pas.\n\nHonnêteté budgétaire\nLe niveau 1 se joue sur le goût et la vitesse. Les niveaux 2–3 se jouent sur le design de process, les intégrations et la propriété. C’est pourquoi les engagements corporate ne ressemblent pas aux projets brochure ₣100k–₣300k — et pourquoi le brief doit le dire clairement."
+    },
+    {
+      "id": "post-automation-roi",
+      "slug": "automation-that-pays-for-itself",
+      "title": "Une automatisation qui se rentabilise : commencez par les goulots ennuyeux",
+      "excerpt": "Les démos d’IA sont excitantes. Les handoffs répétables, relances et saisies sont là où l’automatisation rend souvent de l’argent. Une façon pratique de prioriser.",
+      "category": "Automatisation",
+      "publishedAt": "2026-10-01",
+      "published": true,
+      "body": "Chaque comité a un slide sur l’IA. Moins en ont une liste des cinq tâches hebdomadaires qui brûlent le plus d’heures.\n\nPartir du volume et de la douleur\nLes bons candidats à l’automatisation :\n\n• Fréquents (hebdo ou quotidien)\n• Plus règles que jugement\n• Erreurs coûteuses ou gênantes\n• Déjà « portés » de façon bricolée (héros du tableur)\n\nExemples fréquents : routage de leads, relances d’adhésion, statut de factures, compilation de rapports, checklists d’onboarding, validations de contenu.\n\nRésister au théâtre\nUn chatbot qui ne met pas à jour le CRM, c’est du théâtre. Un workflow qui mène une demande qualifiée du formulaire → propriétaire → suivi avec piste d’audit, c’est de l’opérationnel.\n\nComment nous menons ces missions\n1. Cartographier le chemin actuel avec ceux qui le vivent\n2. Mesurer temps / coût d’erreur sur les deux pires étapes\n3. Livrer une fine tranche d’automatisation avec propriétaires et monitoring\n4. Ensuite seulement élargir\n\nSi un prestataire vend une visite de plateforme avant de nommer votre goulot en une phrase, pause."
+    },
+    {
+      "id": "post-marketing-pipeline",
+      "slug": "marketing-that-connects-to-pipeline",
+      "title": "Un marketing branché sur le pipeline — pas seulement sur les impressions",
+      "excerpt": "Le marketing digital gagne la confiance lorsque campagnes, contenu et suivi CRM partagent un même chemin. La stack minimale que Promptstack exige avant d’augmenter les dépenses.",
+      "category": "Marketing",
+      "publishedAt": "2026-10-03",
+      "published": true,
+      "body": "Dépenser en pubs ou en contenu sans chemin clair vers la conversation, c’est faire évaporer un budget.\n\nLe chemin connecté minimum\nAvant de scaler l’acquisition, nous voulons :\n\n• Un site (ou landing) qui pose offre, preuves et prochaine étape\n• Des formulaires avec assez de contexte pour la vente\n• Un routage vers un propriétaire nommé avec SLA de réponse\n• Une attribution de base : quelle campagne / page a démarré l’échange\n• Une séquence de suivi qui ne dépend pas de la mémoire d’une personne\n\nLe contenu est un actif commercial\nUn blog vide affaiblit une entreprise qui vend du marketing digital. Quelques excellents articles qui montrent comment vous pensez — diagnostic, propriété, mesure — font plus pour la crédibilité corporate que vingt posts minces.\n\nÀ quoi ressemble « bien » en 90 jours\nPas seulement des vanity metrics. Visez : conversations qualifiées réservées, réponses plus rapides, ROI campagne plus lisible, et un feedback sales qui dit que les leads arrivent déjà orientés.\n\nPromptstack construit les systèmes marketing comme le logiciel : diagnostiquer la contrainte, livrer une tranche utile, transférer la propriété, puis scaler ce qui marche."
+    }
+  ],
   "legal": [
     {
       "slug": "privacy-policy",
@@ -983,9 +1034,9 @@
   ],
   "portfolioPage": {
     "hero": {
-      "eyebrow": "Portfolio web",
-      "heading": "Travaux sélectionnés à travers marques et industries",
-      "body": "Nos meilleurs projets de design web — de la finance et l'e-commerce à la beauté, l'éducation et la tech.",
+      "eyebrow": "Travaux sélectionnés",
+      "heading": "Des études de cas — pas seulement des captures d’écran",
+      "body": "Chaque projet ouvre sur le contexte client, le défi, le rôle de Promptstack, le périmètre et le résultat — la preuve qu’attendent les acheteurs corporate.",
       "primaryCta": {
         "label": "Explorer les projets",
         "href": "#portfolio-grid"
@@ -997,9 +1048,9 @@
       "imageSrc": "/brand/portfolio-hero.jpg?v=3"
     },
     "grid": {
-      "eyebrow": "Quelques exemples de notre travail",
-      "heading": "Notre portfolio de design web",
-      "body": "Nous avons livré des projets dans des niches variées. Survolez un projet pour explorer."
+      "eyebrow": "Preuve de livraison",
+      "heading": "Sites et systèmes numériques que nous avons livrés",
+      "body": "Ouvrez un projet pour l’étude de cas complète. Les clients nommés n’apparaissent que lorsqu’ils sont approuvés pour publication ; sinon nous utilisons des libellés sectoriels confidentiels."
     },
     "cta": {
       "heading": "Créons un travail digne d'entrer dans ce portfolio.",
@@ -1019,6 +1070,25 @@
       "category": "Finance",
       "imageSrc": "/brand/portfolio/finance-web-design.png",
       "imageAlt": "Finance projet de design web",
+      "featured": true,
+      "client": "Confidentiel — prestataire de services financiers (Afrique centrale)",
+      "summary": "Une présence web institutionnelle pour une marque finance qui devait inspirer confiance sans freiner les mises à jour contenu.",
+      "challenge": "L’ancien site paraissait daté, enterrait les offres clés et rassurait peu les nouveaux visiteurs. Il fallait une histoire claire, une hiérarchie visuelle forte et une structure maintenable par le marketing.",
+      "role": "Promptstack a mené discovery, architecture de l’information, UI et build front — puis a transféré une structure éditable avec formation.",
+      "scope": [
+        "Refonte de site alignée marque",
+        "Structure pages services / produits",
+        "Parcours de contact / leads",
+        "Build responsive et perf de base",
+        "Formation éditeurs"
+      ],
+      "technologies": [
+        "Stack marketing moderne",
+        "UI responsive",
+        "Blocs CMS",
+        "Événements analytics"
+      ],
+      "outcome": "Un récit finance lisible au premier scroll, des chemins vers le contact plus courts, et un workflow de publication maîtrisé par le client.",
       "href": "/portfolio/finance-web-design"
     },
     {
@@ -1028,6 +1098,24 @@
       "category": "Photographie",
       "imageSrc": "/brand/portfolio/photography-web-design.png",
       "imageAlt": "Photography projet de design web",
+      "featured": true,
+      "client": "Studio photo indépendant",
+      "summary": "Un portfolio conçu pour générer des réservations — pas seulement admirer des images.",
+      "challenge": "De belles images dans une structure faible : galeries lentes, formules floues, peu de passage à la demande.",
+      "role": "Système visuel, storytelling projets et parcours de demande/réservation.",
+      "scope": [
+        "Architecture portfolio",
+        "Layouts projets",
+        "Formules / services",
+        "CTA demande",
+        "Perf mobile"
+      ],
+      "technologies": [
+        "Stratégie d’images",
+        "Patterns portfolio",
+        "Formulaires"
+      ],
+      "outcome": "Offre comprise en quelques secondes, galeries premium sur mobile, demandes plus intentionnées.",
       "href": "/portfolio/photography-web-design"
     },
     {
@@ -1037,6 +1125,20 @@
       "category": "Beauté",
       "imageSrc": "/brand/portfolio/makeup-web-design.png",
       "imageAlt": "Makeup projet de design web",
+      "client": "Beauty / makeup brand engagement",
+      "summary": "A beauty brand site centred on lookbooks, services, and booking interest.",
+      "challenge": "Visual brand strength was not translating into clear service packages or enquiries.",
+      "role": "Design and build of a conversion-oriented beauty web presence with gallery and CTA structure.",
+      "scope": [
+        "Brand web design",
+        "Services presentation",
+        "Enquiry CTAs"
+      ],
+      "technologies": [
+        "Responsive UI",
+        "Image-led layouts"
+      ],
+      "outcome": "Clearer packaging online and a more confident path from inspiration to contact.",
       "href": "/portfolio/makeup-web-design"
     },
     {
@@ -1046,6 +1148,23 @@
       "category": "Business",
       "imageSrc": "/brand/portfolio/business-web-design.png",
       "imageAlt": "Business projet de design web",
+      "featured": true,
+      "client": "Confidentiel — cabinet B2B",
+      "summary": "Un site business pensé pour des acheteurs exigeants.",
+      "challenge": "Des pages génériques n’expliquaient ni process ni preuves ; chaque premier appel recommençait à zéro.",
+      "role": "Narratif diagnose → define → deliver, sections de preuve, CTA alignés sur la qualification commerciale.",
+      "scope": [
+        "Positionnement",
+        "Pages services",
+        "Preuves",
+        "Parcours appel découverte"
+      ],
+      "technologies": [
+        "Web responsive",
+        "Modèle CMS",
+        "Capture de leads"
+      ],
+      "outcome": "Des prospects déjà orientés en appel — moins de défense de marque, plus de cadrage de mission.",
       "href": "/portfolio/business-web-design"
     },
     {
@@ -1055,6 +1174,20 @@
       "category": "Crypto",
       "imageSrc": "/brand/portfolio/crypto-web-design.png",
       "imageAlt": "Crypto projet de design web",
+      "client": "Confidential — digital assets / fintech concept",
+      "summary": "A crypto/fintech marketing UI that balances energy with enough structure for serious visitors.",
+      "challenge": "Hype-heavy visuals without explainer hierarchy made the offer feel risky rather than credible.",
+      "role": "UI/UX design for product story, feature blocks, and trust-oriented CTAs.",
+      "scope": [
+        "Product story UI",
+        "Feature sections",
+        "Trust cues"
+      ],
+      "technologies": [
+        "Modern marketing UI",
+        "Responsive web"
+      ],
+      "outcome": "A more institutional first impression while keeping the category’s visual energy.",
       "href": "/portfolio/crypto-web-design"
     },
     {
@@ -1064,6 +1197,20 @@
       "category": "Beauté",
       "imageSrc": "/brand/portfolio/beauty-web-design.png",
       "imageAlt": "Beauty projet de design web",
+      "client": "Beauty services brand",
+      "summary": "A beauty services website focused on treatments, proof, and bookings.",
+      "challenge": "Service menus were hard to scan; mobile users struggled to find how to book.",
+      "role": "Redesign of service taxonomy, proof modules, and booking CTAs.",
+      "scope": [
+        "Service menu UX",
+        "Gallery / proof",
+        "Booking path"
+      ],
+      "technologies": [
+        "Responsive web",
+        "Form CTAs"
+      ],
+      "outcome": "Faster understanding of offerings and a shorter path to book or enquire.",
       "href": "/portfolio/beauty-web-design"
     },
     {
@@ -1073,6 +1220,20 @@
       "category": "Aide à domicile",
       "imageSrc": "/brand/portfolio/homecare-web-design.jpg",
       "imageAlt": "Home care projet de design web",
+      "client": "Home care / domestic services provider",
+      "summary": "A home-care web presence that explains services, coverage, and how to request help.",
+      "challenge": "Families needed reassurance and clarity; the old site looked informal and incomplete.",
+      "role": "Trust-led redesign with service clarity and request flows.",
+      "scope": [
+        "Service pages",
+        "Trust content",
+        "Request / contact flows"
+      ],
+      "technologies": [
+        "Responsive web",
+        "Lead forms"
+      ],
+      "outcome": "A calmer, more trustworthy first visit — especially on mobile.",
       "href": "/portfolio/homecare-web-design"
     },
     {
@@ -1082,6 +1243,22 @@
       "category": "Produit",
       "imageSrc": "/brand/portfolio/temporary-number.png",
       "imageAlt": "Temporary number projet de design web",
+      "featured": true,
+      "client": "Exploration produit Promptstack — Temporary Number",
+      "summary": "Une expérience produit pour une offre de numéro temporaire : proposition claire et confiance.",
+      "challenge": "Les produits privacy échouent si la landing n’explique pas l’offre en un écran.",
+      "role": "Narratif produit, features et chemin de conversion.",
+      "scope": [
+        "Landing produit",
+        "Features / confiance",
+        "CTA / waitlist",
+        "UI mobile-first"
+      ],
+      "technologies": [
+        "UI product marketing",
+        "Web responsive"
+      ],
+      "outcome": "Une histoire produit nette qui montre aussi notre craft interfaces — pas seulement des sites brochure.",
       "href": "/portfolio/temporary-number"
     },
     {
@@ -1091,6 +1268,19 @@
       "category": "Mode",
       "imageSrc": "/brand/portfolio/fashion-portfolio-design.png",
       "imageAlt": "Fashion portfolio projet de design web",
+      "client": "Fashion / creative portfolio client",
+      "summary": "A fashion portfolio site for showcasing collections with editorial pacing.",
+      "challenge": "Imagery needed space to breathe without losing navigation or contact access.",
+      "role": "Editorial web design and portfolio storytelling.",
+      "scope": [
+        "Lookbook layouts",
+        "Project navigation",
+        "Contact CTAs"
+      ],
+      "technologies": [
+        "Image-led responsive UI"
+      ],
+      "outcome": "A portfolio that feels like a lookbook and still drives professional enquiries.",
       "href": "/portfolio/fashion-portfolio-design"
     },
     {
@@ -1100,6 +1290,20 @@
       "category": "Aide à domicile",
       "imageSrc": "/brand/portfolio/homecare-web-design-2.png",
       "imageAlt": "Home care projet de design web",
+      "client": "Home care brand (variant engagement)",
+      "summary": "A second home-care design direction exploring clearer packaging and visual trust.",
+      "challenge": "Need for a stronger visual system and simpler request path.",
+      "role": "Alternate design system and page structure for home-care conversion.",
+      "scope": [
+        "Visual system",
+        "Service framing",
+        "CTA hierarchy"
+      ],
+      "technologies": [
+        "UI design",
+        "Responsive layouts"
+      ],
+      "outcome": "A refined option set for choosing the direction that best matched brand voice.",
       "href": "/portfolio/homecare-web-design-2"
     },
     {
@@ -1109,6 +1313,19 @@
       "category": "Beauté",
       "imageSrc": "/brand/portfolio/lady-care-design.png",
       "imageAlt": "Lady care projet de design web",
+      "client": "Women’s care / wellness brand",
+      "summary": "A wellness brand site with calm hierarchy and clear next steps.",
+      "challenge": "Soft branding without structure left visitors unsure what to do next.",
+      "role": "Design of brand web pages balancing care aesthetics with conversion.",
+      "scope": [
+        "Brand pages",
+        "Offer framing",
+        "Enquiry path"
+      ],
+      "technologies": [
+        "Responsive UI"
+      ],
+      "outcome": "A composed digital presence that invites contact without visual noise.",
       "href": "/portfolio/lady-care-design"
     },
     {
@@ -1118,6 +1335,19 @@
       "category": "Produit",
       "imageSrc": "/brand/portfolio/body-trimmer-design.png",
       "imageAlt": "Body trimmer projet de design web",
+      "client": "Consumer product brand",
+      "summary": "Product marketing pages for a body-care device with benefit-led storytelling.",
+      "challenge": "Specs alone did not sell; benefits and trust needed a clearer narrative.",
+      "role": "Product landing design emphasising benefits, proof, and purchase/interest CTAs.",
+      "scope": [
+        "Product landing",
+        "Benefit sections",
+        "CTA design"
+      ],
+      "technologies": [
+        "Product marketing UI"
+      ],
+      "outcome": "A landing pattern ready for campaigns and retailer handoff.",
       "href": "/portfolio/body-trimmer-design"
     },
     {
@@ -1127,6 +1357,19 @@
       "category": "Mode",
       "imageSrc": "/brand/portfolio/fashion-brand-design.png",
       "imageAlt": "Fashion brand projet de design web",
+      "client": "Fashion brand",
+      "summary": "Brand website for a fashion label needing stronger identity online.",
+      "challenge": "Inconsistent presentation across drops and campaigns.",
+      "role": "Brand web system and collection presentation.",
+      "scope": [
+        "Brand identity on web",
+        "Collection pages",
+        "Contact / store CTAs"
+      ],
+      "technologies": [
+        "Responsive brand UI"
+      ],
+      "outcome": "A more coherent brand story across pages and devices.",
       "href": "/portfolio/fashion-brand-design"
     },
     {
@@ -1136,6 +1379,18 @@
       "category": "Mode",
       "imageSrc": "/brand/portfolio/fashion-brand-design-2.png",
       "imageAlt": "Fashion brand projet de design web",
+      "client": "Fashion brand (alternate direction)",
+      "summary": "Second fashion brand direction exploring a bolder commercial layout.",
+      "challenge": "Need to test a more campaign-driven composition.",
+      "role": "Alternate UI direction for brand and campaign pages.",
+      "scope": [
+        "Campaign layouts",
+        "Brand pages"
+      ],
+      "technologies": [
+        "UI design"
+      ],
+      "outcome": "A viable second option for seasonal campaign use.",
       "href": "/portfolio/fashion-brand-design-2"
     },
     {
@@ -1145,6 +1400,20 @@
       "category": "Food",
       "imageSrc": "/brand/portfolio/food-web-design.png",
       "imageAlt": "Food projet de design web",
+      "client": "Food / hospitality brand",
+      "summary": "Food brand web design for menus, story, and reservations or orders.",
+      "challenge": "Appetite appeal was strong offline but weak in digital structure.",
+      "role": "Menu/story architecture and conversion CTAs.",
+      "scope": [
+        "Menu presentation",
+        "Story pages",
+        "Reservation / order CTAs"
+      ],
+      "technologies": [
+        "Responsive web",
+        "Image optimisation patterns"
+      ],
+      "outcome": "A hungrier first impression with clearer ways to act.",
       "href": "/portfolio/food-web-design"
     },
     {
@@ -1154,6 +1423,19 @@
       "category": "Marque",
       "imageSrc": "/brand/portfolio/brand-web-design.png",
       "imageAlt": "Brand projet de design web",
+      "client": "Multi-product brand",
+      "summary": "Brand website unifying products under one credible umbrella.",
+      "challenge": "Product pages felt disconnected from the parent brand.",
+      "role": "Umbrella brand architecture and product linking.",
+      "scope": [
+        "Brand home",
+        "Product links",
+        "About / contact"
+      ],
+      "technologies": [
+        "Marketing site UI"
+      ],
+      "outcome": "A single brand home that routes visitors into the right product story.",
       "href": "/portfolio/brand-web-design"
     },
     {
@@ -1163,6 +1445,23 @@
       "category": "E-commerce",
       "imageSrc": "/brand/portfolio/ecommerce-web-design.png",
       "imageAlt": "E-commerce projet de design web",
+      "featured": true,
+      "client": "Confidentiel — marque retail / e-commerce",
+      "summary": "Une boutique orientée conversion et clarté du parcours mobile.",
+      "challenge": "Pages produit faibles sur mobile ; signaux de confiance irréguliers.",
+      "role": "Flux catégories/produits, confiance UI, chemin vers achat / demande.",
+      "scope": [
+        "UX catalogue",
+        "Conversion mobile",
+        "Confiance / politiques",
+        "Landings campagne"
+      ],
+      "technologies": [
+        "Patterns e-commerce",
+        "Perf responsive",
+        "Analytics"
+      ],
+      "outcome": "Parcours d’achat plus net, surtout sur téléphone.",
       "href": "/portfolio/ecommerce-web-design"
     },
     {
@@ -1172,6 +1471,19 @@
       "category": "Finance",
       "imageSrc": "/brand/portfolio/fx-web-design.jpg",
       "imageAlt": "FX projet de design web",
+      "client": "Confidential — FX / trading education or services brand",
+      "summary": "FX-oriented web design with risk-aware messaging and clearer offer packaging.",
+      "challenge": "Aggressive visuals without education hierarchy reduced trust.",
+      "role": "Structured marketing UI for offers, education blocks, and enquiries.",
+      "scope": [
+        "Offer pages",
+        "Education modules",
+        "Lead CTAs"
+      ],
+      "technologies": [
+        "Responsive marketing UI"
+      ],
+      "outcome": "A more measured first visit that still supports acquisition.",
       "href": "/portfolio/fx-web-design"
     },
     {
@@ -1181,6 +1493,18 @@
       "category": "Crypto",
       "imageSrc": "/brand/portfolio/crypto-web-design-2.png",
       "imageAlt": "Crypto projet de design web",
+      "client": "Crypto product (alternate design)",
+      "summary": "Alternate crypto UI exploring denser dashboards and marketing hybrids.",
+      "challenge": "Need a second visual language for product marketing tests.",
+      "role": "UI exploration for crypto marketing surfaces.",
+      "scope": [
+        "Marketing UI variants",
+        "Feature blocks"
+      ],
+      "technologies": [
+        "UI design"
+      ],
+      "outcome": "Additional creative direction for future product launches.",
       "href": "/portfolio/crypto-web-design-2"
     },
     {
@@ -1190,6 +1514,26 @@
       "category": "Entreprise",
       "imageSrc": "/brand/portfolio/company-web-design.png",
       "imageAlt": "Company projet de design web",
+      "featured": true,
+      "client": "Confidentiel — groupe multi-activités",
+      "summary": "Un site corporate qui explique qui est l’organisation, ce qu’elle vend, et comment engager une conversation sérieuse.",
+      "challenge": "Une infra digitale datée faisait paraître l’entreprise plus petite que ses opérations. Process adhésion / événements / admin vivaient dans tableurs et mails.",
+      "role": "Refonte site, pages services, routage des demandes, bases pour communications adhésion/événements — avec trajectoire CRM / e-mail automation.",
+      "scope": [
+        "Refonte corporate",
+        "Architecture services et preuves",
+        "Workflows de contact",
+        "Modèle contenu news / événements",
+        "Publication admin-friendly",
+        "Plan de migration"
+      ],
+      "technologies": [
+        "Stack marketing",
+        "Formulaires CRM-ready",
+        "Hooks e-mail",
+        "Migration hébergement / DNS"
+      ],
+      "outcome": "Un site public à l’échelle réelle de l’entreprise, avec de meilleurs handoffs vers le suivi interne.",
       "href": "/portfolio/company-web-design"
     },
     {
@@ -1199,6 +1543,21 @@
       "category": "Foi",
       "imageSrc": "/brand/portfolio/church-web-design.png",
       "imageAlt": "Church projet de design web",
+      "client": "Faith community / church organisation",
+      "summary": "Church website for sermons, events, and visitor welcome paths.",
+      "challenge": "New visitors could not find service times, ministries, or how to connect.",
+      "role": "Welcoming information architecture and content patterns for church communications.",
+      "scope": [
+        "Service times",
+        "Ministries",
+        "Events",
+        "Connect CTAs"
+      ],
+      "technologies": [
+        "Responsive web",
+        "Content blocks"
+      ],
+      "outcome": "First-time visitors find what matters in one visit; staff can update without fear.",
       "href": "/portfolio/church-web-design"
     },
     {
@@ -1208,6 +1567,23 @@
       "category": "ONG",
       "imageSrc": "/brand/portfolio/ngo-web-design.png",
       "imageAlt": "NGO projet de design web",
+      "featured": true,
+      "client": "Confidentiel — ONG / programme de développement",
+      "summary": "Un site public pour programmes, partenaires et donateurs qui ont besoin de clarté.",
+      "challenge": "Infos dispersées entre PDF et pages obsolètes.",
+      "role": "Structuration programmes / histoires / CTA, site maintenable par des non-techniciens.",
+      "scope": [
+        "Storytelling impact",
+        "Appels / opportunités",
+        "Routage partenaires",
+        "Formation"
+      ],
+      "technologies": [
+        "UI accessible",
+        "Blocs contenu",
+        "Formulaires"
+      ],
+      "outcome": "Une source unique de vérité pour programmes et outreach.",
       "href": "/portfolio/ngo-web-design"
     },
     {
@@ -1217,6 +1593,23 @@
       "category": "Hébergement",
       "imageSrc": "/brand/portfolio/hosting-web-design.png",
       "imageAlt": "Hosting projet de design web",
+      "featured": true,
+      "client": "Confidentiel — hébergeur / infra",
+      "summary": "Un site hébergement qui explique les offres sans noyer l’acheteur.",
+      "challenge": "Packaging technique illisible pour non-initiés.",
+      "role": "Comparaison d’offres, confiance, points d’entrée support/vente.",
+      "scope": [
+        "Comparaison plans",
+        "Explainers",
+        "CTA support/vente",
+        "Crédibilité technique"
+      ],
+      "technologies": [
+        "Site marketing",
+        "Tableaux comparatifs",
+        "Leads"
+      ],
+      "outcome": "Meilleure auto-sélection des plans ; ventes démarrent sur une page partagée.",
       "href": "/portfolio/hosting-web-design"
     },
     {
@@ -1226,6 +1619,19 @@
       "category": "Bijoux",
       "imageSrc": "/brand/portfolio/jewelry-web-design.png",
       "imageAlt": "Jewelry projet de design web",
+      "client": "Jewelry brand",
+      "summary": "Jewelry e-commerce style presentation with luxury pacing and product focus.",
+      "challenge": "Product beauty was lost in cluttered templates.",
+      "role": "Luxury-oriented product and collection web design.",
+      "scope": [
+        "Collection pages",
+        "Product focus UI",
+        "Enquiry / purchase CTAs"
+      ],
+      "technologies": [
+        "Image-led responsive UI"
+      ],
+      "outcome": "A quieter, more premium browse experience.",
       "href": "/portfolio/jewelry-web-design"
     },
     {
@@ -1235,6 +1641,20 @@
       "category": "Beauté",
       "imageSrc": "/brand/portfolio/hair-vendor-web-design.png",
       "imageAlt": "Hair vendor projet de design web",
+      "client": "Hair vendor / beauty supply brand",
+      "summary": "Hair vendor site for catalogue clarity and wholesale/retail enquiries.",
+      "challenge": "Catalogue confusion and weak wholesale messaging.",
+      "role": "Catalogue UX and enquiry segmentation (retail vs wholesale).",
+      "scope": [
+        "Catalogue structure",
+        "Product cards",
+        "Enquiry paths"
+      ],
+      "technologies": [
+        "Responsive catalogue UI",
+        "Forms"
+      ],
+      "outcome": "Buyers find products faster; wholesale leads arrive better labelled.",
       "href": "/portfolio/hair-vendor-web-design"
     },
     {
@@ -1244,6 +1664,23 @@
       "category": "Éducation",
       "imageSrc": "/brand/portfolio/academia-web-design.png",
       "imageAlt": "Academia projet de design web",
+      "featured": true,
+      "client": "Confidentiel — acteur formation / éducation",
+      "summary": "Une expérience web éducative qui transforme les programmes en inscriptions.",
+      "challenge": "Catalogues denses, frais flous, rebond mobile.",
+      "role": "Pages programmes autour curriculum, frais, résultats et parcours d’inscription.",
+      "scope": [
+        "Catalogue programmes",
+        "Clarté frais",
+        "Demandes",
+        "Mobile-first"
+      ],
+      "technologies": [
+        "Web responsive",
+        "Contenu structuré",
+        "Formulaires"
+      ],
+      "outcome": "Comparaison rapide des programmes et contact inscription sans relances inutiles.",
       "href": "/portfolio/academia-web-design"
     },
     {
@@ -1253,6 +1690,23 @@
       "category": "Recherche",
       "imageSrc": "/brand/portfolio/research-web-design.png",
       "imageAlt": "Research projet de design web",
+      "featured": true,
+      "client": "Confidentiel — organisation de recherche",
+      "summary": "Un site recherche qui met en avant publications et expertise sans dump documentaire.",
+      "challenge": "Travaux difficiles à naviguer ; positionnement flou.",
+      "role": "Taxonomie, listes de publications, présence institutionnelle crédible.",
+      "scope": [
+        "Architecture publications",
+        "Expertise",
+        "Listings",
+        "CTA collaboration"
+      ],
+      "technologies": [
+        "UI contenu dense",
+        "Filtres si besoin",
+        "SEO de base"
+      ],
+      "outcome": "Recherche trouvable, institution à jour, porte d’entrée claire pour collaborer.",
       "href": "/portfolio/research-web-design"
     },
     {
@@ -1262,6 +1716,23 @@
       "category": "Agence",
       "imageSrc": "/brand/portfolio/agency-web-design.png",
       "imageAlt": "Agency projet de design web",
+      "featured": true,
+      "client": "Confidentiel — agence créative / digitale",
+      "summary": "Un site agence qui vend process et résultats — pas seulement un moodboard.",
+      "challenge": "Style sans explication du mode d’engagement.",
+      "role": "Services, process, travaux sélectionnés, CTA découverte.",
+      "scope": [
+        "Architecture services",
+        "Story process",
+        "Travaux",
+        "CTA"
+      ],
+      "technologies": [
+        "UI portfolio",
+        "Layouts cas",
+        "Formulaires"
+      ],
+      "outcome": "Prospects comprennent le mode de travail avant le premier meeting.",
       "href": "/portfolio/agency-web-design"
     },
     {
@@ -1271,6 +1742,19 @@
       "category": "Créatif",
       "imageSrc": "/brand/portfolio/abstract-web-design.png",
       "imageAlt": "Abstract projet de design web",
+      "client": "Creative / experimental brand",
+      "summary": "Abstract creative web design showcasing motion-friendly layouts and art direction.",
+      "challenge": "Need a distinctive digital signature without sacrificing usability.",
+      "role": "Art-directed web composition with usable navigation and CTAs.",
+      "scope": [
+        "Art direction",
+        "Layout system",
+        "Contact path"
+      ],
+      "technologies": [
+        "Creative responsive UI"
+      ],
+      "outcome": "A memorable creative presence that still converts curiosity into contact.",
       "href": "/portfolio/abstract-web-design"
     }
   ]

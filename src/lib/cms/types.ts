@@ -217,6 +217,17 @@ export type PortfolioItem = {
   imageSrc: string;
   imageAlt?: string;
   href?: string;
+  /** Short overview shown under the title */
+  summary?: string;
+  /** Named client when approved; otherwise sector / confidential label */
+  client?: string;
+  challenge?: string;
+  /** What Promptstack delivered */
+  role?: string;
+  outcome?: string;
+  scope?: string[];
+  technologies?: string[];
+  featured?: boolean;
 };
 
 export type PortfolioContent = {
