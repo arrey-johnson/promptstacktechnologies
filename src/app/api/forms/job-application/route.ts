@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { saveJobApplication } from "@/lib/applications/store";
 import { getCmsData } from "@/lib/cms/store";
+import { getNotifyToEmail, sendMail } from "@/lib/email/mailer";
+import { jobApplicationAdminEmail } from "@/lib/email/templates";
 
 const MAX_RESUME_BYTES = 5 * 1024 * 1024;
 const ALLOWED_RESUME_TYPES = new Set([
@@ -74,6 +76,24 @@ export async function POST(request: Request) {
       job: application.jobTitle,
       email: application.email,
       receivedAt: application.receivedAt,
+    });
+
+    const admin = jobApplicationAdminEmail({
+      fullName,
+      email,
+      phone,
+      jobTitle: job.title,
+      linkedin: linkedin || undefined,
+      portfolioUrl: portfolioUrl || undefined,
+      coverLetter,
+      hasResume: Boolean(resumePayload),
+    });
+    await sendMail({
+      to: getNotifyToEmail(),
+      subject: admin.subject,
+      text: admin.text,
+      html: admin.html,
+      replyTo: admin.replyTo,
     });
 
     return NextResponse.json({

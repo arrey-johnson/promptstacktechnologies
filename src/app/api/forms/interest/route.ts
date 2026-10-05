@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { getNotifyToEmail, sendMail } from "@/lib/email/mailer";
+import { interestAdminEmail } from "@/lib/email/templates";
 
 export async function POST(request: Request) {
   const body = (await request.json()) as {
@@ -17,6 +19,19 @@ export async function POST(request: Request) {
   console.info("[product-interest]", {
     ...body,
     receivedAt: new Date().toISOString(),
+  });
+
+  const admin = interestAdminEmail({
+    name: body.name,
+    email: body.email,
+    product: body.product,
+  });
+  await sendMail({
+    to: getNotifyToEmail(),
+    subject: admin.subject,
+    text: admin.text,
+    html: admin.html,
+    replyTo: admin.replyTo,
   });
 
   return NextResponse.json({

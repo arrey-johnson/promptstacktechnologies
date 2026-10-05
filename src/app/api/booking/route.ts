@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { isZoomBookingConfigured } from "@/lib/booking/config";
+import { getBookingNotifyEmail, isZoomBookingConfigured } from "@/lib/booking/config";
 import { createDiscoveryZoomMeeting, getBusyBlocks } from "@/lib/booking/zoom";
 import { filterAvailableSlots, listDaySlotStarts } from "@/lib/booking/slots";
+import { getNotifyToEmail, sendAdminAndUserMail } from "@/lib/email/mailer";
+import { bookingAdminEmail, bookingUserEmail } from "@/lib/email/templates";
 
 const bookingSchema = z.object({
   name: z.string().trim().min(2).max(120),
@@ -60,11 +62,41 @@ export async function POST(request: Request) {
       notes: body.notes,
     });
 
+    const notifyTo = getBookingNotifyEmail() || getNotifyToEmail();
     console.info("[booking] zoom scheduled", {
       email: body.email,
       start: body.start,
       joinUrl: meeting.joinUrl,
-      notify: process.env.BOOKING_NOTIFY_EMAIL || process.env.ZOOM_HOST_EMAIL,
+      notify: notifyTo,
+    });
+
+    const admin = bookingAdminEmail({
+      name: body.name,
+      email: body.email,
+      start: body.start,
+      notes: body.notes,
+      joinUrl: meeting.joinUrl || undefined,
+    });
+    const user = bookingUserEmail({
+      name: body.name,
+      start: body.start,
+      joinUrl: meeting.joinUrl || undefined,
+    });
+
+    await sendAdminAndUserMail({
+      admin: {
+        to: notifyTo,
+        subject: admin.subject,
+        text: admin.text,
+        html: admin.html,
+        replyTo: admin.replyTo,
+      },
+      user: {
+        to: body.email,
+        subject: user.subject,
+        text: user.text,
+        html: user.html,
+      },
     });
 
     return NextResponse.json({
