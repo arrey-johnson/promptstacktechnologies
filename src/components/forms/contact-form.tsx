@@ -16,7 +16,8 @@ export function ContactForm({ content }: { content: ContactContent }) {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     setPending(true);
     setStatus(null);
     try {
@@ -33,7 +34,7 @@ export function ContactForm({ content }: { content: ContactContent }) {
       });
       const data = (await res.json()) as { message?: string };
       setStatus(data.message || (res.ok ? "Message sent." : "Something went wrong."));
-      if (res.ok) e.currentTarget.reset();
+      if (res.ok) formEl.reset();
     } catch {
       setStatus("Something went wrong.");
     } finally {

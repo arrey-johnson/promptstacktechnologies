@@ -14,7 +14,8 @@ export function InterestForm({
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     setPending(true);
     setStatus(null);
     try {
@@ -29,7 +30,7 @@ export function InterestForm({
       });
       const data = (await res.json()) as { message?: string };
       setStatus(data.message || (res.ok ? "Thanks — you're on the list." : "Something went wrong."));
-      if (res.ok) e.currentTarget.reset();
+      if (res.ok) formEl.reset();
     } catch {
       setStatus("Something went wrong.");
     } finally {
