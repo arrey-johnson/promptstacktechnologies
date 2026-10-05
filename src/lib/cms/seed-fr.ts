@@ -1,3 +1,4 @@
+import { legalPagesFr } from "./legal-pages-fr";
 import { portfolioItemsFr } from "./portfolio-items";
 import { serviceItemsFr } from "./service-items-fr";
 import { teamMembersFr } from "./team-members";
@@ -60,12 +61,12 @@ export const cmsSeedFr: CmsData = {
           { label: "Politique de confidentialité", href: "/privacy-policy" },
           { label: "Conditions d'utilisation", href: "/terms-of-service" },
           { label: "Politique cookies", href: "/cookie-policy" },
+          { label: "Usage acceptable", href: "/acceptable-use" },
         ],
       },
     ],
     socials: [
       { label: "LinkedIn", href: "https://www.linkedin.com/company/promptstack-technologies/" },
-      { label: "X", href: "https://x.com/" },
       { label: "TikTok", href: "https://www.tiktok.com/@promptstacktechnologies" },
     ],
     newsletter: {
@@ -470,21 +471,5 @@ export const cmsSeedFr: CmsData = {
   ],
   team: teamMembersFr,
   posts: [],
-  legal: [
-    {
-      slug: "privacy-policy",
-      title: "Politique de confidentialité",
-      body: "Brouillon de politique de confidentialité — remplacez par votre texte légal final dans l'Admin.",
-    },
-    {
-      slug: "terms-of-service",
-      title: "Conditions d'utilisation",
-      body: "Brouillon des conditions d'utilisation — remplacez par votre texte légal final dans l'Admin.",
-    },
-    {
-      slug: "cookie-policy",
-      title: "Politique cookies",
-      body: "Brouillon de politique cookies — remplacez par votre texte légal final dans l'Admin.",
-    },
-  ],
+  legal: legalPagesFr,
 };

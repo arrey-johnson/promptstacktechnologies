@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { PageViewTracker } from "@/components/analytics/page-view-tracker";
 import { BookingProvider } from "@/components/booking/booking-provider";
+import { CookieConsentBanner } from "@/components/legal/cookie-consent-banner";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { WhatsAppFloat } from "@/components/layout/whatsapp-float";
@@ -39,6 +40,7 @@ export default async function MarketingLayout({
       <main id="main-content">{children}</main>
       <SiteFooter settings={settings} />
       <WhatsAppFloat phone={settings.phone} />
+      <CookieConsentBanner locale={locale} />
       <Suspense fallback={null}>
         <PageViewTracker locale={locale} />
       </Suspense>

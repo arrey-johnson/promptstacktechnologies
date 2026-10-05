@@ -46,9 +46,16 @@ export function SocialIconLinks({
       ? "inline-flex h-9 w-9 items-center justify-center rounded-md text-text-muted transition-colors hover:bg-brand-lavender/30 hover:text-brand-purple"
       : "inline-flex h-8 w-8 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-white/10 hover:text-white";
 
+  const usable = socials.filter((social) => {
+    const href = (social.href || "").trim();
+    if (!href || href === "#") return false;
+    if (href === "https://x.com/" || href === "https://twitter.com/") return false;
+    return true;
+  });
+
   return (
     <div className={`flex items-center gap-1 ${className}`}>
-      {socials.map((social) => {
+      {usable.map((social) => {
         const Icon = resolveIcon(social.label);
         if (!Icon) {
           return (

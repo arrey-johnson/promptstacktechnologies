@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import { getCookieConsent, type CookieConsentValue } from "@/components/legal/cookie-consent-banner";
 
 function getOrCreateId(key: string) {
   try {
@@ -59,8 +60,21 @@ export function PageViewTracker({ locale }: { locale?: string }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const lastSent = useRef<string>("");
+  const [consent, setConsent] = useState<CookieConsentValue | null>(null);
 
   useEffect(() => {
+    setConsent(getCookieConsent());
+    function onConsent(event: Event) {
+      const detail = (event as CustomEvent<CookieConsentValue>).detail;
+      if (detail === "accepted" || detail === "essential") setConsent(detail);
+      else setConsent(getCookieConsent());
+    }
+    window.addEventListener("pst:cookie-consent", onConsent);
+    return () => window.removeEventListener("pst:cookie-consent", onConsent);
+  }, []);
+
+  useEffect(() => {
+    if (consent !== "accepted") return;
     if (!pathname || pathname.startsWith("/admin")) return;
 
     const query = searchParams?.toString();
@@ -76,7 +90,7 @@ export function PageViewTracker({ locale }: { locale?: string }) {
       sessionId: getSessionId(),
       ...(locale ? { locale } : {}),
     });
-  }, [pathname, searchParams, locale]);
+  }, [pathname, searchParams, locale, consent]);
 
   return null;
 }

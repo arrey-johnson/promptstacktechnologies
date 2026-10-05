@@ -1,3 +1,4 @@
+import { legalPagesEn } from "./legal-pages-en";
 import { portfolioItemsEn } from "./portfolio-items";
 import { serviceItemsEn } from "./service-items";
 import { teamMembersEn } from "./team-members";
@@ -60,12 +61,12 @@ export const cmsSeed: CmsData = {
           { label: "Privacy Policy", href: "/privacy-policy" },
           { label: "Terms of Service", href: "/terms-of-service" },
           { label: "Cookie Policy", href: "/cookie-policy" },
+          { label: "Acceptable Use", href: "/acceptable-use" },
         ],
       },
     ],
     socials: [
       { label: "LinkedIn", href: "https://www.linkedin.com/company/promptstack-technologies/" },
-      { label: "X", href: "https://x.com/" },
       { label: "TikTok", href: "https://www.tiktok.com/@promptstacktechnologies" },
     ],
     newsletter: {
@@ -470,21 +471,5 @@ export const cmsSeed: CmsData = {
   ],
   team: teamMembersEn,
   posts: [],
-  legal: [
-    {
-      slug: "privacy-policy",
-      title: "Privacy Policy",
-      body: "Draft privacy policy — replace with your final legal text in Admin.",
-    },
-    {
-      slug: "terms-of-service",
-      title: "Terms of Service",
-      body: "Draft terms of service — replace with your final legal text in Admin.",
-    },
-    {
-      slug: "cookie-policy",
-      title: "Cookie Policy",
-      body: "Draft cookie policy — replace with your final legal text in Admin.",
-    },
-  ],
+  legal: legalPagesEn,
 };
