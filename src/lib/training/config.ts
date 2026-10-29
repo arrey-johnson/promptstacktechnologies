@@ -13,7 +13,7 @@ export const AI_TRAINING = {
   seatsNote: "Limited seats available — early registration is strongly recommended.",
   whatsappPhone: "+237 674 047 453",
   whatsappHref: "https://wa.me/237674047453?text=Hi%20Promptstack%2C%20I%20want%20to%20register%20for%20AI%20Training",
-  flyerSrc: "/brand/training/ai-professionals-flyer.jpg",
+  flyerSrc: "/brand/training/ai-professionals-hero.jpg",
   paymentLink:
     process.env.FAPSHI_PAYMENT_LINK?.trim() || "https://pay.fapshi.com/86573688",
   learn: [

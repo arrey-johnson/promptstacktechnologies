@@ -52,7 +52,7 @@ export default function AiTrainingPage() {
           <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-(--radius-media) border border-white/15 bg-white/5 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.8)]">
             <Image
               src={AI_TRAINING.flyerSrc}
-              alt="Artificial Intelligence for Professionals — Promptstack training flyer"
+              alt="Professional using AI productivity tools on a laptop"
               width={900}
               height={1200}
               className="h-auto w-full"
