@@ -7,7 +7,7 @@ import { AI_TRAINING, formatXaf } from "@/lib/training/config";
 export const metadata: Metadata = {
   title: "AI Training for Professionals",
   description:
-    "1-day online practical AI training by Promptstack Technologies — register and pay with MTN Mobile Money or Orange Money.",
+    "4-day online practical AI training by Promptstack Technologies (11–14 November 2026 cohort) — register and pay with MTN Mobile Money or Orange Money.",
 };
 
 export default function AiTrainingPage() {
@@ -18,7 +18,7 @@ export default function AiTrainingPage() {
         <div className="site-container relative grid gap-10 py-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-20">
           <div>
             <p className="inline-flex items-center rounded-(--radius-pill) bg-white/12 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">
-              {AI_TRAINING.format} · {AI_TRAINING.mode}
+              {AI_TRAINING.cohortLabel} · {AI_TRAINING.format} · {AI_TRAINING.mode}
             </p>
             <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
               Artificial Intelligence{" "}
@@ -27,14 +27,18 @@ export default function AiTrainingPage() {
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
               {AI_TRAINING.tagline}
             </p>
-            <dl className="mt-8 grid gap-4 sm:grid-cols-3">
+            <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-(--radius-btn) border border-white/15 bg-white/5 px-4 py-3">
-                <dt className="text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">Date</dt>
+                <dt className="text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">Dates</dt>
                 <dd className="mt-1 text-sm font-semibold">{AI_TRAINING.dateLabel}</dd>
               </div>
               <div className="rounded-(--radius-btn) border border-white/15 bg-white/5 px-4 py-3">
+                <dt className="text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">Duration</dt>
+                <dd className="mt-1 text-sm font-semibold">{AI_TRAINING.duration}</dd>
+              </div>
+              <div className="rounded-(--radius-btn) border border-white/15 bg-white/5 px-4 py-3">
                 <dt className="text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">Venue</dt>
-                <dd className="mt-1 text-sm font-semibold">Online (live session)</dd>
+                <dd className="mt-1 text-sm font-semibold">Online (live cohort)</dd>
               </div>
               <div className="rounded-(--radius-btn) border border-white/15 bg-white/5 px-4 py-3">
                 <dt className="text-xs font-semibold tracking-[0.12em] text-brand-lavender uppercase">Fee</dt>
@@ -68,7 +72,7 @@ export default function AiTrainingPage() {
             <p className="pill">What you will learn</p>
             <h2 className="mt-4 heading-lg">Practical AI skills for work that matters</h2>
             <p className="mt-3 max-w-2xl body-muted">
-              A focused online day — not slide-only theory. Leave with workflows you can reuse the next morning.
+              A focused online cohort over four days — not slide-only theory. Leave with workflows you can reuse the next morning.
             </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {AI_TRAINING.learn.map((item) => (

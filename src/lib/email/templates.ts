@@ -297,8 +297,8 @@ export function aiTrainingUserEmail(input: {
     "",
     "Thanks for registering for Artificial Intelligence for Professionals.",
     "",
-    `Date: ${input.dateLabel}`,
-    "Format: Online · 1-day practical training",
+    `Dates: ${input.dateLabel}`,
+    "Format: Online · 4-day practical training (current cohort)",
     `Fee: ${input.amountLabel}`,
     "",
     "Complete payment with MTN Mobile Money or Orange Money:",
@@ -312,8 +312,8 @@ export function aiTrainingUserEmail(input: {
     "Complete your AI Training payment",
     `<p>Hi ${escapeHtml(input.fullName)},</p>
      <p>Thanks for registering for <strong>Artificial Intelligence for Professionals</strong>.</p>
-     <p><strong>Date:</strong> ${escapeHtml(input.dateLabel)}<br/>
-        <strong>Format:</strong> Online · 1-day practical training<br/>
+     <p><strong>Dates:</strong> ${escapeHtml(input.dateLabel)}<br/>
+        <strong>Format:</strong> Online · 4-day practical training (current cohort)<br/>
         <strong>Fee:</strong> ${escapeHtml(input.amountLabel)}</p>
      <p><a href="${escapeHtml(input.paymentLink)}" style="display:inline-block;background:#a800e6;color:#fff;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;">Pay with MoMo / Orange Money</a></p>
      <p>After payment, keep your receipt. Join details will be sent to this email.</p>`,
