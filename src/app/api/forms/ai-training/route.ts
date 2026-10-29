@@ -69,7 +69,6 @@ export async function POST(request: Request) {
     paymentLink: record.paymentLink,
     amountLabel: formatXaf(AI_TRAINING.priceXaf),
     dateLabel: AI_TRAINING.dateLabel,
-    whatsappHref: AI_TRAINING.whatsappHref,
   });
 
   await sendAdminAndUserMail({

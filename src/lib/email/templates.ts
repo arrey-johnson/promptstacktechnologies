@@ -290,7 +290,6 @@ export function aiTrainingUserEmail(input: {
   paymentLink: string;
   amountLabel: string;
   dateLabel: string;
-  whatsappHref: string;
 }) {
   const subject = "Complete your Promptstack AI Training payment";
   const text = [
@@ -306,7 +305,6 @@ export function aiTrainingUserEmail(input: {
     input.paymentLink,
     "",
     "After payment, keep your receipt. Join details will be sent to this email.",
-    `WhatsApp support: ${input.whatsappHref}`,
     "",
     "— Promptstack Technologies",
   ].join("\n");
@@ -318,8 +316,7 @@ export function aiTrainingUserEmail(input: {
         <strong>Format:</strong> Online · 1-day practical training<br/>
         <strong>Fee:</strong> ${escapeHtml(input.amountLabel)}</p>
      <p><a href="${escapeHtml(input.paymentLink)}" style="display:inline-block;background:#a800e6;color:#fff;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;">Pay with MoMo / Orange Money</a></p>
-     <p>After payment, keep your receipt. Join details will be sent to this email.</p>
-     <p><a href="${escapeHtml(input.whatsappHref)}">WhatsApp support</a></p>`,
+     <p>After payment, keep your receipt. Join details will be sent to this email.</p>`,
   );
   return { subject, text, html };
 }

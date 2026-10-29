@@ -31,14 +31,14 @@ export function AiTrainingRegisterForm() {
       };
 
       if (!res.ok || !data.paymentUrl) {
-        setStatus(data.message || "Something went wrong. Please try again or WhatsApp us.");
+        setStatus(data.message || "Something went wrong. Please try again.");
         return;
       }
 
       setStatus(data.message || "Redirecting to payment…");
       window.location.assign(data.paymentUrl);
     } catch {
-      setStatus("Something went wrong. Please try again or WhatsApp us.");
+      setStatus("Something went wrong. Please try again.");
     } finally {
       setPending(false);
     }
@@ -54,7 +54,7 @@ export function AiTrainingRegisterForm() {
       <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand-navy">Secure your seat</h2>
       <p className="mt-2 text-sm body-muted">
         Enter your details, then pay <strong className="text-brand-navy">{formatXaf(AI_TRAINING.priceXaf)}</strong>{" "}
-        with MTN Mobile Money or Orange Money via Fapshi.
+        with MTN Mobile Money or Orange Money.
       </p>
 
       <div className="mt-6 grid gap-4">
@@ -80,7 +80,7 @@ export function AiTrainingRegisterForm() {
           />
         </label>
         <label className="grid gap-1.5 text-sm">
-          <span className="font-semibold text-brand-navy">WhatsApp / phone</span>
+          <span className="font-semibold text-brand-navy">Phone</span>
           <input
             name="phone"
             type="tel"
@@ -108,18 +108,11 @@ export function AiTrainingRegisterForm() {
       </button>
 
       <p className="mt-3 text-xs leading-relaxed text-text-muted">
-        You will be redirected to Fapshi’s secure checkout to pay with Mobile Money or Orange Money. Training is{" "}
+        You will be redirected to a secure checkout to pay with Mobile Money or Orange Money. Training is{" "}
         <strong className="text-brand-navy">online</strong> on {AI_TRAINING.dateLabel}.
       </p>
 
       {status ? <p className="mt-3 text-sm font-medium text-brand-purple">{status}</p> : null}
-
-      <p className="mt-5 border-t border-brand-navy/10 pt-4 text-sm text-text-muted">
-        Prefer WhatsApp?{" "}
-        <a href={AI_TRAINING.whatsappHref} className="font-semibold text-brand-purple hover:underline" target="_blank" rel="noreferrer">
-          Message us on {AI_TRAINING.whatsappPhone}
-        </a>
-      </p>
     </form>
   );
 }

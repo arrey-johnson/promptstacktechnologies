@@ -45,14 +45,6 @@ export default function AiTrainingPage() {
               <a href="#register" className="btn-primary">
                 Register & pay now
               </a>
-              <a
-                href={AI_TRAINING.whatsappHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-11 items-center justify-center rounded-(--radius-btn) border border-white/25 px-5 text-sm font-semibold text-white hover:bg-white/10"
-              >
-                WhatsApp to register
-              </a>
             </div>
             <p className="mt-4 text-sm text-brand-lavender">{AI_TRAINING.seatsNote}</p>
           </div>
@@ -107,17 +99,14 @@ export default function AiTrainingPage() {
 
             <div className="mt-12 rounded-(--radius-media) border border-brand-navy/10 bg-brand-navy px-6 py-8 text-white">
               <p className="text-xs font-semibold tracking-[0.14em] text-brand-lavender uppercase">How payment works</p>
-              <h3 className="mt-3 text-2xl font-bold tracking-tight">Register here → pay on Fapshi</h3>
+              <h3 className="mt-3 text-2xl font-bold tracking-tight">Register here → pay securely</h3>
               <ol className="mt-5 space-y-3 text-sm text-white/85">
                 <li>1. Submit your name, email, and phone on this page.</li>
-                <li>2. You are redirected to Fapshi to pay {formatXaf(AI_TRAINING.priceXaf)} with MTN MoMo or Orange Money.</li>
+                <li>2. Complete payment of {formatXaf(AI_TRAINING.priceXaf)} with MTN Mobile Money or Orange Money.</li>
                 <li>3. Keep your payment receipt — we send online join details to your email.</li>
               </ol>
               <p className="mt-5 text-sm text-brand-lavender">
-                Training is hosted <strong className="text-white">online</strong>. Questions?{" "}
-                <a href={AI_TRAINING.whatsappHref} className="underline underline-offset-2" target="_blank" rel="noreferrer">
-                  WhatsApp {AI_TRAINING.whatsappPhone}
-                </a>
+                Training is hosted <strong className="text-white">online</strong>.
               </p>
             </div>
           </div>
