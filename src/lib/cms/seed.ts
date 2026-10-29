@@ -18,6 +18,7 @@ export const cmsSeed: CmsData = {
       { label: "Services", href: "/services" },
       { label: "Portfolio", href: "/portfolio" },
       { label: "Careers", href: "/careers" },
+      { label: "AI Training", href: "/ai-training" },
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
     ],
@@ -45,6 +46,7 @@ export const cmsSeed: CmsData = {
         title: "Academy",
         links: [
           { label: "Programs", href: "/services/academy" },
+          { label: "AI Training (register)", href: "/ai-training" },
           { label: "Enquire", href: "/contact?subject=Academy%20Enquiry" },
         ],
       },

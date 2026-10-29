@@ -27,6 +27,10 @@
         "href": "/careers"
       },
       {
+        "label": "Formation IA",
+        "href": "/ai-training"
+      },
+      {
         "label": "Blog",
         "href": "/blog"
       },
@@ -88,6 +92,10 @@
           {
             "label": "Programmes",
             "href": "/services/academy"
+          },
+          {
+            "label": "Formation IA (inscription)",
+            "href": "/ai-training"
           },
           {
             "label": "Nous écrire",

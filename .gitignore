@@ -9,6 +9,7 @@ data/booking/bookings.json
 data/applications/applications.json
 data/applications/resumes/
 data/analytics/events.json
+data/training/
 public/uploads/*
 !public/uploads/.gitkeep
 tsconfig.tsbuildinfo

@@ -27,6 +27,10 @@
         "href": "/careers"
       },
       {
+        "label": "AI Training",
+        "href": "/ai-training"
+      },
+      {
         "label": "Blog",
         "href": "/blog"
       },
@@ -88,6 +92,10 @@
           {
             "label": "Programs",
             "href": "/services/academy"
+          },
+          {
+            "label": "AI Training (register)",
+            "href": "/ai-training"
           },
           {
             "label": "Enquire",

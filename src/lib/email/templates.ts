@@ -244,3 +244,82 @@ export function interestAdminEmail(input: {
   );
   return { subject, text, html, replyTo: input.email };
 }
+
+export function aiTrainingAdminEmail(input: {
+  fullName: string;
+  email: string;
+  phone: string;
+  organization?: string;
+  amountXaf: number;
+  paymentLink: string;
+  registrationId: string;
+  fapshiTransId?: string;
+}) {
+  const subject = `AI Training registration — ${input.fullName}`;
+  const text = [
+    "New AI Training registration",
+    "",
+    `Name: ${input.fullName}`,
+    `Email: ${input.email}`,
+    `Phone: ${input.phone}`,
+    `Organization: ${input.organization || "—"}`,
+    `Amount: ${input.amountXaf} XAF`,
+    `Registration ID: ${input.registrationId}`,
+    `Fapshi transId: ${input.fapshiTransId || "—"}`,
+    `Payment link: ${input.paymentLink}`,
+    "",
+    "Registrant was redirected to pay via MTN MoMo / Orange Money.",
+  ].join("\n");
+  const html = wrapHtml(
+    "AI Training registration",
+    `<p><strong>Name:</strong> ${escapeHtml(input.fullName)}</p>
+     <p><strong>Email:</strong> ${escapeHtml(input.email)}</p>
+     <p><strong>Phone:</strong> ${escapeHtml(input.phone)}</p>
+     <p><strong>Organization:</strong> ${escapeHtml(input.organization || "—")}</p>
+     <p><strong>Amount:</strong> ${escapeHtml(String(input.amountXaf))} XAF</p>
+     <p><strong>Registration ID:</strong> ${escapeHtml(input.registrationId)}</p>
+     <p><strong>Fapshi transId:</strong> ${escapeHtml(input.fapshiTransId || "—")}</p>
+     <p><strong>Payment link:</strong> <a href="${escapeHtml(input.paymentLink)}">${escapeHtml(input.paymentLink)}</a></p>
+     <p style="margin-top:16px;">Registrant was redirected to complete MTN MoMo / Orange Money payment.</p>`,
+  );
+  return { subject, text, html, replyTo: input.email };
+}
+
+export function aiTrainingUserEmail(input: {
+  fullName: string;
+  paymentLink: string;
+  amountLabel: string;
+  dateLabel: string;
+  whatsappHref: string;
+}) {
+  const subject = "Complete your Promptstack AI Training payment";
+  const text = [
+    `Hi ${input.fullName},`,
+    "",
+    "Thanks for registering for Artificial Intelligence for Professionals.",
+    "",
+    `Date: ${input.dateLabel}`,
+    "Format: Online · 1-day practical training",
+    `Fee: ${input.amountLabel}`,
+    "",
+    "Complete payment with MTN Mobile Money or Orange Money:",
+    input.paymentLink,
+    "",
+    "After payment, keep your receipt. Join details will be sent to this email.",
+    `WhatsApp support: ${input.whatsappHref}`,
+    "",
+    "— Promptstack Technologies",
+  ].join("\n");
+  const html = wrapHtml(
+    "Complete your AI Training payment",
+    `<p>Hi ${escapeHtml(input.fullName)},</p>
+     <p>Thanks for registering for <strong>Artificial Intelligence for Professionals</strong>.</p>
+     <p><strong>Date:</strong> ${escapeHtml(input.dateLabel)}<br/>
+        <strong>Format:</strong> Online · 1-day practical training<br/>
+        <strong>Fee:</strong> ${escapeHtml(input.amountLabel)}</p>
+     <p><a href="${escapeHtml(input.paymentLink)}" style="display:inline-block;background:#a800e6;color:#fff;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:700;">Pay with MoMo / Orange Money</a></p>
+     <p>After payment, keep your receipt. Join details will be sent to this email.</p>
+     <p><a href="${escapeHtml(input.whatsappHref)}">WhatsApp support</a></p>`,
+  );
+  return { subject, text, html };
+}

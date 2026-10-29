@@ -250,12 +250,23 @@ export function ServiceDetailView({
                           </div>
                         ) : null}
                       </dl>
-                      <Link
-                        href={`#book-discovery`}
-                        className="btn-primary mt-6 inline-flex"
-                      >
-                        {ui.enquireCourse}
-                      </Link>
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        <Link
+                          href={course.id === "ai-training" ? "/ai-training" : "#book-discovery"}
+                          className="btn-primary inline-flex"
+                        >
+                          {course.id === "ai-training"
+                            ? locale === "fr"
+                              ? "Inscription Formation IA"
+                              : "Register for AI Training"
+                            : ui.enquireCourse}
+                        </Link>
+                        {course.id === "ai-training" ? (
+                          <Link href="#book-discovery" className="btn-secondary inline-flex">
+                            {ui.enquireCourse}
+                          </Link>
+                        ) : null}
+                      </div>
                     </div>
 
                     <div className="p-6 sm:p-8">
