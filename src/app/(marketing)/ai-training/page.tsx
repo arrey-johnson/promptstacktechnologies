@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AiTrainingRegisterForm } from "@/components/training/ai-training-register-form";
 import { AI_TRAINING, formatXaf } from "@/lib/training/config";
 
 export const metadata: Metadata = {
@@ -46,8 +45,13 @@ export default function AiTrainingPage() {
               </div>
             </dl>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#register" className="btn-primary">
-                Register & pay now
+              <a
+                href={AI_TRAINING.paymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Register & pay {formatXaf(AI_TRAINING.priceXaf)}
               </a>
             </div>
             <p className="mt-4 text-sm text-brand-lavender">{AI_TRAINING.seatsNote}</p>
@@ -66,7 +70,7 @@ export default function AiTrainingPage() {
         </div>
       </section>
 
-      <section className="site-container section-space">
+      <section id="register" className="site-container section-space scroll-mt-28">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="pill">What you will learn</p>
@@ -100,22 +104,41 @@ export default function AiTrainingPage() {
                 ))}
               </ul>
             </div>
-
-            <div className="mt-12 rounded-(--radius-media) border border-brand-navy/10 bg-brand-navy px-6 py-8 text-white">
-              <p className="text-xs font-semibold tracking-[0.14em] text-brand-lavender uppercase">How payment works</p>
-              <h3 className="mt-3 text-2xl font-bold tracking-tight">Register here → pay securely</h3>
-              <ol className="mt-5 space-y-3 text-sm text-white/85">
-                <li>1. Submit your name, email, and phone on this page.</li>
-                <li>2. Complete payment of {formatXaf(AI_TRAINING.priceXaf)} with MTN Mobile Money or Orange Money.</li>
-                <li>3. Keep your payment receipt — we send online join details to your email.</li>
-              </ol>
-              <p className="mt-5 text-sm text-brand-lavender">
-                Training is hosted <strong className="text-white">online</strong>.
-              </p>
-            </div>
           </div>
 
-          <AiTrainingRegisterForm />
+          <aside className="rounded-(--radius-media) border border-brand-navy/10 bg-white p-6 shadow-[0_20px_50px_-28px_rgb(27_38_59/0.35)] sm:p-8">
+            <p className="text-xs font-semibold tracking-[0.14em] text-brand-purple uppercase">Register & pay</p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand-navy">Secure your seat</h2>
+            <p className="mt-3 text-sm body-muted">
+              Pay <strong className="text-brand-navy">{formatXaf(AI_TRAINING.priceXaf)}</strong> with MTN Mobile
+              Money or Orange Money. You’ll enter your details on the secure checkout page.
+            </p>
+            <dl className="mt-6 space-y-3 text-sm">
+              <div className="flex justify-between gap-4 border-b border-brand-navy/10 pb-3">
+                <dt className="text-text-muted">Cohort</dt>
+                <dd className="font-semibold text-brand-navy">{AI_TRAINING.dateLabel}</dd>
+              </div>
+              <div className="flex justify-between gap-4 border-b border-brand-navy/10 pb-3">
+                <dt className="text-text-muted">Duration</dt>
+                <dd className="font-semibold text-brand-navy">{AI_TRAINING.duration} · Online</dd>
+              </div>
+              <div className="flex justify-between gap-4">
+                <dt className="text-text-muted">Fee</dt>
+                <dd className="font-semibold text-brand-navy">{formatXaf(AI_TRAINING.priceXaf)}</dd>
+              </div>
+            </dl>
+            <a
+              href={AI_TRAINING.paymentLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-8 flex w-full min-h-12 items-center justify-center"
+            >
+              Register & pay now
+            </a>
+            <p className="mt-3 text-xs leading-relaxed text-text-muted">
+              After payment, keep your receipt. Online join details will be sent to the email you use at checkout.
+            </p>
+          </aside>
         </div>
       </section>
 
