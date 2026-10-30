@@ -17,7 +17,7 @@ export const AI_TRAINING = {
   whatsappHref: "https://wa.me/237674047453?text=Hi%20Promptstack%2C%20I%20want%20to%20register%20for%20AI%20Training",
   flyerSrc: "/brand/training/ai-professionals-hero.jpg",
   paymentLink:
-    process.env.FAPSHI_PAYMENT_LINK?.trim() || "https://pay.fapshi.com/86573688",
+    process.env.FAPSHI_PAYMENT_LINK?.trim() || "https://buy.fapshi.com/zxxf7c",
   learn: [
     "Write professional emails, reports, and proposals with AI",
     "Create impressive PowerPoint presentations in minutes",
