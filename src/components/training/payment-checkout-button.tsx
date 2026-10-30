@@ -43,7 +43,7 @@ export function PaymentCheckoutButton({
 
       {open ? (
         <div
-          className="fixed inset-0 z-[100] flex items-end justify-center bg-brand-navy/55 p-0 backdrop-blur-[2px] sm:items-center sm:p-4"
+          className="fixed inset-0 z-[100] flex items-end justify-center bg-brand-navy/55 p-0 backdrop-blur-[2px] sm:items-center sm:p-6"
           role="presentation"
           onClick={() => setOpen(false)}
         >
@@ -51,7 +51,7 @@ export function PaymentCheckoutButton({
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="flex h-[92vh] w-full max-w-lg flex-col overflow-hidden rounded-t-(--radius-media) bg-white shadow-[0_30px_80px_-20px_rgba(15,23,42,0.55)] sm:h-[min(860px,90vh)] sm:rounded-(--radius-media)"
+            className="flex h-[96vh] w-full max-w-5xl flex-col overflow-hidden rounded-t-(--radius-media) bg-white shadow-[0_30px_80px_-20px_rgba(15,23,42,0.55)] sm:h-[min(920px,94vh)] sm:rounded-(--radius-media)"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-center justify-between gap-3 border-b border-brand-navy/10 px-4 py-3">
