@@ -6,7 +6,7 @@ import { AI_TRAINING, formatXaf } from "@/lib/training/config";
 export const metadata: Metadata = {
   title: "AI Training for Professionals",
   description:
-    "4-day online practical AI training by Promptstack Technologies (11–14 November 2026 cohort) — register and pay with MTN Mobile Money or Orange Money.",
+    "3-day online practical AI training by Promptstack Technologies (11–13 November 2026 cohort) — register and pay with MTN Mobile Money or Orange Money.",
 };
 
 export default function AiTrainingPage() {
@@ -76,7 +76,7 @@ export default function AiTrainingPage() {
             <p className="pill">What you will learn</p>
             <h2 className="mt-4 heading-lg">Practical AI skills for work that matters</h2>
             <p className="mt-3 max-w-2xl body-muted">
-              A focused online cohort over four days — not slide-only theory. Leave with workflows you can reuse the next morning.
+              A focused online cohort over three days — not slide-only theory. Leave with workflows you can reuse the next morning.
             </p>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {AI_TRAINING.learn.map((item) => (
