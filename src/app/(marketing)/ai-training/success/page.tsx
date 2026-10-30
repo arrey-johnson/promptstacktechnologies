@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PaymentCheckoutButton } from "@/components/training/payment-checkout-button";
 import { AI_TRAINING, formatXaf } from "@/lib/training/config";
 
 export const metadata: Metadata = {
@@ -17,14 +18,13 @@ export default function AiTrainingSuccessPage() {
         <strong>{formatXaf(AI_TRAINING.priceXaf)}</strong> with MTN Mobile Money or Orange Money.
       </p>
       <div className="mt-10 flex flex-wrap gap-3">
-        <a
-          href={AI_TRAINING.paymentLink}
+        <PaymentCheckoutButton
+          paymentUrl={AI_TRAINING.paymentLink}
           className="btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
+          title="AI Training checkout"
         >
           Continue to payment
-        </a>
+        </PaymentCheckoutButton>
         <Link href="/ai-training" className="btn-secondary">
           Back to training page
         </Link>

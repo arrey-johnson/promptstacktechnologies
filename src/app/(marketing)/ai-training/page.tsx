@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { PaymentCheckoutButton } from "@/components/training/payment-checkout-button";
 import { AI_TRAINING, formatXaf } from "@/lib/training/config";
 
 export const metadata: Metadata = {
@@ -45,14 +46,13 @@ export default function AiTrainingPage() {
               </div>
             </dl>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={AI_TRAINING.paymentLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <PaymentCheckoutButton
+                paymentUrl={AI_TRAINING.paymentLink}
                 className="btn-primary"
+                title="AI Training checkout"
               >
                 Register & pay {formatXaf(AI_TRAINING.priceXaf)}
-              </a>
+              </PaymentCheckoutButton>
             </div>
             <p className="mt-4 text-sm text-brand-lavender">{AI_TRAINING.seatsNote}</p>
           </div>
@@ -111,7 +111,7 @@ export default function AiTrainingPage() {
             <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand-navy">Secure your seat</h2>
             <p className="mt-3 text-sm body-muted">
               Pay <strong className="text-brand-navy">{formatXaf(AI_TRAINING.priceXaf)}</strong> with MTN Mobile
-              Money or Orange Money. You’ll enter your details on the secure checkout page.
+              Money or Orange Money. Enter your details in the checkout popup.
             </p>
             <dl className="mt-6 space-y-3 text-sm">
               <div className="flex justify-between gap-4 border-b border-brand-navy/10 pb-3">
@@ -127,14 +127,13 @@ export default function AiTrainingPage() {
                 <dd className="font-semibold text-brand-navy">{formatXaf(AI_TRAINING.priceXaf)}</dd>
               </div>
             </dl>
-            <a
-              href={AI_TRAINING.paymentLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <PaymentCheckoutButton
+              paymentUrl={AI_TRAINING.paymentLink}
               className="btn-primary mt-8 flex w-full min-h-12 items-center justify-center"
+              title="AI Training checkout"
             >
               Register & pay now
-            </a>
+            </PaymentCheckoutButton>
             <p className="mt-3 text-xs leading-relaxed text-text-muted">
               After payment, keep your receipt. Online join details will be sent to the email you use at checkout.
             </p>
